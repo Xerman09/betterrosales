@@ -3,9 +3,9 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v4';
-var STATIC_CACHE = 'bettersolano-static-' + CACHE_VERSION;
-var RUNTIME_CACHE = 'bettersolano-runtime-' + CACHE_VERSION;
+var CACHE_VERSION = 'v5';
+var STATIC_CACHE = 'betterrosales-static-' + CACHE_VERSION;
+var RUNTIME_CACHE = 'betterrosales-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
 
 // Core shell: precached on install for instant offline load

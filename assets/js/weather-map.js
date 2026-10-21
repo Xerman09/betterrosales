@@ -63,7 +63,7 @@
     CACHE_KEY: 'solano_weather_cache',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 16.5167, lon: 121.1833 },
+    COORDINATES: { lat: 15.8942, lon: 120.6334 },
 
     mapWeatherCode(code) {
       const mappings = {
