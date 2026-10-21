@@ -124,7 +124,7 @@ export default function Header() {
           <Link href="/">
             <img
               src="/assets/images/logo/better-solano-logo.svg"
-              alt="Better Solano Logo"
+              alt="Better Rosales Logo"
               className="logo-img"
             />
           </Link>

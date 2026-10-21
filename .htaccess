@@ -291,6 +291,6 @@ ServerSignature Off
 # Uncomment to prevent image hotlinking
 # <IfModule mod_rewrite.c>
 #     RewriteCond %{HTTP_REFERER} !^$
-#     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bettersolano\.org [NC]
+#     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?betterrosales\.org [NC]
 #     RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [F,NC,L]
 # </IfModule>

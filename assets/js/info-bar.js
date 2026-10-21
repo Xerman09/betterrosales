@@ -455,7 +455,7 @@ const WeatherService = {
       location: {
         lat: CONFIG.SOLANO_LAT,
         lon: CONFIG.SOLANO_LON,
-        name: 'Solano, Nueva Vizcaya',
+        name: 'Rosales, Pangasinan',
       },
     };
   },

@@ -1,9 +1,9 @@
 /**
- * BetterSolano Service Worker
+ * BetterRosales Service Worker
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v5';
+var CACHE_VERSION = 'v6';
 var STATIC_CACHE = 'betterrosales-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betterrosales-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -236,11 +236,11 @@ self.addEventListener('push', function (event) {
   if (!event.data) return;
   var data = event.data.json();
   event.waitUntil(
-    self.registration.showNotification(data.title || 'BetterSolano', {
+    self.registration.showNotification(data.title || 'BetterRosales', {
       body: data.body || '',
       icon: '/assets/images/logo/favicon.svg',
       badge: '/assets/images/logo/favicon.svg',
-      tag: data.tag || 'bettersolano-notification',
+      tag: data.tag || 'betterrosales-notification',
       data: { url: data.url || '/' },
     })
   );

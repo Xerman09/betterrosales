@@ -1,30 +1,30 @@
 {
   "news": [
     {
-      "id": "business-permit-renewal-2025",
-      "title": "Business Permit Renewal 2025",
-      "date": "2025-11-28",
+      "id": "business-permit-renewal-2026",
+      "title": "Business Permit Renewal & Tax Assessment",
+      "date": "2026-01-15",
       "category": "Announcement",
       "badge": "info",
-      "summary": "Deadline for business permit renewal is set for January 20, 2025. Early renewal is encouraged to avoid penalties.",
+      "summary": "LGU Rosales Treasury & BPLO announcement for business permit applications and renewals at Rosales Municipal Hall.",
       "url": null
     },
     {
-      "id": "new-public-market-wing",
-      "title": "New Public Market Wing Opens",
-      "date": "2025-11-15",
+      "id": "rosales-trading-post-operations",
+      "title": "Rosales Trading Post (RTP) Operations in Tomana West",
+      "date": "2025-12-10",
       "category": "Project",
       "badge": "success",
-      "summary": "The renovated wing of the Solano Public Market is now open to vendors and the public.",
+      "summary": "Full trading and wholesale market activities underway at the newly structured Rosales Trading Post under Ordinance No. 01-2025.",
       "url": null
     },
     {
-      "id": "scheduled-power-interruption",
-      "title": "Scheduled Power Interruption",
-      "date": "2025-11-10",
+      "id": "cferm-trauma-center-services",
+      "title": "Expanded Trauma & Medical Services at CFERMTC",
+      "date": "2025-11-20",
       "category": "Advisory",
-      "badge": "warning",
-      "summary": "Maintenance scheduled for Barangay Osme\u00f1a on Dec 1, 8:00 AM - 5:00 PM.",
+      "badge": "info",
+      "summary": "Conrado F. Estrella Regional Medical and Trauma Center expands specialized clinical consultations in Carmay East, Rosales.",
       "url": null
     }
   ]
