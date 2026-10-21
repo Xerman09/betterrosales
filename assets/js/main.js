@@ -583,4 +583,48 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initEduAccordion();
+
+  // ─── Emergency Hotline Continuous Carousel ────────────────────────────────
+  const initHotlineCarousel = () => {
+    const hotlineBar = document.querySelector('.hotline-bar');
+    if (!hotlineBar) return;
+
+    const itemsContainer = hotlineBar.querySelector('.hotline-items');
+    if (!itemsContainer || itemsContainer.dataset.carouselInit === 'true') return;
+
+    const items = Array.from(itemsContainer.querySelectorAll('.hotline-item'));
+    if (items.length === 0) return;
+
+    itemsContainer.dataset.carouselInit = 'true';
+
+    const inner = hotlineBar.querySelector('.hotline-inner');
+    if (inner && !inner.querySelector('.hotline-label')) {
+      const label = document.createElement('div');
+      label.className = 'hotline-label';
+      label.innerHTML = '<i class="bi bi-shield-exclamation" aria-hidden="true"></i> <span>24/7 Hotlines</span>';
+      inner.insertBefore(label, itemsContainer);
+    }
+
+    const track = document.createElement('div');
+    track.className = 'hotline-track hotline-items-track';
+
+    // Original set
+    items.forEach((item) => track.appendChild(item));
+
+    // Duplicate sets for seamless infinite loop
+    for (let c = 0; c < 2; c++) {
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('tabindex', '-1');
+        track.appendChild(clone);
+      });
+    }
+
+    itemsContainer.innerHTML = '';
+    itemsContainer.appendChild(track);
+    itemsContainer.classList.add('hotline-carousel-ready');
+  };
+
+  initHotlineCarousel();
 });
