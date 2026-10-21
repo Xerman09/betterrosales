@@ -1,9 +1,38 @@
 {
   "_schema_version": "1.0",
-  "_status": "draft",
-  "_source": "Bureau of Local Government Finance (BLGF) / LGU Solano Budget Office",
-  "_note": "Awaiting official fiscal data",
-  "municipality": "Solano",
-  "province": "Nueva Vizcaya",
-  "fiscal_years": []
+  "_status": "active",
+  "_source": "Bureau of Local Government Finance (DOF-BLGF) / Commission on Audit (COA)",
+  "_note": "Aggregated from official BLGF Statement of Receipts and Expenditures and local revenue reports",
+  "municipality": "Rosales",
+  "province": "Pangasinan",
+  "income_class": "1st Class",
+  "regional_performance": "Ranked 5th in Locally Sourced Revenues (LSR) among all municipalities in Region I (Ilocos Region)",
+  "financial_summary": {
+    "fiscal_year": 2024,
+    "total_revenue": 347500000,
+    "total_expenditure": 314200000,
+    "net_operating_surplus": 33300000,
+    "currency": "PHP"
+  },
+  "revenue_legislation": [
+    {
+      "ordinance_no": "Ordinance No. 05-2024",
+      "title": "An Ordinance Enacting the Updated Municipal Revenue Code of Rosales",
+      "status": "Enacted"
+    }
+  ],
+  "data_portals": [
+    {
+      "name": "Bureau of Local Government Finance (BLGF)",
+      "url": "https://blgf.gov.ph"
+    },
+    {
+      "name": "Commission on Audit (COA) Annual Audit Reports",
+      "url": "https://www.coa.gov.ph"
+    },
+    {
+      "name": "Department of Budget and Management (DBM) Open Data",
+      "url": "https://www.dbm.gov.ph"
+    }
+  ]
 }
