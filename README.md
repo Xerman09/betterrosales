@@ -1,6 +1,6 @@
-# BetterSolano.org
+# BetterRosales.org
 
-A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Solano, Nueva Vizcaya, Philippines.
+A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Rosales, Pangasinan, Philippines.
 
 ![Version](https://img.shields.io/badge/version-1.1.15-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
@@ -13,7 +13,7 @@ A civic-tech initiative providing transparent access to municipal services, prog
 
 ## Version Notice
 
-A **React + TypeScript** version of BetterSolano.org is now available for contributors who prefer modern tooling and component-based architecture.
+A **React + TypeScript** version of BetterRosales.org is now available for contributors who prefer modern tooling and component-based architecture.
 
 | Version            | Branch             | Status             | Documentation                |
 | ------------------ | ------------------ | ------------------ | ---------------------------- |
@@ -37,13 +37,13 @@ To adapt this project for your LGU, fork the repository and customize the conten
 
 ## About
 
-BetterSolano.org is a volunteer-driven, open-source project that empowers the people of Solano with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
+BetterRosales.org is a volunteer-driven, open-source project that empowers the people of Rosales with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
 
-**Cost to the People of Solano = ₱0**
+**Cost to the People of Rosales = ₱0**
 
 ## Live Demo
 
-Visit the live website: [https://bettersolano.org](https://bettersolano.org)
+Visit the live website: [https://betterrosales.org](https://betterrosales.org)
 
 ## Technology Stack
 
@@ -453,25 +453,24 @@ See [LICENSE](LICENSE) for full details.
 
 | Channel  | Link                                                                      |
 | -------- | ------------------------------------------------------------------------- |
-| Website  | [bettersolano.org](https://bettersolano.org)                              |
-| Email    | volunteer@bettersolano.org                                                |
-| Facebook | [@bettersolano.org](https://www.facebook.com/bettersolano.org)            |
-| LinkedIn | [BetterSolano](https://www.linkedin.com/company/bettersolano/)            |
+| Website  | [betterrosales.org](https://betterrosales.org)                            |
+| Email    | volunteer@betterrosales.org                                              |
+| Facebook | [@betterrosales.org](https://www.facebook.com/betterrosales.org)          |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [BetterSolano/bettersolano](https://github.com/BetterSolano/bettersolano) |
+| GitHub   | [Xerman09/betterrosales](https://github.com/Xerman09/betterrosales)       |
 
 ## Acknowledgments
 
 - [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
 - [Abakada.org](https://abakada.org) for supporting civic technology efforts
-- LGU Solano for public data availability and transparency
+- LGU Rosales for public data availability and transparency
 - All volunteers and contributors who dedicate their time
 - Open-source community for the tools and libraries used
-- Citizens of Solano for their feedback and support
+- Citizens of Rosales for their feedback and support
 
 ---
 
-Made for the people of Solano, Nueva Vizcaya
+Made for the people of Rosales, Pangasinan
 
 ## Developer
 
