@@ -695,7 +695,7 @@
 }
 
 .home-stat-card-value {
-  font-size: clamp(1.2rem, 1.45vw, 1.5rem) !important;
+  font-size: clamp(1.1rem, 1.35vw, 1.35rem) !important;
   line-height: 1.2 !important;
   white-space: nowrap;
 }
