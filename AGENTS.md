@@ -15,6 +15,9 @@
      - `chore(scope): ...`
    - Never leave uncommitted work behind after completing a request.
 
+3. **Answer Concisely**
+   - Keep responses brief, direct, and focused on key outcomes, changed files, and verification results without unnecessary filler.
+
 ## Branding & Asset Conventions
 
 - **Logo & Emblem**: The BetterRosales.org brand mark (`assets/images/logo/better-rosales-logo.svg` and `-white.svg`, plus legacy `better-solano-logo*.svg` aliases and `react-app/public/assets/images/logo/` copies) must remain an **original civic geometric emblem** and must **never** replicate or closely resemble the official Municipality of Rosales LGU seal.

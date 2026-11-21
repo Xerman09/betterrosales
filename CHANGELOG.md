@@ -8,6 +8,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
+- Added rule #3 (**Answer Concisely**) to `AGENTS.md` requiring brief, direct responses focused on outcomes, changed files, and verification.
 - Added `AGENTS.md` with mandatory agent workflow rules: document all changes in `CHANGELOG.md`, keep technical docs/comments updated, always commit completed work using Conventional Commits, and preserve original non-LGU civic branding for BetterRosales.org.
 
 ### Changed
