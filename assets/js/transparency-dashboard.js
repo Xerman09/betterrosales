@@ -208,99 +208,174 @@
 
   function initDpwhMap() {
     const mapEl = document.getElementById('dpwh-project-map');
-    if (!mapEl || typeof L === 'undefined') return;
-
-    mapEl.innerHTML = '';
-
-    const map = L.map(mapEl, {
-      center: [15.8942, 120.6334],
-      zoom: 13,
-      scrollWheelZoom: false
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 18
-    }).addTo(map);
+    const listEl = document.getElementById('dpwh-project-list');
+    if (!mapEl) return;
 
     const projects = [
       {
+        id: 'flood-agno',
         name: 'Agno & Lagasit River Flood Control & Dikes',
         category: 'Flood Control',
         status: 'In Progress',
-        budget: '₱ 48.50M',
+        budget: '₱48.50M',
+        location: 'Agno & Lagasit River Basin',
         coords: [15.8885, 120.6185]
       },
       {
+        id: 'bldg-tumana',
         name: 'Brgy. Tumana West Multi-Purpose Building',
         category: 'Buildings',
         status: 'Completed',
-        budget: '₱ 9.80M',
+        budget: '₱9.80M',
+        location: 'Brgy. Tumana West, Rosales',
         coords: [15.8998, 120.6422]
       },
       {
+        id: 'bldg-poblacion',
         name: 'Poblacion Multi-Purpose Civic Facility',
         category: 'Buildings',
         status: 'In Progress',
-        budget: '₱ 14.20M',
+        budget: '₱14.20M',
+        location: 'Poblacion, Rosales',
         coords: [15.8942, 120.6334]
       },
       {
+        id: 'road-macarthur',
         name: 'MacArthur Highway Widening & FMR Concreting',
         category: 'Roadways',
         status: 'Bidding',
-        budget: '₱ 36.00M',
+        budget: '₱36.00M',
+        location: 'MacArthur Hwy Corridor',
         coords: [15.8825, 120.6065]
       }
     ];
 
-    const statusColors = {
-      Completed: '#16a34a',
-      'In Progress': '#0032a0',
-      Bidding: '#d97706'
+    const statusMeta = {
+      Completed: { color: '#16a34a', cls: 'is-done' },
+      'In Progress': { color: '#0032a0', cls: 'is-active' },
+      Bidding: { color: '#d97706', cls: 'is-bid' }
     };
 
-    const layerGroup = L.layerGroup().addTo(map);
+    let map = null;
+    let layerGroup = null;
+    const markersById = {};
+    let activeProjectId = projects[0].id;
 
-    function renderMarkers(categoryFilter) {
-      layerGroup.clearLayers();
+    if (typeof L !== 'undefined') {
+      mapEl.innerHTML = '';
+      map = L.map(mapEl, {
+        center: [15.892, 120.627],
+        zoom: 13,
+        scrollWheelZoom: false
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      layerGroup = L.layerGroup().addTo(map);
+    }
+
+    function selectProject(projectId, panToMap) {
+      activeProjectId = projectId;
+      if (listEl) {
+        listEl.querySelectorAll('.dpwh-project-card').forEach((card) => {
+          card.classList.toggle('is-selected', card.dataset.projectId === projectId);
+        });
+      }
+      const marker = markersById[projectId];
+      if (panToMap && map && marker) {
+        map.setView(marker.getLatLng(), 14, { animate: true });
+        marker.openPopup();
+      }
+    }
+
+    function renderProjects(categoryFilter) {
       const filtered =
         categoryFilter === 'all'
           ? projects
           : projects.filter((p) => p.category === categoryFilter);
 
-      filtered.forEach((p) => {
-        const color = statusColors[p.status] || '#0032a0';
-        const marker = L.circleMarker(p.coords, {
-          radius: 8,
-          fillColor: color,
-          color: '#ffffff',
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.94
-        }).addTo(layerGroup);
+      if (filtered.length && !filtered.some((p) => p.id === activeProjectId)) {
+        activeProjectId = filtered[0].id;
+      }
 
-        marker.bindPopup(
-          `<div style="min-width:195px;font-family:inherit;">
-            <strong style="display:block;margin-bottom:4px;color:#0f172a;">${p.name}</strong>
-            <div style="font-size:12px;color:#475569;margin-bottom:4px;">Category: ${p.category}</div>
-            <div style="font-size:12px;margin-bottom:2px;">
-              <span style="display:inline-block;padding:2px 8px;border-radius:999px;background:${color};color:#fff;font-weight:600;">${p.status}</span>
-            </div>
-            <div style="font-size:12px;color:#0f172a;font-weight:700;margin-top:4px;">DPWH Allocation: ${p.budget}</div>
-          </div>`
-        );
-      });
+      if (listEl) {
+        listEl.innerHTML = filtered
+          .map((p) => {
+            const meta = statusMeta[p.status] || statusMeta['In Progress'];
+            const selectedCls = p.id === activeProjectId ? ' is-selected' : '';
+            return `
+              <button type="button" class="dpwh-project-card${selectedCls}" data-project-id="${p.id}" role="listitem">
+                <div class="dpwh-proj-top">
+                  <span class="dpwh-proj-cat">${p.category}</span>
+                  <span class="dpwh-proj-budget">${p.budget}</span>
+                </div>
+                <div class="dpwh-proj-name">${p.name}</div>
+                <div class="dpwh-proj-bottom">
+                  <span class="dpwh-proj-loc"><i class="bi bi-geo-alt" aria-hidden="true"></i>${p.location}</span>
+                  <span class="dpwh-status-pill ${meta.cls}"><i class="legend-dot" style="background:${meta.color};"></i>${p.status}</span>
+                </div>
+              </button>
+            `;
+          })
+          .join('');
+
+        listEl.querySelectorAll('.dpwh-project-card').forEach((card) => {
+          card.addEventListener('click', () => {
+            selectProject(card.dataset.projectId, true);
+          });
+        });
+      }
+
+      if (map && layerGroup) {
+        layerGroup.clearLayers();
+        Object.keys(markersById).forEach((k) => delete markersById[k]);
+
+        filtered.forEach((p) => {
+          const meta = statusMeta[p.status] || statusMeta['In Progress'];
+          const marker = L.circleMarker(p.coords, {
+            radius: 8,
+            fillColor: meta.color,
+            color: '#ffffff',
+            weight: 2.5,
+            opacity: 1,
+            fillOpacity: 0.95
+          }).addTo(layerGroup);
+
+          marker.bindPopup(
+            `<div style="min-width:195px;font-family:inherit;">
+              <strong style="display:block;margin-bottom:4px;color:#0f172a;">${p.name}</strong>
+              <div style="font-size:12px;color:#475569;margin-bottom:4px;">${p.category} · ${p.location}</div>
+              <div style="font-size:12px;margin-bottom:2px;">
+                <span style="display:inline-block;padding:2px 8px;border-radius:999px;background:${meta.color};color:#fff;font-weight:600;">${p.status}</span>
+              </div>
+              <div style="font-size:12px;color:#0f172a;font-weight:700;margin-top:4px;">DPWH Allocation: ${p.budget}</div>
+            </div>`
+          );
+
+          marker.on('click', () => selectProject(p.id, false));
+          markersById[p.id] = marker;
+        });
+
+        if (filtered.length > 1) {
+          const bounds = L.latLngBounds(filtered.map((p) => p.coords));
+          map.fitBounds(bounds, { padding: [36, 36], maxZoom: 14 });
+        } else if (filtered.length === 1) {
+          map.setView(filtered[0].coords, 14);
+        }
+      }
     }
 
-    renderMarkers('all');
+    renderProjects('all');
 
     document.querySelectorAll('[data-dpwh-filter]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const cat = btn.dataset.dpwhFilter;
         document.querySelectorAll('[data-dpwh-filter]').forEach((b) => b.classList.remove('is-active'));
         btn.classList.add('is-active');
-        renderMarkers(cat);
+        renderProjects(cat);
       });
     });
   }

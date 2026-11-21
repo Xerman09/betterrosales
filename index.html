@@ -768,67 +768,71 @@
 
           <!-- Row 2: DPWH Infrastructure Map + COA Reports Unified Split Panel -->
           <div class="td-panel td-panel--split-infra">
-            <div class="td-pane td-pane--map">
-              <div class="td-pane-head">
-                <div>
-                  <h3>DPWH • Infrastructure</h3>
-                  <p class="transparency-card-subtitle">
-                    Public Works and Highway Projects in the 6th District
-                  </p>
-                </div>
-                <div class="transparency-legend" aria-label="Project status legend">
-                  <span class="legend-item"
-                    ><i class="legend-dot legend-dot--done"></i>Completed</span
-                  >
-                  <span class="legend-item"
-                    ><i class="legend-dot legend-dot--active"></i>In Progress</span
-                  >
-                  <span class="legend-item"
-                    ><i class="legend-dot legend-dot--bid"></i>Bidding</span
-                  >
-                </div>
-              </div>
+            <div class="td-pane td-pane--dpwh-split">
+              <div class="dpwh-split-layout">
+                <!-- Left: Project Information, Filters & Interactive List -->
+                <div class="dpwh-info-col">
+                  <div class="dpwh-info-head">
+                    <div class="dpwh-eyebrow-row">
+                      <span class="transparency-badge">6th District · DPWH</span>
+                      <span class="dpwh-total-pill">₱108.50M Tracked</span>
+                    </div>
+                    <h3>DPWH • Infrastructure</h3>
+                    <p class="transparency-card-subtitle">
+                      Public Works and Highway Projects across Rosales — click a project or map pin
+                      to inspect status and budget allocation.
+                    </p>
+                  </div>
 
-              <div class="td-filter-row" role="group" aria-label="Filter DPWH projects by category">
-                <button type="button" class="td-pill is-active" data-dpwh-filter="all">
-                  All Projects
-                </button>
-                <button type="button" class="td-pill" data-dpwh-filter="Flood Control">
-                  Flood Control
-                </button>
-                <button type="button" class="td-pill" data-dpwh-filter="Buildings">
-                  Buildings
-                </button>
-                <button type="button" class="td-pill" data-dpwh-filter="Roadways">
-                  Roadways
-                </button>
-              </div>
+                  <div
+                    class="td-filter-row"
+                    role="group"
+                    aria-label="Filter DPWH projects by category"
+                  >
+                    <button type="button" class="td-pill is-active" data-dpwh-filter="all">
+                      All (4)
+                    </button>
+                    <button type="button" class="td-pill" data-dpwh-filter="Flood Control">
+                      Flood Control
+                    </button>
+                    <button type="button" class="td-pill" data-dpwh-filter="Buildings">
+                      Buildings
+                    </button>
+                    <button type="button" class="td-pill" data-dpwh-filter="Roadways">
+                      Roadways
+                    </button>
+                  </div>
 
-              <div id="dpwh-project-map" class="dpwh-map-box dpwh-map-box--tall">
-                <div class="dpwh-map-placeholder">
-                  [ Interactive Project Map Placeholder ] (Enable JavaScript to view the project
-                  map).
-                </div>
-              </div>
+                  <div id="dpwh-project-list" class="dpwh-project-list" role="list">
+                    <!-- Populated dynamically by transparency-dashboard.js -->
+                  </div>
 
-              <div class="dpwh-categories">
-                <div class="dpwh-cat-item">
-                  <span class="dpwh-cat-label">Flood Control</span>
-                  <span class="dpwh-cat-desc"
-                    >Agno River and Lagasit River drainage systems and dikes.</span
-                  >
+                  <div class="dpwh-cat-footnotes">
+                    <span><strong>Flood Control:</strong> Agno &amp; Lagasit River dikes</span>
+                    <span><strong>Buildings:</strong> Brgy. Tumana West &amp; Poblacion</span>
+                    <span><strong>Roadways:</strong> FMR &amp; MacArthur Hwy widening</span>
+                  </div>
                 </div>
-                <div class="dpwh-cat-item">
-                  <span class="dpwh-cat-label">Buildings</span>
-                  <span class="dpwh-cat-desc"
-                    >Brgy. Multi-Purpose Buildings (e.g., Brgy. Tumana West, Poblacion).</span
-                  >
-                </div>
-                <div class="dpwh-cat-item">
-                  <span class="dpwh-cat-label">Roadways</span>
-                  <span class="dpwh-cat-desc"
-                    >Farm-to-Market Road (FMR) concreting and MacArthur Highway widening.</span
-                  >
+
+                <!-- Right: Full-Height Interactive Map -->
+                <div class="dpwh-map-col">
+                  <div class="dpwh-map-legend-overlay" aria-label="Project status legend">
+                    <span class="legend-item"
+                      ><i class="legend-dot legend-dot--done"></i>Completed</span
+                    >
+                    <span class="legend-item"
+                      ><i class="legend-dot legend-dot--active"></i>In Progress</span
+                    >
+                    <span class="legend-item"
+                      ><i class="legend-dot legend-dot--bid"></i>Bidding</span
+                    >
+                  </div>
+                  <div id="dpwh-project-map" class="dpwh-map-box dpwh-map-box--premium">
+                    <div class="dpwh-map-placeholder">
+                      [ Interactive Project Map Placeholder ] (Enable JavaScript to view the
+                      project map).
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

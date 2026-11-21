@@ -21,6 +21,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Redesigned **DPWH • Infrastructure** (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) into a two-pane interactive explorer: project information, category filters, and clickable project cards on the left synced with a full-height Leaflet map and floating status legend on the right.
 - Restored `.td-panel--split-procurement` (`Monthly Cost Trend` + `Top Awardees & Contractors`) to its `1.3fr / 1fr` 2-column split while keeping `.td-panel--split-infra` (`DPWH • Infrastructure` and `COA Reports`) full-width single-column (`1fr`) in `assets/css/ui-enhancements.css`.
 - Updated Section 2 Transparency Dashboard panels (`.td-panel--split-procurement`, `.td-panel--split-infra`) in `assets/css/ui-enhancements.css` to a single-column (`1fr`) full-width layout.
 - Rebuilt Section 2 Transparency Dashboard (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) away from a 2x2 card grid into an interactive asymmetric split workspace: dark-navy KPI summary strip, unified Procurement & Awardees panel with working `Line`/`Bar` toggle and entity filter pills (`All`, `LGU of Rosales`, `CFERMTC`, `NIA-PIMO`), and unified DPWH Infrastructure Map + COA Reports panel with live map category filters (`All`, `Flood Control`, `Buildings`, `Roadways`).
