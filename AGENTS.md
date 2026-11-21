@@ -22,3 +22,4 @@
   ```bash
   node scripts/generate_rosales_logo.js
   ```
+
