@@ -9,6 +9,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
+- Added **Section 7: Emergency Hotlines Directory** (`#emergency-hotlines-directory` — "Who to call") to `index.html` and `assets/css/ui-enhancements.css` with clickable `tel:` links and Bootstrap Icons for MDRRMO (`(075) 582-7022`, `911`), BFP (`(075) 582-7132`, `911`), PNP (`(075) 582-7164`, `911`), Rural Health Unit (`(075) 582-7153`), Rosales Water District (`(075) 582-7234`), and PANELCO III (`0917-852-7353`), and fixed Contact Information phone `(075) 582-4920` and ZIP `2441`.
 - Added **Section 2: Transparency Dashboard** (`#transparency-dashboard`) to `index.html`, `assets/js/transparency-dashboard.js`, and `assets/css/ui-enhancements.css` featuring:
   - **Monthly Cost Trend** (Jan 2018 – Dec 2025 PhilGEPS SVG line/area chart, Q1/Q3 highlights, tracked entities).
   - **Top Awardees & Contractors** (horizontal bar chart & sector breakdown for Infrastructure, Medical/Lab, Fleet Maintenance, and Agricultural Support).
