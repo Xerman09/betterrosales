@@ -2815,18 +2815,31 @@
   margin-bottom: 20px;
 }
 
+.brgy-filter-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brgy-count-label {
+  font-size: 0.78125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #64748b;
+}
+
 .brgy-notice-pill {
-  flex: 1 1 420px;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
+  padding: 11px 16px;
   background: #eff6ff;
   border: 1px solid #dbeafe;
   border-radius: 10px;
   font-size: 0.8125rem;
   color: #1e3a8a;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .brgy-notice-pill i {
@@ -2837,31 +2850,64 @@
 
 .brgy-dir-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 .brgy-dir-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 14px 16px;
+  border-top: 3px solid #334155;
+  border-radius: 14px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.brgy-dir-card--pob {
+  border-top-color: #0032a0;
 }
 
 .brgy-dir-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 50, 160, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 50, 160, 0.07);
   border-color: #cbd5e1;
+}
+
+.brgy-dir-card--pob:hover {
+  border-top-color: #0032a0;
 }
 
 .brgy-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+}
+
+.brgy-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.brgy-icon-badge--pob {
+  background: #eff6ff;
+  color: #0032a0;
+}
+
+.brgy-top-right {
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 
@@ -2880,8 +2926,8 @@
   color: #475569;
   background: #f1f5f9;
   border: 1px solid #e2e8f0;
-  padding: 2px 7px;
-  border-radius: 5px;
+  padding: 2px 8px;
+  border-radius: 6px;
 }
 
 .brgy-tag--pob {
@@ -2890,9 +2936,15 @@
   border-color: #dbeafe;
 }
 
+.brgy-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .brgy-name {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.03125rem;
   font-weight: 700;
   color: #0f172a;
   line-height: 1.3;
@@ -2900,26 +2952,47 @@
 
 .brgy-meta {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.78125rem;
   color: #64748b;
+}
+
+.brgy-card-foot {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.brgy-dilg-tag {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.brgy-map-link {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  color: #0032a0;
+  text-decoration: none;
+}
+
+.brgy-map-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
-  .brgy-dir-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
   .brgy-dir-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .brgy-dir-grid {
     grid-template-columns: 1fr;
   }

@@ -1008,13 +1008,28 @@
             </p>
           </div>
 
+          <div class="brgy-notice-pill" style="margin-bottom: 18px">
+            <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+            <span>
+              <strong>Liga ng mga Barangay President:</strong> Hon. Crisanto S. Coloma Jr. ·
+              Incumbent Punong Barangay roster is verified via the DILG Rosales MLGOO office.
+            </span>
+          </div>
+
           <div class="brgy-controls-bar">
-            <div class="brgy-notice-pill">
-              <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
-              <span>
-                <strong>Liga ng mga Barangay President:</strong> Hon. Crisanto S. Coloma Jr. ·
-                Incumbent Punong Barangay roster is verified via the DILG Rosales MLGOO office.
-              </span>
+            <div class="brgy-filter-left">
+              <div class="td-filter-row" role="group" aria-label="Filter barangays">
+                <button type="button" class="td-pill is-active" data-brgy-filter="all">
+                  All (37)
+                </button>
+                <button type="button" class="td-pill" data-brgy-filter="poblacion">
+                  Poblacion Zones (5)
+                </button>
+                <button type="button" class="td-pill" data-brgy-filter="barangay">
+                  Barangays (32)
+                </button>
+              </div>
+              <span class="brgy-count-label" id="brgy-count-label">Showing 37 of 37</span>
             </div>
             <div class="sb-search-wrap">
               <i class="bi bi-search" aria-hidden="true"></i>
@@ -1030,426 +1045,999 @@
 
           <!-- Barangays Grid -->
           <div class="brgy-dir-grid" id="brgy-dir-grid">
-            <div class="brgy-dir-card" data-brgy-name="acop">
+            <article class="brgy-dir-card" data-brgy-name="acop" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">01</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#01</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Acop</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="bakit-bakit">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Acop</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Acop%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Acop on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="bakit-bakit" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">02</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#02</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Bakit-Bakit</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="balincanaway">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Bakit-Bakit</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Bakit-Bakit%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Bakit-Bakit on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="balincanaway" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">03</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#03</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Balincanaway</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="cabalaoangan norte">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Balincanaway</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Balincanaway%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Balincanaway on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="cabalaoangan norte" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">04</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#04</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Cabalaoangan Norte</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="cabalaoangan sur">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Cabalaoangan Norte</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Cabalaoangan%20Norte%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Cabalaoangan Norte on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="cabalaoangan sur" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">05</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#05</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Cabalaoangan Sur</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="calanutan (don felix coloma)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Cabalaoangan Sur</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Cabalaoangan%20Sur%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Cabalaoangan Sur on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="calanutan (don felix coloma)" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">06</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#06</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Calanutan (Don Felix Coloma)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="camangaan">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Calanutan (Don Felix Coloma)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Calanutan%20(Don%20Felix%20Coloma)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Calanutan (Don Felix Coloma) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="camangaan" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">07</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#07</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Camangaan</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="capitan tomas">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Camangaan</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Camangaan%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Camangaan on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="capitan tomas" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">08</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#08</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Capitan Tomas</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="carmay east">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Capitan Tomas</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Capitan%20Tomas%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Capitan Tomas on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="carmay east" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">09</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#09</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Carmay East</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="carmay west">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Carmay East</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Carmay%20East%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Carmay East on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="carmay west" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">10</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#10</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Carmay West</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="carmen east">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Carmay West</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Carmay%20West%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Carmay West on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="carmen east" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">11</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#11</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Carmen East</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="carmen west">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Carmen East</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Carmen%20East%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Carmen East on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="carmen west" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">12</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#12</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Carmen West</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="casanicolasan">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Carmen West</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Carmen%20West%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Carmen West on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="casanicolasan" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">13</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#13</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Casanicolasan</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="coliling">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Casanicolasan</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Casanicolasan%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Casanicolasan on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="coliling" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">14</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#14</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Coliling</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="don antonio village">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Coliling</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Coliling%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Coliling on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="don antonio village" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">15</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#15</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Don Antonio Village</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="guiling">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Don Antonio Village</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Don%20Antonio%20Village%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Don Antonio Village on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="guiling" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">16</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#16</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Guiling</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="palakipak">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Guiling</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Guiling%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Guiling on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="palakipak" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">17</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#17</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Palakipak</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="pangaoan">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Palakipak</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Palakipak%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Palakipak on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="pangaoan" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">18</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#18</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Pangaoan</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="rabago">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Pangaoan</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Pangaoan%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Pangaoan on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="rabago" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">19</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#19</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Rabago</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="rizal">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Rabago</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Rabago%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Rabago on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="rizal" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">20</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#20</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Rizal</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="salvacion">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Rizal</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Rizal%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Rizal on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="salvacion" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">21</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#21</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Salvacion</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san angel">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Salvacion</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Salvacion%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Salvacion on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san angel" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">22</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#22</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Angel</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san antonio">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Angel</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Angel%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Angel on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san antonio" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">23</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#23</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Antonio</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san bartolome">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Antonio</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Antonio%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Antonio on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san bartolome" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">24</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#24</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Bartolome</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san isidro">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Bartolome</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Bartolome%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Bartolome on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san isidro" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">25</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#25</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Isidro</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san luis">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Isidro</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Isidro%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Isidro on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san luis" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">26</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#26</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Luis</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san pedro east">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Luis</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Luis%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Luis on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san pedro east" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">27</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#27</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Pedro East</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san pedro west">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Pedro East</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Pedro%20East%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Pedro East on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san pedro west" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">28</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#28</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Pedro West</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="san vicente">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Pedro West</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Pedro%20West%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Pedro West on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="san vicente" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">29</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#29</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">San Vicente</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="station district">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">San Vicente</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20San%20Vicente%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay San Vicente on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="station district" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">30</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#30</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Station District</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="tumana east">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Station District</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Station%20District%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Station District on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="tumana east" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">31</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#31</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Tumana East</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="tumana west">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Tumana East</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Tumana%20East%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Tumana East on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card" data-brgy-name="tumana west" data-brgy-group="barangay">
               <div class="brgy-card-top">
-                <span class="brgy-num">32</span>
-                <span class="brgy-tag">Barangay</span>
+                <div class="brgy-icon-badge" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#32</span>
+                  <span class="brgy-tag">Barangay</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Tumana West</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="zone i (poblacion)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Tumana West</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Tumana%20West%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Tumana West on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card brgy-dir-card--pob" data-brgy-name="zone i (poblacion)" data-brgy-group="poblacion">
               <div class="brgy-card-top">
-                <span class="brgy-num">33</span>
-                <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                <div class="brgy-icon-badge brgy-icon-badge--pob" aria-hidden="true">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#33</span>
+                  <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Zone I (Poblacion)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="zone ii (poblacion)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Zone I (Poblacion)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Zone%20I%20(Poblacion)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Zone I (Poblacion) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card brgy-dir-card--pob" data-brgy-name="zone ii (poblacion)" data-brgy-group="poblacion">
               <div class="brgy-card-top">
-                <span class="brgy-num">34</span>
-                <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                <div class="brgy-icon-badge brgy-icon-badge--pob" aria-hidden="true">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#34</span>
+                  <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Zone II (Poblacion)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="zone iii (poblacion)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Zone II (Poblacion)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Zone%20II%20(Poblacion)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Zone II (Poblacion) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card brgy-dir-card--pob" data-brgy-name="zone iii (poblacion)" data-brgy-group="poblacion">
               <div class="brgy-card-top">
-                <span class="brgy-num">35</span>
-                <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                <div class="brgy-icon-badge brgy-icon-badge--pob" aria-hidden="true">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#35</span>
+                  <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Zone III (Poblacion)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="zone iv (poblacion)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Zone III (Poblacion)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Zone%20III%20(Poblacion)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Zone III (Poblacion) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card brgy-dir-card--pob" data-brgy-name="zone iv (poblacion)" data-brgy-group="poblacion">
               <div class="brgy-card-top">
-                <span class="brgy-num">36</span>
-                <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                <div class="brgy-icon-badge brgy-icon-badge--pob" aria-hidden="true">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#36</span>
+                  <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Zone IV (Poblacion)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
-            <div class="brgy-dir-card" data-brgy-name="zone v (poblacion)">
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Zone IV (Poblacion)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Zone%20IV%20(Poblacion)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Zone IV (Poblacion) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
+            <article class="brgy-dir-card brgy-dir-card--pob" data-brgy-name="zone v (poblacion)" data-brgy-group="poblacion">
               <div class="brgy-card-top">
-                <span class="brgy-num">37</span>
-                <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                <div class="brgy-icon-badge brgy-icon-badge--pob" aria-hidden="true">
+                  <i class="bi bi-buildings-fill"></i>
+                </div>
+                <div class="brgy-top-right">
+                  <span class="brgy-num">#37</span>
+                  <span class="brgy-tag brgy-tag--pob">Poblacion Zone</span>
+                </div>
               </div>
-              <h4 class="brgy-name">Zone V (Poblacion)</h4>
-              <p class="brgy-meta">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                Rosales, Pangasinan
-              </p>
-            </div>
+              <div class="brgy-card-body">
+                <h4 class="brgy-name">Zone V (Poblacion)</h4>
+                <p class="brgy-meta">Rosales, Pangasinan 2441</p>
+              </div>
+              <div class="brgy-card-foot">
+                <span class="brgy-dilg-tag">DILG Sub-Unit</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Barangay%20Zone%20V%20(Poblacion)%2C%20Rosales%2C%20Pangasinan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="brgy-map-link"
+                  aria-label="View Barangay Zone V (Poblacion) on Google Maps"
+                  >Map <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </div>
+            </article>
           </div>
           <script>
             (function () {
               const input = document.getElementById('brgy-search-input');
               const grid = document.getElementById('brgy-dir-grid');
-              if (!input || !grid) return;
-              input.addEventListener('input', () => {
-                const q = input.value.trim().toLowerCase();
+              const countEl = document.getElementById('brgy-count-label');
+              const filterBtns = document.querySelectorAll('[data-brgy-filter]');
+              if (!grid) return;
+              let activeGroup = 'all';
+              function applyFilters() {
+                const q = (input ? input.value : '').trim().toLowerCase();
+                let visible = 0;
                 grid.querySelectorAll('.brgy-dir-card').forEach((card) => {
+                  const matchGroup = activeGroup === 'all' || card.dataset.brgyGroup === activeGroup;
                   const name = card.dataset.brgyName || '';
-                  card.style.display = !q || name.includes(q) ? '' : 'none';
+                  const matchSearch = !q || name.includes(q);
+                  const show = matchGroup && matchSearch;
+                  card.style.display = show ? '' : 'none';
+                  if (show) visible++;
+                });
+                if (countEl) countEl.textContent = 'Showing ' + visible + ' of 37';
+              }
+              filterBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                  activeGroup = btn.dataset.brgyFilter;
+                  filterBtns.forEach((b) => b.classList.remove('is-active'));
+                  btn.classList.add('is-active');
+                  applyFilters();
                 });
               });
+              if (input) input.addEventListener('input', applyFilters);
             })();
           </script>
         </div>
