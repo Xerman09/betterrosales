@@ -35,6 +35,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Added A–Z quick-jump bar (`.brgy-alpha-bar`), empty-state reset, and a 2-column dark-navy **Liga ng mga Barangay & DILG Rosales** summary card (`.brgy-summary-card`) to balance the 37-barangay 3-column grid in `government/index.html` and `assets/css/ui-enhancements.css`.
 - Upgraded the 37 Barangays cards in `government/index.html` and `assets/css/ui-enhancements.css` to a 3-column layout with `3px` top accent borders, icon badges, `All (37)` / `Poblacion Zones (5)` / `Barangays (32)` filter pills, live visible counter, and direct Google Maps links (`Map ↗`).
 - Replaced the legacy 22 Solano barangays and captains in `government/index.html` and `assets/css/ui-enhancements.css` with all **37 official barangays of Rosales, Pangasinan**, a live search bar (`#brgy-search-input`), and an official DILG Rosales MLGOO / Liga ng mga Barangay notice (omitting unverified captain names and phone numbers per `AGENTS.md` Rule #4).
 - Redesigned **Executive Department Heads & Key Offices** in `government/index.html` and `assets/css/ui-enhancements.css` with 9 dedicated office emblem SVGs (`assets/images/offices/*.svg`), acronym pills, clean head-of-office strips, and aligned footer metadata/service links (removing the vertical blue `.dept-card-icon` bar).

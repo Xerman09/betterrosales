@@ -2997,3 +2997,149 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* A-Z Quick Jump & Summary Card for 37 Barangays */
+.brgy-alpha-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.brgy-alpha-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.brgy-alpha-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.brgy-alpha-btn:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.brgy-alpha-btn.is-active {
+  background: #0032a0;
+  color: #ffffff;
+}
+
+.brgy-summary-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #0f172a 0%, #00216e 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.brgy-summary-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fef08a;
+  background: rgba(242, 201, 29, 0.16);
+  border: 1px solid rgba(242, 201, 29, 0.35);
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.brgy-summary-card h4 {
+  margin: 0 0 6px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.brgy-summary-card p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.5;
+}
+
+.brgy-summary-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.brgy-summary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f2c91d;
+  padding: 7px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.brgy-summary-btn:hover {
+  background: #fde047;
+}
+
+.brgy-summary-btn--outline {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.brgy-summary-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.brgy-empty-state {
+  text-align: center;
+  padding: 36px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  color: #475569;
+}
+
+.brgy-empty-state i {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  .brgy-summary-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .brgy-summary-card {
+    grid-column: span 1;
+  }
+}
