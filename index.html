@@ -607,6 +607,238 @@
         </div>
       </section>
 
+      <!-- Section 2: Transparency Dashboard -->
+      <section
+        id="transparency-dashboard"
+        class="section transparency-dashboard-section"
+        aria-label="Transparency: Budget, Contracts & Audit"
+      >
+        <div class="container">
+          <div class="home-section-header transparency-header">
+            <div>
+              <span class="about-rosales-eyebrow">
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
+                Open Government Data
+              </span>
+              <h2>Transparency: Budget, Contracts &amp; Audit</h2>
+              <p>
+                Financial accountability data for Rosales — budgets, procurement, infrastructure,
+                and COA audit reports — all in one place.
+              </p>
+            </div>
+            <a href="budget/" class="home-section-link"
+              ><i class="bi bi-arrow-right" aria-hidden="true"></i>
+              <span>View full transparency dashboard</span></a
+            >
+          </div>
+
+          <div class="transparency-grid">
+            <!-- Card 1: Monthly Cost Trend -->
+            <article class="transparency-card">
+              <div class="transparency-card-header">
+                <div class="transparency-card-icon"><i class="bi bi-graph-up"></i></div>
+                <div>
+                  <h3>📊 Monthly Cost Trend</h3>
+                  <p class="transparency-card-subtitle">
+                    Contract amounts over time • Jan 2018 – Dec 2025
+                  </p>
+                </div>
+              </div>
+              <div id="philgeps-trend-chart" class="transparency-chart-box"></div>
+              <ul class="transparency-meta-list">
+                <li>
+                  <strong>Data Source:</strong> PhilGEPS Award Notices for the Municipality of
+                  Rosales.
+                </li>
+                <li>
+                  <strong>Trend Highlights:</strong> Track municipal spending spikes, typically
+                  peaking in Q1 for DPWH infrastructure allocations and Q3 for disaster-relief and
+                  medical procurements.
+                </li>
+                <li>
+                  <strong>Tracked Entities:</strong> Includes the LGU of Rosales, the Conrado F.
+                  Estrella Regional Medical and Trauma Center (CFERMTC), and the National Irrigation
+                  Administration (NIA-PIMO) Rosales office.
+                </li>
+              </ul>
+            </article>
+
+            <!-- Card 2: Top Awardees & Contractors -->
+            <article class="transparency-card">
+              <div class="transparency-card-header">
+                <div class="transparency-card-icon"><i class="bi bi-trophy-fill"></i></div>
+                <div>
+                  <h3>🏆 Top Awardees &amp; Contractors</h3>
+                  <p class="transparency-card-subtitle">
+                    By total contract value • Publicly disclosed via PhilGEPS
+                  </p>
+                </div>
+              </div>
+              <div class="awardee-bars">
+                <div class="awardee-bar-item">
+                  <div class="awardee-bar-label">
+                    <span>Infrastructure &amp; Construction</span>
+                    <span class="awardee-bar-tag">Top Sector</span>
+                  </div>
+                  <div class="awardee-bar-track">
+                    <div class="awardee-bar-fill" style="width: 92%"></div>
+                  </div>
+                  <p>
+                    e.g., W.J.P. Construction and Supply — handling multi-purpose buildings and road
+                    works.
+                  </p>
+                </div>
+                <div class="awardee-bar-item">
+                  <div class="awardee-bar-label">
+                    <span>Medical &amp; Laboratory Suppliers</span>
+                  </div>
+                  <div class="awardee-bar-track">
+                    <div class="awardee-bar-fill" style="width: 78%"></div>
+                  </div>
+                  <p>
+                    Supplying essential hospital equipment and lab supplies to the Conrado F.
+                    Estrella Regional Medical and Trauma Center.
+                  </p>
+                </div>
+                <div class="awardee-bar-item">
+                  <div class="awardee-bar-label">
+                    <span>Heavy Equipment &amp; Fleet Maintenance</span>
+                  </div>
+                  <div class="awardee-bar-track">
+                    <div class="awardee-bar-fill" style="width: 62%"></div>
+                  </div>
+                  <p>
+                    e.g., FAB 8 Enterprises — handling vehicle repairs and parts for the Rosales LGU
+                    and local irrigation administration.
+                  </p>
+                </div>
+                <div class="awardee-bar-item">
+                  <div class="awardee-bar-label">
+                    <span>Agricultural Support</span>
+                  </div>
+                  <div class="awardee-bar-track">
+                    <div class="awardee-bar-fill" style="width: 54%"></div>
+                  </div>
+                  <p>
+                    Contractors providing seeds, fertilizers, and equipment for the Rosales
+                    agricultural sector.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: DPWH Infrastructure -->
+            <article class="transparency-card">
+              <div class="transparency-card-header">
+                <div class="transparency-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <h3>🏗️ DPWH • Infrastructure</h3>
+                  <p class="transparency-card-subtitle">
+                    Public Works and Highway Projects in the 6th District
+                  </p>
+                </div>
+              </div>
+              <div id="dpwh-project-map" class="dpwh-map-box">
+                <div class="dpwh-map-placeholder">
+                  [ Interactive Project Map Placeholder ] (Enable JavaScript to view the project
+                  map).
+                </div>
+              </div>
+              <ul class="transparency-meta-list">
+                <li>
+                  <strong>Flood Control:</strong> Agno River and Lagasit River drainage systems and
+                  dikes.
+                </li>
+                <li>
+                  <strong>Buildings:</strong> Construction of Brgy. Multi-Purpose Buildings (e.g.,
+                  Brgy. Tumana West, Poblacion).
+                </li>
+                <li>
+                  <strong>Roadways:</strong> Farm-to-Market Road (FMR) concreting and MacArthur
+                  Highway widening projects.
+                </li>
+                <li>
+                  <strong>Status Indicators:</strong> Click on any map pin to see if a project is
+                  <em>Bidding</em>, <em>In Progress</em>, or <em>Completed</em>, alongside its exact
+                  DPWH budget allocation.
+                </li>
+              </ul>
+            </article>
+
+            <!-- Card 4: Commission on Audit (COA) Reports -->
+            <article class="transparency-card">
+              <div class="transparency-card-header">
+                <div class="transparency-card-icon"><i class="bi bi-file-earmark-check"></i></div>
+                <div>
+                  <h3>📑 Commission on Audit (COA) Reports</h3>
+                  <p class="transparency-card-subtitle">Annual Financial Audit Summaries</p>
+                </div>
+              </div>
+              <div class="coa-accordion">
+                <details open>
+                  <summary>
+                    <span>Municipality of Rosales</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                  </summary>
+                  <div class="coa-accordion-body">
+                    <p>
+                      Executive Summaries and Financial Statements covering LGU revenue, Internal
+                      Revenue Allotment (IRA) utilization, and asset management.
+                    </p>
+                    <a href="budget/" class="coa-link"
+                      ><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> View LGU Financial
+                      Summaries</a
+                    >
+                  </div>
+                </details>
+                <details>
+                  <summary>
+                    <span>Rosales Water District</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                  </summary>
+                  <div class="coa-accordion-body">
+                    <p>
+                      Annual Audit Reports verifying water sanitation budgets and operational
+                      expenses.
+                    </p>
+                    <a href="budget/" class="coa-link"
+                      ><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> View Water District
+                      Audit Reports</a
+                    >
+                  </div>
+                </details>
+                <details>
+                  <summary>
+                    <span>Barangay Audits</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                  </summary>
+                  <div class="coa-accordion-body">
+                    <p>
+                      Accountability trackers for the SK (Sangguniang Kabataan) and Barangay-level
+                      development funds across the 37 barangays.
+                    </p>
+                    <a href="budget/" class="coa-link"
+                      ><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> View 37 Barangay
+                      Trackers</a
+                    >
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+
+          <div class="transparency-footer-note">
+            <a href="budget/" class="btn btn-primary">
+              <span>View full transparency dashboard &rarr;</span>
+            </a>
+            <p class="transparency-disclaimer">
+              Note: Better Rosales is an independent digital information tool relying on open
+              government data, not a municipal booking platform.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Weather & Location Section -->
       <section class="section weather-map-section">
         <div class="container">
@@ -1431,6 +1663,7 @@
     <script defer src="assets/js/fb-feed.js?v=1.2.0"></script>
     <script defer src="assets/js/volunteer-popup.js?v=1.2.2"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="assets/js/transparency-dashboard.js"></script>
     <script defer src="assets/js/weather-map.js?v=1.6.4"></script>
 
     <!-- Failsafe: Ensure weather section renders even if scripts hang -->

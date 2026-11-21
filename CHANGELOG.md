@@ -8,6 +8,11 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
+- Added **Section 2: Transparency Dashboard** (`#transparency-dashboard`) to `index.html`, `assets/js/transparency-dashboard.js`, and `assets/css/ui-enhancements.css` featuring:
+  - **Monthly Cost Trend** (Jan 2018 – Dec 2025 PhilGEPS SVG line/area chart, Q1/Q3 highlights, tracked entities).
+  - **Top Awardees & Contractors** (horizontal bar chart & sector breakdown for Infrastructure, Medical/Lab, Fleet Maintenance, and Agricultural Support).
+  - **DPWH • Infrastructure** (interactive Leaflet project map for 6th District Rosales projects with Bidding/In Progress/Completed status pins and budget allocations).
+  - **Commission on Audit (COA) Reports** (accessible accordion summaries for Municipality of Rosales, Rosales Water District, and 37 Barangay Audits).
 - Added **BetterGov Mission & Guiding Principles** section to `AGENTS.md` (citizen-first service access, accessibility/responsiveness, and multilingual/real-time civic utility per `docs.bettergov.ph/docs/about`).
 - Added rule #3 (**Answer Concisely**) to `AGENTS.md` requiring brief, direct responses focused on outcomes, changed files, and verification.
 - Added `AGENTS.md` with mandatory agent workflow rules: document all changes in `CHANGELOG.md`, keep technical docs/comments updated, always commit completed work using Conventional Commits, and preserve original non-LGU civic branding for BetterRosales.org.
