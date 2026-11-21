@@ -2113,6 +2113,13 @@
   transition: transform 0.35s ease;
 }
 
+.leader-bg-img--portrait-right {
+  width: 58%;
+  left: auto;
+  right: 0;
+  object-position: center 12%;
+}
+
 .home-leader-card--bg:hover .leader-bg-img {
   transform: scale(1.04);
 }
@@ -2122,10 +2129,11 @@
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    95deg,
-    rgba(15, 23, 42, 0.92) 0%,
-    rgba(15, 23, 42, 0.72) 56%,
-    rgba(0, 50, 160, 0.32) 100%
+    90deg,
+    rgba(15, 23, 42, 0.98) 0%,
+    rgba(15, 23, 42, 0.94) 44%,
+    rgba(15, 23, 42, 0.45) 72%,
+    rgba(15, 23, 42, 0.15) 100%
   );
 }
 

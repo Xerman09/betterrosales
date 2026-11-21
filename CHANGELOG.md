@@ -22,6 +22,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Added `AGENTS.md` with mandatory agent workflow rules: document all changes in `CHANGELOG.md`, keep technical docs/comments updated, always commit completed work using Conventional Commits, and preserve original non-LGU civic branding for BetterRosales.org.
 
 ### Added
+- Added cropped official portrait `assets/images/officials/mayor-william-cezar.jpg` for Mayor **Hon. William Cezar** and wired it into the Leadership background card in `index.html` and `assets/css/ui-enhancements.css`.
 - Added rule #4 (**Only Use Real, Verified Data**) to `AGENTS.md` prohibiting synthetic numbers, fake charts, unverified contacts, or placeholder portraits.
 
 ### Removed
