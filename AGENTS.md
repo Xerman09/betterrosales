@@ -26,6 +26,11 @@ BetterRosales.org is part of the **BetterGov.ph** civic initiative (`https://doc
 3. **Answer Concisely**
    - Keep responses brief, direct, and focused on key outcomes, changed files, and verification results without unnecessary filler.
 
+4. **Only Use Real, Verified Data (No Fabricated Placeholders)**
+   - Never invent or fabricate statistics, contract amounts, budget allocations, chart data points, project statuses, phone numbers, email addresses, or placeholder portraits.
+   - Only display figures, entities, and contacts backed by verified public sources (e.g., PSA Census 2020, DILG/COMELEC, DOF, MPDC, Rosales.gov.ph, live Open-Meteo/FX APIs).
+   - When granular or live data (e.g., PhilGEPS contract totals, DPWH project allocations) is not connected to a verified dataset or API, present qualitative summaries and direct links to the official source portals instead of synthetic numbers or dummy charts.
+
 ## UI/UX Craft & Design Standards
 
 Follow the workspace skill `.agents/skills/civic-ui-ux/SKILL.md` on all UI/UX work:

@@ -21,7 +21,12 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Added rule #3 (**Answer Concisely**) to `AGENTS.md` requiring brief, direct responses focused on outcomes, changed files, and verification.
 - Added `AGENTS.md` with mandatory agent workflow rules: document all changes in `CHANGELOG.md`, keep technical docs/comments updated, always commit completed work using Conventional Commits, and preserve original non-LGU civic branding for BetterRosales.org.
 
+### Added
+- Added rule #4 (**Only Use Real, Verified Data**) to `AGENTS.md` prohibiting synthetic numbers, fake charts, unverified contacts, or placeholder portraits.
+
 ### Removed
+- Removed all synthetic/unverified data across `index.html`, `assets/js/transparency-dashboard.js`, and `assets/js/weather-map.js`:
+  - Removed synthetic PhilGEPS `₱25M–₱100M` trend chart points, unverified awardee percentage bars/ranks (`92%`–`54%`), unverified DPWH `₱` allocations/statuses (`₱108.50M`, etc.), unverified `mayor@rosales.gov.ph` / `vicemayor@rosales.gov.ph` emails, placeholder official portrait SVGs, and random mock weather fallback values.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed

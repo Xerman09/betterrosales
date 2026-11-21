@@ -24,3 +24,4 @@ Follow these principles on every UI and UX task to deliver clear, trustworthy, a
 
 4. **Accessibility & Mobile Responsiveness**
    - Use semantic landmarks (`<article>`, `<section>`, `aria-label`, `role="list"`), sufficient color contrast (`>= 4.5:1`), and clean responsive stacking at `<= 960px` and `<= 600px`.
+

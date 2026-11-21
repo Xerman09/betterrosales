@@ -662,40 +662,38 @@
                     Contract amounts over time • Jan 2018 – Dec 2025
                   </p>
                 </div>
-                <div class="td-controls">
-                  <div class="td-segmented" role="group" aria-label="Chart display mode">
-                    <button type="button" class="td-seg-btn is-active" data-chart-mode="line">
-                      Line
-                    </button>
-                    <button type="button" class="td-seg-btn" data-chart-mode="bar">Bar</button>
-                  </div>
-                </div>
+                <span class="transparency-badge">PhilGEPS</span>
               </div>
 
-              <div class="td-filter-row" role="group" aria-label="Filter by tracked entity">
-                <button type="button" class="td-pill is-active" data-entity-filter="all">
-                  All Entities
-                </button>
-                <button type="button" class="td-pill" data-entity-filter="lgu">
-                  LGU of Rosales
-                </button>
-                <button type="button" class="td-pill" data-entity-filter="cfermtc">
-                  CFERMTC
-                </button>
-                <button type="button" class="td-pill" data-entity-filter="nia">NIA-PIMO</button>
+              <div class="transparency-callout">
+                <strong>Trend Highlights:</strong> Track municipal spending spikes, typically
+                peaking in <strong>Q1</strong> for DPWH infrastructure allocations and
+                <strong>Q3</strong> for disaster-relief and medical procurements.
               </div>
 
-              <div id="philgeps-trend-chart" class="transparency-chart-box"></div>
+              <div class="entity-chips">
+                <span class="entity-chips-label">Tracked Entities:</span>
+                <span class="entity-chip">LGU of Rosales</span>
+                <span class="entity-chip"
+                  >Conrado F. Estrella Regional Medical and Trauma Center (CFERMTC)</span
+                >
+                <span class="entity-chip"
+                  >National Irrigation Administration (NIA-PIMO) Rosales</span
+                >
+              </div>
 
               <div class="td-trend-footer">
-                <div class="transparency-legend" aria-label="Chart peak indicators">
-                  <span class="legend-item"><i class="legend-dot legend-dot--q1"></i>Q1 DPWH Infra Peak</span>
-                  <span class="legend-item"><i class="legend-dot legend-dot--q3"></i>Q3 Medical &amp; DRRM Peak</span>
-                </div>
                 <div class="source-caption">
                   <i class="bi bi-database-check" aria-hidden="true"></i>
-                  Source: PhilGEPS Award Notices for the Municipality of Rosales
+                  Data Source: PhilGEPS Award Notices for the Municipality of Rosales
                 </div>
+                <a
+                  href="https://notices.philgeps.gov.ph/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="coa-link"
+                  >Search PhilGEPS Notices <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i
+                ></a>
               </div>
             </div>
 
@@ -704,69 +702,53 @@
                 <div>
                   <h3>Top Awardees &amp; Contractors</h3>
                   <p class="transparency-card-subtitle">
-                    By total contract value • Disclosed via PhilGEPS
+                    Disclosed procurement sectors via PhilGEPS
                   </p>
                 </div>
-                <span class="transparency-badge">Top 4 Sectors</span>
+                <span class="transparency-badge">4 Sectors</span>
               </div>
 
               <div class="awardee-ledger">
                 <div class="awardee-row">
                   <div class="awardee-row-head">
-                    <span class="awardee-rank">01</span>
                     <span class="awardee-sector">Infrastructure &amp; Construction</span>
-                    <span class="awardee-vendor">W.J.P. Construction &amp; Supply</span>
+                    <span class="awardee-vendor">W.J.P. Construction and Supply</span>
                   </div>
-                  <div class="awardee-bar-track">
-                    <div class="awardee-bar-fill" style="width: 92%"></div>
-                  </div>
-                  <p class="awardee-desc">Multi-purpose buildings and municipal road works.</p>
+                  <p class="awardee-desc">Handling multi-purpose buildings and road works.</p>
                 </div>
                 <div class="awardee-row">
                   <div class="awardee-row-head">
-                    <span class="awardee-rank">02</span>
                     <span class="awardee-sector">Medical &amp; Laboratory Suppliers</span>
-                    <span class="awardee-vendor">CFERMTC Supply</span>
-                  </div>
-                  <div class="awardee-bar-track">
-                    <div class="awardee-bar-fill" style="width: 78%"></div>
                   </div>
                   <p class="awardee-desc">
-                    Essential hospital equipment and lab supplies for Conrado F. Estrella Regional
-                    Medical and Trauma Center.
+                    Supplying essential hospital equipment and lab supplies to the Conrado F.
+                    Estrella Regional Medical and Trauma Center.
                   </p>
                 </div>
                 <div class="awardee-row">
                   <div class="awardee-row-head">
-                    <span class="awardee-rank">03</span>
-                    <span class="awardee-sector">Heavy Equipment &amp; Fleet</span>
+                    <span class="awardee-sector">Heavy Equipment &amp; Fleet Maintenance</span>
                     <span class="awardee-vendor">FAB 8 Enterprises</span>
                   </div>
-                  <div class="awardee-bar-track">
-                    <div class="awardee-bar-fill" style="width: 62%"></div>
-                  </div>
                   <p class="awardee-desc">
-                    Vehicle repairs and parts for Rosales LGU and local irrigation administration.
+                    Handling vehicle repairs and parts for the Rosales LGU and local irrigation
+                    administration.
                   </p>
                 </div>
                 <div class="awardee-row">
                   <div class="awardee-row-head">
-                    <span class="awardee-rank">04</span>
                     <span class="awardee-sector">Agricultural Support</span>
-                    <span class="awardee-vendor">Agri-Inputs</span>
-                  </div>
-                  <div class="awardee-bar-track">
-                    <div class="awardee-bar-fill" style="width: 54%"></div>
                   </div>
                   <p class="awardee-desc">
-                    Seeds, fertilizers, and farm equipment for the Rosales agricultural sector.
+                    Contractors providing seeds, fertilizers, and equipment for the Rosales
+                    agricultural sector.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Row 2: DPWH Infrastructure Map + COA Reports Unified Split Panel -->
+          <!-- Row 2: DPWH Infrastructure Interactive Split Explorer -->
           <div class="td-panel td-panel--split-infra">
             <div class="td-pane td-pane--dpwh-split">
               <div class="dpwh-split-layout">
@@ -775,12 +757,11 @@
                   <div class="dpwh-info-head">
                     <div class="dpwh-eyebrow-row">
                       <span class="transparency-badge">6th District · DPWH</span>
-                      <span class="dpwh-total-pill">₱108.50M Tracked</span>
                     </div>
                     <h3>DPWH • Infrastructure</h3>
                     <p class="transparency-card-subtitle">
-                      Public Works and Highway Projects across Rosales — click a project or map pin
-                      to inspect status and budget allocation.
+                      Public Works and Highway Projects in the 6th District — select a project area
+                      to locate it on the map.
                     </p>
                   </div>
 
@@ -790,7 +771,7 @@
                     aria-label="Filter DPWH projects by category"
                   >
                     <button type="button" class="td-pill is-active" data-dpwh-filter="all">
-                      All (4)
+                      All Categories
                     </button>
                     <button type="button" class="td-pill" data-dpwh-filter="Flood Control">
                       Flood Control
@@ -816,17 +797,6 @@
 
                 <!-- Right: Full-Height Interactive Map -->
                 <div class="dpwh-map-col">
-                  <div class="dpwh-map-legend-overlay" aria-label="Project status legend">
-                    <span class="legend-item"
-                      ><i class="legend-dot legend-dot--done"></i>Completed</span
-                    >
-                    <span class="legend-item"
-                      ><i class="legend-dot legend-dot--active"></i>In Progress</span
-                    >
-                    <span class="legend-item"
-                      ><i class="legend-dot legend-dot--bid"></i>Bidding</span
-                    >
-                  </div>
                   <div id="dpwh-project-map" class="dpwh-map-box dpwh-map-box--premium">
                     <div class="dpwh-map-placeholder">
                       [ Interactive Project Map Placeholder ] (Enable JavaScript to view the
@@ -1363,12 +1333,6 @@
           </div>
           <div class="home-leadership-grid">
             <article class="home-leader-card home-leader-card--bg">
-              <img
-                src="assets/images/officials/mayor-cezar.svg"
-                alt="Hon. William Cezar, Municipal Mayor of Rosales"
-                class="leader-bg-img"
-                loading="lazy"
-              />
               <div class="leader-bg-scrim" aria-hidden="true"></div>
               <div class="leader-bg-content">
                 <div class="leader-meta">
@@ -1382,24 +1346,14 @@
                     Source: Rosales.gov.ph
                   </span>
                   <div class="leader-actions">
-                    <a href="mailto:mayor@rosales.gov.ph" class="leader-bg-btn">
-                      <i class="bi bi-envelope" aria-hidden="true"></i>
-                      Email
-                    </a>
                     <a href="government/" class="leader-bg-btn leader-bg-btn--primary">
-                      Profile <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                      Directory <i class="bi bi-arrow-right" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </article>
             <article class="home-leader-card home-leader-card--bg">
-              <img
-                src="assets/images/officials/vice-mayor-kho.svg"
-                alt="Hon. John Isaac Kho, Vice Mayor of Rosales"
-                class="leader-bg-img"
-                loading="lazy"
-              />
               <div class="leader-bg-scrim" aria-hidden="true"></div>
               <div class="leader-bg-content">
                 <div class="leader-meta">
@@ -1413,12 +1367,8 @@
                     Source: Rosales.gov.ph
                   </span>
                   <div class="leader-actions">
-                    <a href="mailto:vicemayor@rosales.gov.ph" class="leader-bg-btn">
-                      <i class="bi bi-envelope" aria-hidden="true"></i>
-                      Email
-                    </a>
                     <a href="government/" class="leader-bg-btn leader-bg-btn--primary">
-                      Profile <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                      Directory <i class="bi bi-arrow-right" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>

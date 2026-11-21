@@ -126,10 +126,10 @@
     },
 
     async fetchWeather() {
-      // If running via file: protocol (no CORS), use mock data immediately
+      // If running via file: protocol (no CORS), report unavailable instead of fake numbers
       if (isFileProtocol()) {
-        console.log('Weather: File protocol detected, using mock data');
-        return getMockWeather();
+        console.log('Weather: File protocol detected, live API requires HTTP/HTTPS');
+        return null;
       }
 
       // Try cache first
@@ -185,8 +185,8 @@
         );
         return weatherData;
       } catch (error) {
-        console.warn('Weather: ✗ API fetch failed, using mock data -', error.message);
-        return getMockWeather();
+        console.warn('Weather: ✗ API fetch failed -', error.message);
+        return null;
       }
     },
 
@@ -220,8 +220,8 @@
           timestamp: Date.now(),
         };
       } catch (e) {
-        console.warn('Weather: Transform failed, using mock', e);
-        return getMockWeather();
+        console.warn('Weather: Transform failed', e);
+        return null;
       }
     },
   };
