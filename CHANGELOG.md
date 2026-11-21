@@ -25,6 +25,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Upgraded **Section 5: Government Leadership** (`index.html`, `assets/css/ui-enhancements.css`, `assets/images/officials/*.svg`) to full-bleed background portrait cards with a dark contrast scrim, gold role badges, hover zoom, and glassmorphic `Email` / `Profile` actions.
 - Updated **Section 5: Government Leadership** in `index.html` and `assets/css/ui-enhancements.css` to display Rosales's current officials (**Hon. William Cezar**, Municipal Mayor; **Hon. John Isaac Kho**, Vice Mayor · Presiding Officer; Source: `Rosales.gov.ph`) with Bootstrap Icons, removing leftover Solano officials and `(078)` phone numbers, and linking to the full Government Directory (`government/`).
 - Redesigned **Weather and Map of Rosales** (`index.html`, `assets/js/weather-map.js`, `assets/css/ui-enhancements.css`) as a unified two-pane card: dark-navy live weather panel on the left (with `Live`/`Demo` badge, Humidity/Wind tiles, and 4-column upcoming hours via `forecast_days: 2`) paired with a full-height Leaflet map and Google Maps quick link on the right.
 - Redesigned **DPWH • Infrastructure** (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) into a two-pane interactive explorer: project information, category filters, and clickable project cards on the left synced with a full-height Leaflet map and floating status legend on the right.

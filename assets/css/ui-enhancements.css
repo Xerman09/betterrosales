@@ -2089,40 +2089,54 @@
   flex-wrap: wrap;
 }
 
-.home-leader-card--elevated {
+.home-leader-card--bg {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 225px !important;
+  padding: 26px !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  background: #0f172a !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
   display: flex !important;
-  flex-direction: column !important;
-  gap: 18px !important;
-  padding: 24px !important;
-  border-radius: 14px !important;
-  border: 1px solid #e2e8f0 !important;
-  background: #ffffff !important;
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
   text-align: left !important;
 }
 
-.leader-card-top {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.leader-portrait {
-  width: 76px;
-  height: 76px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 2px solid #e2e8f0;
-  flex-shrink: 0;
-  background: #0f172a;
-}
-
-.leader-portrait-img {
+.leader-bg-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  display: block;
+  object-position: center top;
+  z-index: 0;
+  transition: transform 0.35s ease;
+}
+
+.home-leader-card--bg:hover .leader-bg-img {
+  transform: scale(1.04);
+}
+
+.leader-bg-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    95deg,
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(15, 23, 42, 0.72) 56%,
+    rgba(0, 50, 160, 0.32) 100%
+  );
+}
+
+.leader-bg-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .leader-meta {
@@ -2132,48 +2146,51 @@
   min-width: 0;
 }
 
-.home-leader-card--elevated .home-leader-badge {
-  margin: 0 0 6px !important;
-  display: inline-flex !important;
-  font-size: 0.725rem !important;
-  font-weight: 700 !important;
-  padding: 3px 10px !important;
-  border-radius: 6px !important;
-  background: #eff6ff !important;
-  color: #0032a0 !important;
-  border: 1px solid #dbeafe !important;
+.leader-bg-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(242, 201, 29, 0.18);
+  color: #fef08a;
+  border: 1px solid rgba(242, 201, 29, 0.38);
+  margin-bottom: 10px;
 }
 
 .leader-meta h3 {
   margin: 0 !important;
-  font-size: 1.25rem !important;
+  font-size: 1.5rem !important;
   font-weight: 800 !important;
-  color: #0f172a !important;
-  letter-spacing: -0.015em;
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-.leader-office {
-  margin: 3px 0 0;
-  font-size: 0.8125rem;
-  color: #64748b;
+.leader-bg-office {
+  margin: 5px 0 0;
+  font-size: 0.84375rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.leader-card-footer {
+.leader-bg-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
   padding-top: 14px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 0.8125rem;
 }
 
-.leader-source {
+.leader-bg-source {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.72);
   font-weight: 500;
 }
 
@@ -2183,36 +2200,38 @@
   gap: 8px;
 }
 
-.leader-action-btn {
+.leader-bg-btn {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   font-size: 0.78125rem;
   font-weight: 600;
-  color: #334155;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 5px 11px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 6px 12px;
   border-radius: 8px;
   text-decoration: none;
+  backdrop-filter: blur(6px);
   transition: all 0.15s ease;
 }
 
-.leader-action-btn:hover {
-  background: #f1f5f9;
+.leader-bg-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.leader-bg-btn--primary {
+  background: #f2c91d;
+  border-color: #f2c91d;
   color: #0f172a;
+  font-weight: 700;
 }
 
-.leader-action-btn--primary {
-  background: #0032a0;
-  border-color: #0032a0;
-  color: #ffffff;
-}
-
-.leader-action-btn--primary:hover {
-  background: #00216e;
-  border-color: #00216e;
-  color: #ffffff;
+.leader-bg-btn--primary:hover {
+  background: #fde047;
+  border-color: #fde047;
+  color: #0f172a;
 }
 
 .leadership-directory-bar {
