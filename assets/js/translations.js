@@ -6505,9 +6505,11 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ng Site',
     'breadcrumb-privacy': 'Patakaran sa Pagkapribado',
     'breadcrumb-terms': 'Mga Tuntunin ng Paggamit',
-    'hero-welcome': 'Maligayang Pagdating sa BetterRosales.org',
+    'hero-welcome': 'Maligayang Pagdating sa Rosales. Ang Puso at Pintuan ng Pangasinan.',
     'hero-subtitle':
-      'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Rosales, Pangasinan.',
+      'Kung saan nagtatagpo ang mayamang pamana, ipinagmamalaking lutuin, at makabagong pag-unlad sa sangandaan ng Hilaga.',
+    'hero-explore-town': 'Tuklasin ang Aming Bayan',
+    'hero-business-tourism': 'Negosyo at Turismo',
     'hero-browse': 'Tingnan ang mga Serbisyo',
     'hero-contact': 'Makipag-ugnayan sa Amin',
     'hero-search-placeholder': 'Maghanap ng serbisyo...',
@@ -12978,9 +12980,11 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ti Site',
     'breadcrumb-privacy': 'Pagannurotan ti Pagkapribado',
     'breadcrumb-terms': 'Dagiti Kondision ti Panagusar',
-    'hero-welcome': 'Naragsak a Panangyawat iti BetterRosales.org',
+    'hero-welcome': 'Naragsak a Panagsangbay iti Rosales. Ti Puso ken Ruangan ti Pangasinan.',
     'hero-subtitle':
-      'Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Rosales, Pangasinan.',
+      'Ayan ti panagsabat ti nabaknang a tawid, ipagpannakkel a taraon, ken moderno a panagrang-ay iti nagsasabtan ti Amianan.',
+    'hero-explore-town': 'Sukisoken ti Ilitayo',
+    'hero-business-tourism': 'Negosio ken Turismo',
     'hero-browse': 'Kitaen dagiti Serbisio',
     'hero-contact': 'Kontaken Dakami',
     'hero-search-placeholder': 'Agsapul ti serbisio...',
@@ -19450,6 +19454,377 @@ const TranslationEngine = {
   },
   initialized: false,
   observers: [],
+  originalTextMap: typeof WeakMap !== 'undefined' ? new WeakMap() : null,
+  originalPlaceholderMap: typeof WeakMap !== 'undefined' ? new WeakMap() : null,
+
+  phraseTranslations: {
+    fil: {
+      'Emergency Hotlines': 'Mga Pang-emergency na Hotline',
+      'Police:': 'Pulisya:',
+      'BFP Fire:': 'BFP Bumbero:',
+      'Hall:': 'Munisipyo:',
+      'Hospital:': 'Ospital:',
+      'Emergency:': 'Emerhensya:',
+      'Gateway of the Ilocos Region': 'Pintuan ng Rehiyon ng Ilocos',
+      'The Crossroads of Heritage and Progress': 'Ang Sangandaan ng Pamana at Pag-unlad',
+      'Strategically positioned at the end of TPLEX Phase 1 and the MacArthur Highway, Rosales is a 1st-class municipality spanning 37 barangays. Home to nearly 67,000 residents, it serves as the vibrant eastern gateway to the Ilocos Region. Whether you are craving the legendary tupig of Carmen, exploring centuries-old architecture, or investing in our rapidly growing commercial hubs, Rosales offers a perfect balance of rural charm and urban convenience.':
+        'Matatagpuan sa dulo ng TPLEX Phase 1 at MacArthur Highway, ang Rosales ay isang 1st-class na munisipalidad na binubuo ng 37 barangay. Tahanan ng halos 67,000 residente, ito ang masiglang silangang pintuan patungong Rehiyon ng Ilocos. Mula sa tanyag na tupig ng Carmen at makasaysayang arkitektura hanggang sa lumalagong sentro ng komersyo, pinagsasama ng Rosales ang ganda ng kanayunan at makabagong kaginhawahan.',
+      'Residents': 'Mga Residente',
+      'Barangays': 'Mga Barangay',
+      'Income Class': 'Klase ng Kita',
+      'Land area': 'Lawak ng Lupa',
+      'Pop. density': 'Densidad ng Pop.',
+      '1st Class': 'Unang Klase (1st Class)',
+      'Official Source: PSA Census 2020': 'Opisyal na Sanggunian: PSA Census 2020',
+      'Official Source: DILG / Comelec': 'Opisyal na Sanggunian: DILG / Comelec',
+      'Official Source: Department of Finance': 'Opisyal na Sanggunian: Kagawaran ng Pananalapi (DOF)',
+      'Official Source: MPDC Land Use Plan': 'Opisyal na Sanggunian: Plano sa Paggamit ng Lupa ng MPDC',
+      'Official Computed: 66,711 ÷ 66.39 km²': 'Opisyal na Kuwenta: 66,711 ÷ 66.39 km²',
+      'Open Government Data': 'Bukas na Datos ng Pamahalaan',
+      'Transparency: Budget, Contracts & Audit': 'Transparency: Badyet, Kontrata at Audit',
+      'Financial accountability data for Rosales — budgets, procurement, infrastructure, and COA audit reports — all in one place.':
+        'Datos ng pananagutan sa pananalapi ng Rosales — badyet, pagbili, imprastraktura, at ulat ng COA — sa iisang lugar.',
+      'View full transparency dashboard': 'Tingnan ang buong transparency dashboard',
+      'View full transparency dashboard →': 'Tingnan ang buong transparency dashboard →',
+      'PhilGEPS Award Notices': 'Mga Abiso ng Award sa PhilGEPS',
+      '3 Entities': '3 Entidad',
+      '6th District': 'Ika-6 na Distrito',
+      'DPWH Infrastructure Projects': 'Mga Proyektong Imprastraktura ng DPWH',
+      '37 Barangays': '37 Barangay',
+      'Annual COA Audit Coverage': 'Taunang Saklaw ng Audit ng COA',
+      'Monthly Cost Trend': 'Buwanang Takbo ng Gastos',
+      'Contract amounts over time • Jan 2018 – Dec 2025': 'Halaga ng mga kontrata sa paglipas ng panahon • Ene 2018 – Dis 2025',
+      'Trend Highlights:': 'Mga Tampok sa Takbo:',
+      'Tracked Entities:': 'Mga Sinusubaybayang Entidad:',
+      'Data Source: PhilGEPS Award Notices for the Municipality of Rosales': 'Pinagmulan ng Datos: Mga Abiso ng Award sa PhilGEPS para sa Munisipalidad ng Rosales',
+      'Search PhilGEPS Notices': 'Maghanap sa mga Abiso ng PhilGEPS',
+      'Top Awardees & Contractors': 'Mga Nangungunang Kontratista at Awardee',
+      'Disclosed procurement sectors via PhilGEPS': 'Mga inihayag na sektor ng pagbili sa PhilGEPS',
+      '4 Sectors': '4 na Sektor',
+      'Infrastructure & Construction': 'Imprastraktura at Konstruksyon',
+      'Handling multi-purpose buildings and road works.': 'Namamahala sa mga gusaling pangmaramihan at gawaing kalsada.',
+      'Medical & Laboratory Suppliers': 'Mga Tagapagtustos ng Medikal at Laboratoryo',
+      'Supplying essential hospital equipment and lab supplies to the Conrado F. Estrella Regional Medical and Trauma Center.':
+        'Nagbibigay ng mahahalagang kagamitan sa ospital at laboratoryo para sa Conrado F. Estrella Regional Medical and Trauma Center.',
+      'Heavy Equipment & Fleet Maintenance': 'Mabibigat na Kagamitan at Pagmimintina ng Sasakyan',
+      'Handling vehicle repairs and parts for the Rosales LGU and local irrigation administration.':
+        'Namamahala sa pagkukumpuni at piyesa ng mga sasakyan para sa LGU Rosales at lokal na irigasyon.',
+      'Agricultural Support': 'Suporta sa Agrikultura',
+      'Contractors providing seeds, fertilizers, and equipment for the Rosales agricultural sector.':
+        'Mga kontratistang nagbibigay ng binhi, pataba, at kagamitan para sa sektor ng agrikultura ng Rosales.',
+      'DPWH • Infrastructure': 'DPWH • Imprastraktura',
+      'Public Works and Highway Projects in the 6th District — select a project area to locate it on the map.':
+        'Mga Proyektong Pang-imprastraktura sa Ika-6 na Distrito — pumili ng proyekto upang makita sa mapa.',
+      'All Categories': 'Lahat ng Kategorya',
+      'Flood Control': 'Pagkontrol sa Baha',
+      'Buildings': 'Mga Gusali',
+      'Roadways': 'Mga Kalsada',
+      'Commission on Audit (COA) Reports': 'Mga Ulat ng Commission on Audit (COA)',
+      'Annual Financial Audit Summaries': 'Buod ng Taunang Pagsusuri sa Pananalapi',
+      'Public Audit': 'Pampublikong Audit',
+      'Municipality of Rosales': 'Munisipalidad ng Rosales',
+      'LGU & IRA': 'LGU at IRA',
+      'Executive Summaries and Financial Statements covering LGU revenue, Internal Revenue Allotment (IRA) utilization, and asset management.':
+        'Mga Buod at Pahayag sa Pananalapi na sumasaklaw sa kita ng LGU, paggamit ng IRA, at pamamahala ng ari-arian.',
+      'View LGU Financial Summaries': 'Tingnan ang mga Buod sa Pananalapi ng LGU',
+      'Rosales Water District': 'Rosales Water District',
+      'Water & Sanitation': 'Tubig at Kalinisan',
+      'Annual Audit Reports verifying water sanitation budgets and operational expenses.':
+        'Mga Taunang Ulat ng Audit na sumusuri sa badyet sa tubig at gastusin sa operasyon.',
+      'View Water District Audit Reports': 'Tingnan ang mga Ulat ng Audit ng Water District',
+      'Barangay Audits': 'Mga Audit ng Barangay',
+      '37 Barangays & SK': '37 Barangay at SK',
+      'Accountability trackers for the SK (Sangguniang Kabataan) and Barangay-level development funds across the 37 barangays.':
+        'Mga tagasubaybay ng pananagutan para sa pondo ng SK at pag-unlad ng 37 barangay.',
+      'View 37 Barangay Trackers': 'Tingnan ang 37 Tagasubaybay ng Barangay',
+      'Audited Entities': 'Mga Sinuring Entidad',
+      'Barangay & SK Trackers': 'Mga Tagasubaybay ng Barangay at SK',
+      'Annual': 'Taunan',
+      'COA Financial Filings': 'Mga Paghahain sa Pananalapi ng COA',
+      'Note: Better Rosales is an independent digital information tool relying on open government data, not a municipal booking platform.':
+        'Paalala: Ang Better Rosales ay isang independiyenteng digital na gabay batay sa bukas na datos ng pamahalaan, at hindi opisyal na platform sa pag-book ng munisipyo.',
+      'Live meteorological conditions & municipal hall location • 15.8942°N, 120.6334°E':
+        'Kasalukuyang lagay ng panahon at lokasyon ng munisipyo • 15.8942°N, 120.6334°E',
+      'Open in Google Maps': 'Buksan sa Google Maps',
+      'Live': 'Kasalukuyan',
+      'Humidity': 'Halumigmig',
+      'Wind': 'Hangin',
+      'Upcoming Hours': 'Mga Susunod na Oras',
+      'Clear sky': 'Maaliwalas na kalangitan',
+      'Mainly clear': 'Pangunahing maaliwalas',
+      'Partly cloudy': 'Bahagyang maulap',
+      'Overcast': 'Maulap',
+      'Light rain': 'Mahinang ulan',
+      'Moderate rain': 'Katamtamang ulan',
+      'Heavy rain': 'Malakas na ulan',
+      'Thunderstorm': 'Bagyo at kulog',
+      'Present': 'Kasalukuyan',
+      'Gateway of Eastern Pangasinan': 'Pintuan ng Silangang Pangasinan',
+      'Strategically connecting the provinces of Pangasinan, Tarlac, and Nueva Ecija, Rosales serves as the vital junction for regional travel, commerce, and agriculture.':
+        'Nag-uugnay sa mga lalawigan ng Pangasinan, Tarlac, at Nueva Ecija, ang Rosales ay mahalagang sangandaan ng paglalakbay, komersyo, at agrikultura.',
+      'Modern Commercial Hub': 'Makabagong Sentro ng Komersyo',
+      'Home to major commercial complexes, banking hubs, modern public markets, and premier health facilities serving over 67,000 residents and neighboring towns.':
+        'Tahanan ng malalaking pamilihan, mga bangko, makabagong palengke, at mga pasilidad pangkalusugan na naglilingkod sa mahigit 67,000 residente at karatig-bayan.',
+      'Official Facebook Page': 'Opisyal na Pahina sa Facebook',
+      'Real-time updates, straight from our page': 'Mga napapanahong balita, direkta mula sa aming pahina',
+      'Follow the Official LGU Rosales Facebook Page for the latest announcements, advisories, events, and community updates as they happen.':
+        'Subaybayan ang Opisyal na Pahina sa Facebook ng LGU Rosales para sa mga pinakabagong anunsyo, abiso, at kaganapan sa komunidad.',
+      'Official announcements & advisories': 'Mga opisyal na anunsyo at abiso',
+      'Events & community programs': 'Mga kaganapan at programang pangkomunidad',
+      'Posted in real time, as it happens': 'Inilalathala sa totoong oras',
+      'Visit our Facebook Page': 'Bisitahin ang Aming Pahina sa Facebook',
+      "Can't see the feed?": 'Hindi makita ang feed?',
+      'Open it on Facebook': 'Buksan sa Facebook',
+      'From our Facebook Page': 'Mula sa Aming Pahina sa Facebook',
+      'The latest posts published by the Official LGU Rosales Facebook Page.': 'Ang mga pinakabagong post mula sa Opisyal na Pahina sa Facebook ng LGU Rosales.',
+      'Visit the Official LGU Rosales Facebook Page': 'Bisitahin ang Opisyal na Pahina sa Facebook ng LGU Rosales',
+      'Currently in office': 'Kasalukuyang Nanunungkulan',
+      'Leadership': 'Pamunuan',
+      'See the full Government Directory (Sangguniang Bayan & Department Heads)':
+        'Tingnan ang buong Direktoryo ng Pamahalaan (Sangguniang Bayan at mga Pinuno ng Departamento)',
+      'Municipal Mayor': 'Alkalde ng Bayan',
+      'Vice Mayor · Presiding Officer': 'Bise Alkalde · Tagapangulo',
+      'Executive Branch · Office of the Mayor': 'Sangay Tagapagpaganap · Tanggapan ng Alkalde',
+      'Legislative Branch · Sangguniang Bayan': 'Sangay Tagapagbatas · Sangguniang Bayan',
+      'Directory': 'Direktoryo',
+      'Full Government Directory': 'Buong Direktoryo ng Pamahalaan',
+      '— Sangguniang Bayan Members, Department Heads & 37 Barangay Officials':
+        '— Mga Miyembro ng Sangguniang Bayan, Pinuno ng Departamento at 37 Opisyal ng Barangay',
+      'Browse Directory': 'Tingnan ang Direktoryo',
+      '24/7 Emergency & Utility Response': '24/7 Pagtugon sa Emerhensya at Serbisyo',
+      'Who to call': 'Sino ang Tatawagan',
+      'View All Contacts': 'Tingnan Lahat ng Kontak',
+      'Disaster Risk Reduction': 'Pagtugon sa Sakuna at Panganib',
+      'Fire & Rescue Response': 'Sunog at Pagsagip',
+      'Peace & Order': 'Kapayapaan at Kaayusan',
+      'Medical & Health Assistance': 'Tulong Medikal at Pangkalusugan',
+      'Water Supply & Service': 'Suplay at Serbisyo ng Tubig',
+      'Electric Utility & Outages': 'Serbisyo ng Kuryente at Kawalan ng Kuryente',
+      'National Emergency': 'Pambansang Emerhensya',
+      'Report Incorrect or Missing Information': 'Mag-ulat ng Mali o Kulang na Impormasyon',
+      'What would you like to submit?': 'Ano ang nais mong isumite?',
+      'Incorrect Information': 'Maling Impormasyon',
+      'Additional Information': 'Karagdagang Impormasyon',
+      'General Feedback': 'Pangkalahatang Puna',
+      'Page / Section': 'Pahina / Seksyon',
+      'Submit Report / Information': 'Isumite ang Ulat / Impormasyon',
+      'Cost to the People of Rosales =': 'Gastos sa mga Mamamayan ng Rosales =',
+      'Volunteer with us': 'Magboluntaryo sa amin',
+      'Contribute code with us': 'Mag-ambag ng code sa amin',
+      'All public information sourced from official government portals.': 'Lahat ng pampublikong impormasyon ay mula sa mga opisyal na portal ng pamahalaan.',
+      'View Services': 'Tingnan ang mga Serbisyo',
+    },
+    ilo: {
+      'Emergency Hotlines': 'Dagiti Pang-emerhensia a Hotline',
+      'Police:': 'Polisia:',
+      'BFP Fire:': 'BFP Bombero:',
+      'Hall:': 'Munisipio:',
+      'Hospital:': 'Ospital:',
+      'Emergency:': 'Emerhensia:',
+      'Gateway of the Ilocos Region': 'Ruangan ti Rehion ti Ilocos',
+      'The Crossroads of Heritage and Progress': 'Ti Nagsasabtan ti Tawid ken Panagrang-ay',
+      'Strategically positioned at the end of TPLEX Phase 1 and the MacArthur Highway, Rosales is a 1st-class municipality spanning 37 barangays. Home to nearly 67,000 residents, it serves as the vibrant eastern gateway to the Ilocos Region. Whether you are craving the legendary tupig of Carmen, exploring centuries-old architecture, or investing in our rapidly growing commercial hubs, Rosales offers a perfect balance of rural charm and urban convenience.':
+        'Masarakan iti ungto ti TPLEX Phase 1 ken MacArthur Highway, ti Rosales ket maysa a 1st-class a munisipalidad nga addaan iti 37 a barangay. Pagtaengan ti agarup 67,000 nga umili, daytoy ti naragsak a daya a ruangan ti Rehion ti Ilocos. Manipud iti nalatak a tupig ti Carmen ken kadaanan nga arkitektura agingga iti dumurdur-as a sentro ti komersio, pagtitiponen ti Rosales ti pintas ti away ken moderno a nam-ay.',
+      'Residents': 'Dagiti Umili',
+      'Barangays': 'Dagiti Barangay',
+      'Income Class': 'Klase ti Sapul',
+      'Land area': 'Kalawa ti Daga',
+      'Pop. density': 'Densidad ti Pop.',
+      '1st Class': 'Umuna a Klase (1st Class)',
+      'Official Source: PSA Census 2020': 'Opisial a Gubuayan: PSA Census 2020',
+      'Official Source: DILG / Comelec': 'Opisial a Gubuayan: DILG / Comelec',
+      'Official Source: Department of Finance': 'Opisial a Gubuayan: Departamento ti Pinansia (DOF)',
+      'Official Source: MPDC Land Use Plan': 'Opisial a Gubuayan: Plano ti Panagusar ti Daga ti MPDC',
+      'Official Computed: 66,711 ÷ 66.39 km²': 'Opisial a Kuentada: 66,711 ÷ 66.39 km²',
+      'Open Government Data': 'Silulukat a Datos ti Gobierno',
+      'Transparency: Budget, Contracts & Audit': 'Transparency: Badyet, Kontrata ken Audit',
+      'Financial accountability data for Rosales — budgets, procurement, infrastructure, and COA audit reports — all in one place.':
+        'Datos ti sungsungbatan iti pinansia ti Rosales — badyet, panaggatang, imprastraktura, ken report ti COA — iti maymaysa a lugar.',
+      'View full transparency dashboard': 'Kitaen ti sibubukel a transparency dashboard',
+      'View full transparency dashboard →': 'Kitaen ti sibubukel a transparency dashboard →',
+      'PhilGEPS Award Notices': 'Dagiti Pakaammo ti Award iti PhilGEPS',
+      '3 Entities': '3 nga Entidad',
+      '6th District': 'Maika-6 a Distrito',
+      'DPWH Infrastructure Projects': 'Dagiti Proyekto nga Imprastraktura ti DPWH',
+      '37 Barangays': '37 a Barangay',
+      'Annual COA Audit Coverage': 'Tinawen a Sakop ti Audit ti COA',
+      'Monthly Cost Trend': 'Binulan a Panaggunay ti Gastos',
+      'Contract amounts over time • Jan 2018 – Dec 2025': 'Gatad dagiti kontrata iti panaglabas ti panawen • Ene 2018 – Dis 2025',
+      'Trend Highlights:': 'Dagiti Tampok ti Panaggunay:',
+      'Tracked Entities:': 'Dagiti Masipsiput nga Entidad:',
+      'Data Source: PhilGEPS Award Notices for the Municipality of Rosales': 'Gubuayan ti Datos: Dagiti Pakaammo ti Award iti PhilGEPS para iti Munisipalidad ti Rosales',
+      'Search PhilGEPS Notices': 'Agsapul kadagiti Pakaammo ti PhilGEPS',
+      'Top Awardees & Contractors': 'Dagiti Kangrunaan a Kontratista ken Awardee',
+      'Disclosed procurement sectors via PhilGEPS': 'Dagiti naipakaammo a sektor ti panaggatang babaen ti PhilGEPS',
+      '4 Sectors': '4 a Sektor',
+      'Infrastructure & Construction': 'Imprastraktura ken Konstruksion',
+      'Handling multi-purpose buildings and road works.': 'Agimaton kadagiti multi-purpose a pasdek ken trabaho ti kalsada.',
+      'Medical & Laboratory Suppliers': 'Dagiti Agsuplay ti Medikal ken Laboratorio',
+      'Supplying essential hospital equipment and lab supplies to the Conrado F. Estrella Regional Medical and Trauma Center.':
+        'Mangipapaay kadagiti napateg a ramit ti ospital ken laboratorio para iti Conrado F. Estrella Regional Medical and Trauma Center.',
+      'Heavy Equipment & Fleet Maintenance': 'Dadakkel a Ramit ken Panagtarimaan ti Lugan',
+      'Handling vehicle repairs and parts for the Rosales LGU and local irrigation administration.':
+        'Agimaton iti panagtarimaan ken piesa dagiti lugan para iti LGU Rosales ken lokal a padanum.',
+      'Agricultural Support': 'Suporta iti Agrikultura',
+      'Contractors providing seeds, fertilizers, and equipment for the Rosales agricultural sector.':
+        'Dagiti kontratista a mangipapaay ti bin-i, abono, ken ramit para iti sektor ti agrikultura ti Rosales.',
+      'DPWH • Infrastructure': 'DPWH • Imprastraktura',
+      'Public Works and Highway Projects in the 6th District — select a project area to locate it on the map.':
+        'Dagiti Proyekto ti Kalsada ken Pasdek iti Maika-6 a Distrito — pumili ti proyekto tapno makita iti mapa.',
+      'All Categories': 'Amin a Kategoria',
+      'Flood Control': 'Panagkontrol ti Layus',
+      'Buildings': 'Dagiti Pasdek',
+      'Roadways': 'Dagiti Kalsada',
+      'Commission on Audit (COA) Reports': 'Dagiti Report ti Commission on Audit (COA)',
+      'Annual Financial Audit Summaries': 'Tinawen a Pakabuklan ti Audit ti Pinansia',
+      'Public Audit': 'Publiko nga Audit',
+      'Municipality of Rosales': 'Munisipalidad ti Rosales',
+      'LGU & IRA': 'LGU ken IRA',
+      'Executive Summaries and Financial Statements covering LGU revenue, Internal Revenue Allotment (IRA) utilization, and asset management.':
+        'Dagiti Pakabuklan ken Pahayag ti Pinansia a mangsaklaw iti sapul ti LGU, panagusar ti IRA, ken panangimaton kadagiti sanikua.',
+      'View LGU Financial Summaries': 'Kitaen dagiti Pakabuklan ti Pinansia ti LGU',
+      'Rosales Water District': 'Rosales Water District',
+      'Water & Sanitation': 'Danum ken Kinadalus',
+      'Annual Audit Reports verifying water sanitation budgets and operational expenses.':
+        'Dagiti Tinawen a Report ti Audit a mangsursur iti badyet ti danum ken gastos ti operasion.',
+      'View Water District Audit Reports': 'Kitaen dagiti Report ti Audit ti Water District',
+      'Barangay Audits': 'Dagiti Audit ti Barangay',
+      '37 Barangays & SK': '37 a Barangay ken SK',
+      'Accountability trackers for the SK (Sangguniang Kabataan) and Barangay-level development funds across the 37 barangays.':
+        'Dagiti mangsipsiput ti sungsungbatan para iti pondo ti SK ken panagrang-ay dagiti 37 a barangay.',
+      'View 37 Barangay Trackers': 'Kitaen ti 37 a Mangsipsiput ti Barangay',
+      'Audited Entities': 'Dagiti Nasukimat nga Entidad',
+      'Barangay & SK Trackers': 'Dagiti Mangsipsiput ti Barangay ken SK',
+      'Annual': 'Tinawen',
+      'COA Financial Filings': 'Dagiti Naidatag a Pinansia ti COA',
+      'Note: Better Rosales is an independent digital information tool relying on open government data, not a municipal booking platform.':
+        'Palagip: Ti Better Rosales ket maysa nga independiyente a digital a giya a naibatay iti silulukat a datos ti gobierno, ken saan a plataforma ti panag-book ti munisipio.',
+      'Live meteorological conditions & municipal hall location • 15.8942°N, 120.6334°E':
+        'Agdama a kasasaad ti panawen ken lokasion ti munisipio • 15.8942°N, 120.6334°E',
+      'Open in Google Maps': 'Lukatan iti Google Maps',
+      'Live': 'Agdama',
+      'Humidity': 'Alinaaw',
+      'Wind': 'Angin',
+      'Upcoming Hours': 'Sumarsaruno nga Oras',
+      'Clear sky': 'Nalinak a tangatang',
+      'Mainly clear': 'Kangrunaan a nalinak',
+      'Partly cloudy': 'Adda ulepna',
+      'Overcast': 'Naulep',
+      'Light rain': 'Nakalmay a tudo',
+      'Moderate rain': 'Katamtaman a tudo',
+      'Heavy rain': 'Napigsa a tudo',
+      'Thunderstorm': 'Bagio ken gurruod',
+      'Present': 'Agdama',
+      'Gateway of Eastern Pangasinan': 'Ruangan ti Daya a Pangasinan',
+      'Strategically connecting the provinces of Pangasinan, Tarlac, and Nueva Ecija, Rosales serves as the vital junction for regional travel, commerce, and agriculture.':
+        'Mangisilpo kadagiti probinsia ti Pangasinan, Tarlac, ken Nueva Ecija, ti Rosales ti napateg a nagsasabtan ti panagbiahe, komersio, ken agrikultura.',
+      'Modern Commercial Hub': 'Moderno a Sentro ti Komersio',
+      'Home to major commercial complexes, banking hubs, modern public markets, and premier health facilities serving over 67,000 residents and neighboring towns.':
+        'Pagtaengan dagiti dadakkel a pagtagilakuan, banko, moderno a tiendaan, ken pasilidad ti salun-at nga agserserbi iti nasurok a 67,000 nga umili.',
+      'Official Facebook Page': 'Opisial a Panid iti Facebook',
+      'Real-time updates, straight from our page': 'Dagiti agdama a damag, direkta manipud iti panidmi',
+      'Follow the Official LGU Rosales Facebook Page for the latest announcements, advisories, events, and community updates as they happen.':
+        'Suroten ti Opisial a Panid iti Facebook ti LGU Rosales para kadagiti kaudian nga anunsio, pakaammo, ken pasken ti komunidad.',
+      'Official announcements & advisories': 'Dagiti opisial nga anunsio ken pakaammo',
+      'Events & community programs': 'Dagiti pasken ken programa ti komunidad',
+      'Posted in real time, as it happens': 'Maipablaak iti agdama nga oras',
+      'Visit our Facebook Page': 'Bisitaen ti Panidmi iti Facebook',
+      "Can't see the feed?": 'Saan a makita ti feed?',
+      'Open it on Facebook': 'Lukatan iti Facebook',
+      'From our Facebook Page': 'Manipud iti Panidmi iti Facebook',
+      'The latest posts published by the Official LGU Rosales Facebook Page.': 'Dagiti kaudian a post manipud iti Opisial a Panid iti Facebook ti LGU Rosales.',
+      'Visit the Official LGU Rosales Facebook Page': 'Bisitaen ti Opisial a Panid iti Facebook ti LGU Rosales',
+      'Currently in office': 'Agdama nga Agserserbi',
+      'Leadership': 'Panangidaulo',
+      'See the full Government Directory (Sangguniang Bayan & Department Heads)':
+        'Kitaen ti sibubukel a Direktoria ti Gobierno (Sangguniang Bayan ken Pangulo dagiti Departamento)',
+      'Municipal Mayor': 'Mayor ti Ili',
+      'Vice Mayor · Presiding Officer': 'Bise Mayor · Mangidaulo nga Opisial',
+      'Executive Branch · Office of the Mayor': 'Sanga ti Ehekutibo · Opisina ti Mayor',
+      'Legislative Branch · Sangguniang Bayan': 'Sanga ti Lehislatibo · Sangguniang Bayan',
+      'Directory': 'Direktoria',
+      'Full Government Directory': 'Sibubukel a Direktoria ti Gobierno',
+      '— Sangguniang Bayan Members, Department Heads & 37 Barangay Officials':
+        '— Dagiti Kameng ti Sangguniang Bayan, Pangulo dagiti Departamento ken 37 nga Opisial ti Barangay',
+      'Browse Directory': 'Kitaen ti Direktoria',
+      '24/7 Emergency & Utility Response': '24/7 a Panagtignay iti Emerhensia ken Serbisio',
+      'Who to call': 'Asino ti Awagan',
+      'View All Contacts': 'Kitaen Amin a Kontak',
+      'Disaster Risk Reduction': 'Panagsagana ken Panagtignay iti Didigra',
+      'Fire & Rescue Response': 'Apuy ken Panangisalakan',
+      'Peace & Order': 'Kappia ken Urnos',
+      'Medical & Health Assistance': 'Tulong Medikal ken Salun-at',
+      'Water Supply & Service': 'Suplay ken Serbisio ti Danum',
+      'Electric Utility & Outages': 'Serbisio ti Koriente ken Panagawan ti Silaw',
+      'National Emergency': 'Nailian nga Emerhensia',
+      'Report Incorrect or Missing Information': 'Ireport ti Biddut wenno Kurang nga Impormasion',
+      'What would you like to submit?': 'Ania ti kayatmo nga isumite?',
+      'Incorrect Information': 'Biddut nga Impormasion',
+      'Additional Information': 'Kanayonan nga Impormasion',
+      'General Feedback': 'Sapasap a Komento',
+      'Page / Section': 'Panid / Seksion',
+      'Submit Report / Information': 'Isumite ti Report / Impormasion',
+      'Cost to the People of Rosales =': 'Gastos kadagiti Umili ti Rosales =',
+      'Volunteer with us': 'Agboluntario kadakami',
+      'Contribute code with us': 'Agidonar ti code kadakami',
+      'All public information sourced from official government portals.': 'Amin a publiko nga impormasion ket nagtaud kadagiti opisial a portal ti gobierno.',
+      'View Services': 'Kitaen dagiti Serbisio',
+    },
+  },
+
+  translatePhrase: function (text, lang) {
+    const dict = this.phraseTranslations[lang];
+    if (!dict) return null;
+    if (dict[text]) return dict[text];
+    if (text.indexOf('Official Source: ') === 0) {
+      const rest = text.slice('Official Source: '.length);
+      return (lang === 'fil' ? 'Opisyal na Sanggunian: ' : 'Opisial a Gubuayan: ') + rest;
+    }
+    if (text.indexOf('Source: ') === 0) {
+      const rest = text.slice('Source: '.length);
+      return (lang === 'fil' ? 'Sanggunian: ' : 'Gubuayan: ') + rest;
+    }
+    return null;
+  },
+
+  applyPhraseTranslations: function (root, lang) {
+    if (!root || !this.originalTextMap) return;
+    const self = this;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    const nodes = [];
+    let n;
+    while ((n = walker.nextNode())) {
+      const p = n.parentElement;
+      if (!p) continue;
+      if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'SVG', 'TEXTAREA'].includes(p.tagName)) continue;
+      if (p.closest && p.closest('[data-i18n], .leaflet-control-attribution, .lang-selector')) continue;
+      nodes.push(n);
+    }
+
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      const raw = node.nodeValue;
+      if (!raw || !raw.trim()) continue;
+
+      if (!self.originalTextMap.has(node)) {
+        self.originalTextMap.set(node, raw);
+      }
+      const origRaw = self.originalTextMap.get(node);
+      if (lang === 'en') {
+        if (node.nodeValue !== origRaw) node.nodeValue = origRaw;
+        continue;
+      }
+
+      const trimmed = origRaw.trim();
+      const translated = self.translatePhrase(trimmed, lang);
+      if (translated) {
+        const leading = origRaw.match(/^\s*/)[0];
+        const trailing = origRaw.match(/\s*$/)[0];
+        const nextVal = leading + translated + trailing;
+        if (node.nodeValue !== nextVal) node.nodeValue = nextVal;
+      }
+    }
+  },
 
   /**
    * Initialize the translation engine
@@ -19661,6 +20036,11 @@ const TranslationEngine = {
       self.translateElement(el, lang);
     });
 
+    // Translate remaining static/dynamic text nodes using lossless phrase fallback
+    if (document.body) {
+      self.applyPhraseTranslations(document.body, lang);
+    }
+
     // Update document language attribute
     document.documentElement.lang = this.langCodes[lang] || lang;
 
@@ -19753,6 +20133,10 @@ const TranslationEngine = {
                 .forEach(function (el) {
                   self.translateElement(el, self.currentLang);
                 });
+            }
+
+            if (self.currentLang !== 'en') {
+              self.applyPhraseTranslations(node, self.currentLang);
             }
           }
         });
