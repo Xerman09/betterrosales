@@ -238,28 +238,18 @@ const CONFIG = {
 const ExchangeRateService = {
   /**
    * Fetch exchange rates from API
-   * Uses frankfurter.app (free, no API key required)
-   * Note: This API uses EUR as base, so we need to convert to PHP
+   * Uses open.er-api.com (free, no API key required) with PHP as base
    * @returns {Promise<object>} Exchange rates relative to PHP
    */
   async fetchRates() {
     try {
-      // Using exchangerate.host which is free and supports PHP as base
-      const currencies = CONFIG.CURRENCIES.join(',');
-      const response = await fetch(
-        `https://api.exchangerate.host/latest?base=PHP&symbols=${currencies}`
-      );
+      const response = await fetch('https://open.er-api.com/v6/latest/PHP');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-
-      if (!data.success && data.rates) {
-        // Some APIs return rates directly
-        return this.processRates(data.rates);
-      }
 
       if (data.rates) {
         return this.processRates(data.rates);
@@ -274,12 +264,14 @@ const ExchangeRateService = {
   },
 
   /**
-   * Fallback API using Open Exchange Rates style endpoint
+   * Fallback API using exchangerate.host endpoint
    */
   async fetchRatesFallback() {
     try {
-      // Using a different free API as fallback
-      const response = await fetch('https://open.er-api.com/v6/latest/PHP');
+      const currencies = CONFIG.CURRENCIES.join(',');
+      const response = await fetch(
+        `https://api.exchangerate.host/latest?base=PHP&symbols=${currencies}`
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -384,7 +376,7 @@ const WeatherService = {
   async fetchWeather() {
     try {
       const response = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.SOLANO_LAT}&longitude=${CONFIG.SOLANO_LON}&current_weather=true`
+        `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.ROSALES_LAT}&longitude=${CONFIG.ROSALES_LON}&current_weather=true`
       );
 
       if (!response.ok) {
@@ -398,8 +390,8 @@ const WeatherService = {
           temperature: data.current_weather.temperature,
           timestamp: Date.now(),
           location: {
-            lat: CONFIG.SOLANO_LAT,
-            lon: CONFIG.SOLANO_LON,
+            lat: CONFIG.ROSALES_LAT,
+            lon: CONFIG.ROSALES_LON,
             name: 'Rosales, Pangasinan',
           },
         };
@@ -455,8 +447,8 @@ const WeatherService = {
       temperature: null,
       timestamp: Date.now(),
       location: {
-        lat: CONFIG.SOLANO_LAT,
-        lon: CONFIG.SOLANO_LON,
+        lat: CONFIG.ROSALES_LAT,
+        lon: CONFIG.ROSALES_LON,
         name: 'Rosales, Pangasinan',
       },
     };
