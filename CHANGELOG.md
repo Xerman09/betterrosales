@@ -21,6 +21,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Removed raw emojis from Section 2 Transparency Dashboard card headings in `index.html`, relying on the Bootstrap Icons in `.transparency-card-icon`.
 - Updated `scripts/generate_rosales_logo.js` to also generate `favicon.svg` (both `assets/images/logo/` and `react-app/public/assets/images/logo/`) using the new BetterRosales geometric emblem, and regenerated multi-resolution `favicon.ico` (`16x16`, `32x32`, `48x48`).
 - Moved the 5-card Quick Statistics Grid (`66,711` Residents, `37` Barangays, `1st Class` Income Class, `66.39 km²` Land area, and `1,004.8/km²` Pop. density with official sources) into `#about-rosales .about-rosales-highlights` in `index.html` and `assets/css/ui-enhancements.css`, and restored `.home-stats-v2` to its 4-column layout.
 - Updated `.home-stats-v2` Quick Statistics Grid in `index.html` and `assets/css/ui-enhancements.css` to a 5-card responsive grid (`66,711` Residents, `37` Barangays, `1st Class` Income Class, `66.39 km²` Land area, and `1,004.8/km²` Pop. density) with official sources.
