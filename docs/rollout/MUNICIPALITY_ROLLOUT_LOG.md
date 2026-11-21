@@ -1,0 +1,59 @@
+# Municipality Rollout Task Log (Per-Commit Guide)
+
+Use this log as a step-by-step replication guide when adapting the BetterGov municipal portal template to other municipalities. Every commit in this repository is documented below with what was added/changed and what to customize per municipality.
+
+---
+
+## 1. Branding, Favicons & Agent Rules
+
+| Commit | Summary | What Was Added / Changed | What to Update for Other Municipalities |
+| :--- | :--- | :--- | :--- |
+| `91bd555` | `feat(branding): redesign original BetterRosales logo and add agent workflow rules` | Created `AGENTS.md`, `CHANGELOG.md`, and updated `scripts/generate_rosales_logo.js` to generate an original civic geometric mark (5-ray `#f2c91d` sun + `#0032a0` valley ribbons) beside the wordmark across all 8 SVG targets. | Replace the wordmark in `scripts/generate_<municipality>_logo.js` and design an original geometric emblem (never replicate the official LGU seal). Run the generator script to update all 8 SVG files. |
+| `5342875` / `6143e3b` | `docs(agents): add concise response rule to AGENTS.md` | Added concise response rule to `AGENTS.md`. | Keep `AGENTS.md` at repo root. |
+| `b8fc03e` | `feat(branding): update favicon.svg and favicon.ico to BetterRosales emblem` | Extended `scripts/generate_rosales_logo.js` to output `favicon.svg` and regenerated multi-resolution `favicon.ico` (`16x16`, `32x32`, `48x48`). | Regenerate `favicon.svg` and `favicon.ico` in both `assets/images/logo/` and `react-app/public/assets/images/logo/`. |
+| `881a6d6` | `docs(agents): add BetterGov mission and guiding principles to AGENTS.md` | Added BetterGov.ph mission & guiding principles (`docs.bettergov.ph/docs/about`) to `AGENTS.md`. | Keep consistent across all BetterGov portals. |
+| `e700852` | `feat(ui): redesign Leadership cards with portraits and add civic-ui-ux skill` | Added `.agents/skills/civic-ui-ux/SKILL.md` and UI/UX Craft standards in `AGENTS.md`. | Copy `.agents/skills/civic-ui-ux/SKILL.md` into new municipality repos. |
+| `d540600` | `fix(data): remove all synthetic or unverified data and enforce real-data rule in AGENTS.md` | Added Rule #4 (Only Use Real, Verified Data) to `AGENTS.md`; stripped all synthetic numbers, fake charts, unverified emails, and mock weather fallbacks. | Audit all stats, charts, emails, and phone numbers—only publish verified public data. |
+
+---
+
+## 2. Global Header, Hotlines & Real-Time Info Bar
+
+| Commit | Summary | What Was Added / Changed | What to Update for Other Municipalities |
+| :--- | :--- | :--- | :--- |
+| `16917be` | `fix(ui): prevent emergency hotline carousel from wrapping onto second row` | Added `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport` in `assets/css/ui-enhancements.css`. | Keep CSS fix in `assets/css/ui-enhancements.css`. |
+| `decee49` | `fix(info-bar): use live open.er-api.com as primary FX endpoint and Rosales coordinate keys` | Switched `ExchangeRateService.fetchRates()` in `assets/js/info-bar.js` to `open.er-api.com/v6/latest/PHP` and `WeatherService` to municipality lat/lon keys. | Update `ROSALES_LAT` / `ROSALES_LON` in `assets/js/info-bar.js` to the target municipality's coordinates. |
+| `a806606` | `fix(government): use single-row Rosales emergency hotline carousel` | Replaced 3-row legacy `.hotline-items` in `government/index.html` with `.hotline-carousel-viewport` / `.hotline-track`. | Replace hotline numbers with the municipality's verified Police, Fire, Hall, Hospital, and DRRMO numbers. |
+| `06ebad7` | `fix(ui): sync single-row Rosales emergency hotline carousel across all 49 HTML pages` | Synced `.hotline-carousel-viewport` / `.hotline-track` and `ui-enhancements.css` `<link>` across all 49 subpages (`services/`, `service-details/`, `legislative/`, `statistics/`, `budget/`, `contact/`, `faq/`, `news/`, `accessibility/`, `privacy/`, `terms/`, `sitemap/`, error pages). | Run a bulk sync across all HTML subpages whenever updating the global hotline bar or shared CSS. |
+
+---
+
+## 3. Homepage (`index.html`, `translations.js`, `weather-map.js`, `transparency-dashboard.js`)
+
+| Commit | Summary | What Was Added / Changed | What to Update for Other Municipalities |
+| :--- | :--- | :--- | :--- |
+| `5c1cd02` | `feat(home): update Rosales SEO metadata, hero copy, and add About Rosales section` | Updated `<title>`, meta description, Open Graph/Twitter tags, `geo.region` (`PH-PAN`), `geo.position`, Hero copy + CTAs, and added `#about-rosales` split section; updated `assets/js/translations.js` hero keys. | Update `<title>`, SEO meta, `geo.region` (PSGC/ISO province code), `geo.position`, Hero copy, and `#about-rosales` intro copy. |
+| `090d6a1` → `b66202c` | `feat(home): update Quick Statistics Grid to 5 official Rosales data cards` | Added 5-card Quick Statistics Grid with official sources (PSA Census 2020, DILG/Comelec, DOF, MPDC, computed density). | Replace all 5 figures and official sources with the municipality's verified PSA/DILG/DOF/MPDC figures. |
+| `50a29ae` | `feat(home): move 5-card Quick Statistics Grid into About Rosales section` | Moved the 5-card grid into `#about-rosales .about-rosales-highlights` (2×2 + 1 full-width card) and restored `.home-stats-v2` to 4 columns. | Keep layout pattern; swap card values/sources. |
+| `dae5afb` | `chore(home): remove Popular Services section from index.html` | Removed `<!-- Quick Access Services -->` from `index.html`. | Omit or keep based on municipal homepage scope. |
+| `e440f5f` → `7ba8ada` | `feat(home): add Section 2 Transparency Dashboard` & `feat(ui): redesign DPWH Infrastructure as two-pane interactive map explorer` | Built `#transparency-dashboard` (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`): KPI summary strip, PhilGEPS & Top Awardees split panel, DPWH Infrastructure 2-pane interactive Leaflet map explorer (categories on left, map on right), and COA Reports accordion + coverage bar. | Update tracked entities (LGU, local hospitals/irrigation), PhilGEPS/awardee sectors, DPWH district number, map coordinates/areas, and COA entities. |
+| `39c874a` | `fix(map): center Weather & Map section on Rosales, Pangasinan instead of Solano` | Updated `assets/js/weather-map.js` (`ROSALES_CENTER`, OSM embed fallback `bbox`/`marker`, popup ZIP, cache key) and `index.html` JSON-LD `GeoCoordinates` (`weather-map.js?v=1.6.5`). | Update `ROSALES_CENTER`, OSM fallback `bbox`/`marker`, ZIP code, and JSON-LD `GeoCoordinates`. |
+| `8c9d321` | `feat(ui): redesign Weather & Map of Rosales as unified two-pane card` | Unified `.weather-map-grid` into a 2-pane card (dark-navy live weather panel on left with `forecast_days: 2` + 4 upcoming hours, full-height Leaflet map + Google Maps link on right). | Update Google Maps query link and municipality coordinates. |
+| `e90431a` → `282abd5` | `feat(home): update Section 5 Government Leadership` & enlarge portrait cards | Updated Mayor & Vice Mayor on `index.html` with `Rosales.gov.ph` source, enlarged full-bleed background portrait cards (`min-height: 310px`), and added neutral-studio headshots (`assets/images/officials/mayor-william-cezar.jpg`, `vice-mayor-john-isaac-kho.jpg`). | Replace Mayor & Vice Mayor names, branch/office names, and portrait photos in `assets/images/officials/`. |
+| `72411d5` | `feat(home): add Section 7 Emergency Hotlines Directory and fix Rosales contact info` | Added `#emergency-hotlines-directory` (*"Who to call"*) 6-card `tel:` directory with Bootstrap Icons and updated Contact Information phone/ZIP. | Update all 6 emergency/utility numbers (MDRRMO, BFP, PNP, RHU, Water District, Electric Coop) and hall phone/ZIP. |
+
+---
+
+## 4. Government Directory (`government/index.html`)
+
+| Commit | Summary | What Was Added / Changed | What to Update for Other Municipalities |
+| :--- | :--- | :--- | :--- |
+| `825f230` | `feat(government): update Executive Branch, Sangguniang Bayan, and 9 Rosales department offices` | Updated `government/index.html` SEO meta, Executive Branch portrait cards, all 10 Sangguniang Bayan members (including ABC & SK Ex-Officio), and 9 municipal offices (removing legacy `(078)` contacts). | Replace SEO meta, Mayor/Vice Mayor, SB members, and municipal department heads/locations/hotlines. |
+| `681544d` & `4fea5fa` | `feat(government): redesign Sangguniang Bayan with horizontal cards...` & interactive filter/search | Redesigned SB section as 2-column horizontal cards with circular portraits (`assets/images/officials/sb-*.svg`), `01`–`10` seat numbers, role filter pills (`All`, `Regular`, `Ex-Officio`), live name search, and `Legislation →` links. | Generate `sb-*.svg` (or add `.jpg`/`.png` portraits) matching the municipality's councilors. |
+| `75ee1c1` | `feat(government): redesign Executive Department cards with office emblems and structured layout` | Added 9 agency-style SVG emblems (`assets/images/offices/*.svg`), acronym pills, head-of-office strips, and bottom-aligned metadata/service links. | Update office heads, locations, hotlines, and service-detail links per municipality. |
+
+---
+
+## 5. Subsequent Commits Log
+
+*(Append every new commit below as work progresses.)*

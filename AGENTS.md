@@ -12,6 +12,7 @@ BetterRosales.org is part of the **BetterGov.ph** civic initiative (`https://doc
 
 1. **Document All Changes**
    - Every change made to the repository must be properly documented in `CHANGELOG.md` (under `[Unreleased]` or the current release section) with a clear summary of what changed and which files were affected.
+   - Every commit must also be logged in `docs/rollout/MUNICIPALITY_ROLLOUT_LOG.md` (with commit hash, summary, what was added/changed, and what to update for other municipalities) so it serves as a replication guide.
    - Keep code comments, JSDoc/docstrings, and technical docs (`docs/`) accurate and up to date when modifying scripts, assets, or application behavior.
 
 2. **Always Commit Changes**

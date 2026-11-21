@@ -11,6 +11,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
+- Created per-commit municipality replication guide `docs/rollout/MUNICIPALITY_ROLLOUT_LOG.md` covering all commits from `91bd555` through `75ee1c1`, and updated `AGENTS.md` Rule #1 to log every future commit there.
 - Added workspace skill `.agents/skills/civic-ui-ux/SKILL.md` and UI/UX Craft standards in `AGENTS.md`.
 - Added official portrait assets (`assets/images/officials/mayor-cezar.svg`, `assets/images/officials/vice-mayor-kho.svg`) and redesigned **Section 5: Government Leadership** (`index.html`, `assets/css/ui-enhancements.css`) with left-aligned role badges, branch/office subtitles, `Email` / `Profile` action buttons, and a full Government Directory bar.
 - Added **Section 7: Emergency Hotlines Directory** (`#emergency-hotlines-directory` — "Who to call") to `index.html` and `assets/css/ui-enhancements.css` with clickable `tel:` links and Bootstrap Icons for MDRRMO (`(075) 582-7022`, `911`), BFP (`(075) 582-7132`, `911`), PNP (`(075) 582-7164`, `911`), Rural Health Unit (`(075) 582-7153`), Rosales Water District (`(075) 582-7234`), and PANELCO III (`0917-852-7353`), and fixed Contact Information phone `(075) 582-4920` and ZIP `2441`.
