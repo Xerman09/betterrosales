@@ -3333,3 +3333,28 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Hero Rosales Architectural Landmark Backdrop
+   -------------------------------------------------------------------------- */
+.home-hero-v2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-landmark-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/banners/rosales-hero-landmark.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.home-hero-v2 > .container {
+  position: relative;
+  z-index: 1;
+}
