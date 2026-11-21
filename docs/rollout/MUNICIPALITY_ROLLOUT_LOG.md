@@ -56,4 +56,7 @@ Use this log as a step-by-step replication guide when adapting the BetterGov mun
 
 ## 5. Subsequent Commits Log
 
-*(Append every new commit below as work progresses.)*
+| Summary | What Was Added / Changed | What to Update for Other Municipalities |
+| :--- | :--- | :--- |
+| `feat(government): replace 22 Solano barangays with 37 real Rosales barangays` | Replaced the 22 Solano barangays & captains in `government/index.html` and `assets/css/ui-enhancements.css` with all 37 official Rosales barangays (`01`–`37`), live search (`#brgy-search-input`), and DILG MLGOO / Liga ng mga Barangay notice (omitting unverified captain names/numbers). | Replace the barangays array with the municipality's verified PSA/DILG barangay list and Liga ng mga Barangay President; only add Punong Barangay names/contacts if verified from DILG/LGU. |
+
