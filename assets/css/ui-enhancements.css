@@ -829,3 +829,145 @@
   font-size: 0.9375rem;
   line-height: 1.6;
 }
+
+/* --------------------------------------------------------------------------
+   Section 1: About / Introduction (Rosales Split Layout)
+   -------------------------------------------------------------------------- */
+.about-rosales-section {
+  padding: 56px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.about-rosales-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-rosales-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0032a0;
+  background: rgba(0, 50, 160, 0.08);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  margin-bottom: 14px;
+}
+
+.about-rosales-content h2 {
+  font-size: clamp(1.625rem, 2.5vw, 2.125rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.about-rosales-content p {
+  font-size: 1.025rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+.about-rosales-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.about-highlight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  transition: var(--transition-smooth);
+}
+
+.about-highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 50, 160, 0.08);
+  border-color: rgba(0, 50, 160, 0.25);
+}
+
+.about-highlight-card--primary {
+  background: linear-gradient(135deg, #0032a0 0%, #00216e 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.about-highlight-card--accent {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+  border-color: #fde047;
+}
+
+.about-highlight-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: rgba(0, 50, 160, 0.08);
+  color: #0032a0;
+  margin-bottom: 10px;
+}
+
+.about-highlight-card--primary .about-highlight-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fef08a;
+}
+
+.about-highlight-card--accent .about-highlight-icon {
+  background: rgba(161, 98, 7, 0.14);
+  color: #854d0e;
+}
+
+.about-highlight-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.about-highlight-card--primary .about-highlight-value {
+  color: #ffffff;
+}
+
+.about-highlight-label {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.about-highlight-card--primary .about-highlight-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-highlight-card--accent .about-highlight-label {
+  color: #713f12;
+}
+
+@media (max-width: 960px) {
+  .about-rosales-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-rosales-section {
+    padding: 36px 0;
+  }
+  .about-rosales-highlights {
+    grid-template-columns: 1fr;
+  }
+}

@@ -50,9 +50,11 @@ const translations = {
     'breadcrumb-terms': 'Terms of Use',
 
     // Hero Section
-    'hero-welcome': 'Welcome to BetterRosales.org',
+    'hero-welcome': 'Welcome to Rosales. The Heart and Gateway of Pangasinan.',
     'hero-subtitle':
-      'Access government services, information, and resources for the people of Rosales, Pangasinan.',
+      'Where rich heritage, culinary pride, and modern progress meet at the crossroads of the North.',
+    'hero-explore-town': 'Explore Our Town',
+    'hero-business-tourism': 'Business & Tourism',
     'hero-browse': 'Browse Services',
     'hero-contact': 'Contact Us',
     'hero-search-placeholder': 'Search for services...',
