@@ -1,5 +1,13 @@
 # BetterRosales.org Agent Guidelines
 
+## BetterGov Mission & Guiding Principles
+
+BetterRosales.org is part of the **BetterGov.ph** civic initiative (`https://docs.bettergov.ph/docs/about`) to modernize and streamline citizen access to Philippine government services. Always prioritize:
+
+- **Citizen-First Service Access**: Make municipal services, transparency data, government structure/officials, and news easy to find, search, and filter in one place.
+- **Accessibility & Responsiveness**: Ensure every UI change is accessible, mobile-responsive across all device sizes, and fast-loading.
+- **Multilingual & Real-Time Utility**: Maintain consistency across supported languages (English, Filipino, Ilocano) and keep real-time civic widgets (weather, forex, PHT, emergency hotlines) accurate and reliable.
+
 ## Mandatory Workflow Rules
 
 1. **Document All Changes**
