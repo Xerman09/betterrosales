@@ -2416,3 +2416,29 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Government Directory Department Cards (Rosales Offices)
+   -------------------------------------------------------------------------- */
+.dept-card-head-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0032a0;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 4px 10px;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+.dept-card-loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78125rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
