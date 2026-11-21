@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed `assets/js/weather-map.js` (`ROSALES_CENTER: [15.8942, 120.6334]`, OSM embed fallback, `rosales_weather_cache`, and `Pangasinan 2441` popup) and `index.html` JSON-LD `GeoCoordinates` (`15.8942, 120.6334`) so the Weather & Map section centers on Rosales, Pangasinan instead of Solano, Nueva Vizcaya (bumped `weather-map.js?v=1.6.5`).
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added

@@ -60,7 +60,7 @@
   // Weather Service - Handles fetching, caching, and providing weather data
   // ============================================================================
   const WeatherService = {
-    CACHE_KEY: 'solano_weather_cache',
+    CACHE_KEY: 'rosales_weather_cache',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
     COORDINATES: { lat: 15.8942, lon: 120.6334 },
@@ -336,7 +336,7 @@
   // Map Component - Initializes and manages the Leaflet map
   // ============================================================================
   const MapComponent = {
-    SOLANO_CENTER: [16.5167, 121.1833],
+    ROSALES_CENTER: [15.8942, 120.6334],
     DEFAULT_ZOOM: 14,
     map: null,
 
@@ -390,7 +390,7 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.6134%2C15.8792%2C120.6534%2C15.9092&layer=mapnik&marker=15.8942%2C120.6334"
                 style="border:0;display:block;"
                 title="Map of Rosales, Pangasinan"
                 loading="lazy">
@@ -421,7 +421,7 @@
 
         // Create the map with keyboard navigation support
         this.map = L.map(container, {
-          center: this.SOLANO_CENTER,
+          center: this.ROSALES_CENTER,
           zoom: this.DEFAULT_ZOOM,
           scrollWheelZoom: false,
           zoomControl: true,
@@ -463,8 +463,8 @@
         tileLayer.addTo(this.map);
 
         // Add marker
-        const marker = L.marker(this.SOLANO_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Rosales Municipal Hall</strong><br>Pangasinan 3708');
+        const marker = L.marker(this.ROSALES_CENTER).addTo(this.map);
+        marker.bindPopup('<strong>Rosales Municipal Hall</strong><br>Pangasinan 2441');
 
         container.setAttribute('data-map-loaded', 'leaflet');
 
