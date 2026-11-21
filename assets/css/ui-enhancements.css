@@ -2446,6 +2446,48 @@
 /* --------------------------------------------------------------------------
    Sangguniang Bayan Horizontal Editorial Cards (Distinct from Executive Bg Cards)
    -------------------------------------------------------------------------- */
+.sb-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sb-search-wrap {
+  position: relative;
+  min-width: 240px;
+  flex: 0 1 280px;
+}
+
+.sb-search-wrap i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+.sb-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 34px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  background: #ffffff;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sb-search-input:focus {
+  border-color: #0032a0;
+  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.1);
+}
+
 .sb-council-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2453,16 +2495,27 @@
 }
 
 .sb-member-card {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
+  gap: 18px;
+  padding: 20px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-left: 4px solid #0032a0;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.sb-seat-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #94a3b8;
 }
 
 .sb-member-card:hover {
@@ -2481,11 +2534,11 @@
 }
 
 .sb-portrait {
-  width: 68px;
-  height: 68px;
-  border-radius: 14px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 1px solid #dbeafe;
+  border: 2px solid #dbeafe;
   flex-shrink: 0;
   background: #f1f5f9;
 }
@@ -2500,10 +2553,11 @@
 
 .sb-member-info {
   min-width: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 5px;
 }
 
 .sb-role-pill {
@@ -2528,16 +2582,41 @@
 
 .sb-member-info h4 {
   margin: 0;
+  padding-right: 26px;
   font-size: 1.0625rem;
   font-weight: 700;
   color: #0f172a;
   line-height: 1.25;
 }
 
+.sb-card-foot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
 .sb-branch-meta {
   margin: 0;
   font-size: 0.78125rem;
   color: #64748b;
+}
+
+.sb-leg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0032a0;
+  text-decoration: none;
+}
+
+.sb-leg-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 820px) {

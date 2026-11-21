@@ -416,9 +416,35 @@
             </p>
           </div>
 
+          <!-- Filter & Search Controls -->
+          <div class="sb-controls-bar">
+            <div class="td-filter-row" role="group" aria-label="Filter Sangguniang Bayan members">
+              <button type="button" class="td-pill is-active" data-sb-filter="all">
+                All Members (10)
+              </button>
+              <button type="button" class="td-pill" data-sb-filter="regular">
+                Regular Councilors (8)
+              </button>
+              <button type="button" class="td-pill" data-sb-filter="exofficio">
+                Ex-Officio (2)
+              </button>
+            </div>
+            <div class="sb-search-wrap">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <input
+                type="search"
+                id="sb-search-input"
+                class="sb-search-input"
+                placeholder="Search councilor by name..."
+                aria-label="Search Sangguniang Bayan member"
+              />
+            </div>
+          </div>
+
           <!-- Councilors Grid -->
-          <div class="sb-council-grid">
-            <article class="sb-member-card">
+          <div class="sb-council-grid" id="sb-council-grid">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">01</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-revita.svg"
@@ -430,10 +456,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Patrick V. Revita</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">02</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-cruiz-lauraya.svg"
@@ -445,10 +477,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Anafeil Marie C. Cruiz-Lauraya</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">03</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-monje.svg"
@@ -460,10 +498,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Emwil P. Monje</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">04</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-bince.svg"
@@ -475,10 +519,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Alvin P. Bince</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">05</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-coloma-cc.svg"
@@ -490,10 +540,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Christopher Conrad C. Coloma</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">06</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-consue.svg"
@@ -505,10 +561,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Enrique U. Consue Jr.</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">07</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-tagalicud.svg"
@@ -520,10 +582,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Romulo E. Tagalicud</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card">
+            <article class="sb-member-card" data-sb-group="regular">
+              <span class="sb-seat-num" aria-hidden="true">08</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-carino.svg"
@@ -535,10 +603,16 @@
               <div class="sb-member-info">
                 <span class="sb-role-pill">Municipal Councilor</span>
                 <h4>Hon. Joselito A. Cariño</h4>
-                <p class="sb-branch-meta">Sangguniang Bayan · Regular Member</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Bayan · Regular Member</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card sb-member-card--exofficio">
+            <article class="sb-member-card sb-member-card--exofficio" data-sb-group="exofficio">
+              <span class="sb-seat-num" aria-hidden="true">09</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-coloma-abc.svg"
@@ -552,10 +626,16 @@
                   >ABC President (Ex-Officio Member)</span
                 >
                 <h4>Hon. Crisanto S. Coloma Jr.</h4>
-                <p class="sb-branch-meta">Liga ng mga Barangay · Ex-Officio</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Liga ng mga Barangay · Ex-Officio</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
-            <article class="sb-member-card sb-member-card--exofficio">
+            <article class="sb-member-card sb-member-card--exofficio" data-sb-group="exofficio">
+              <span class="sb-seat-num" aria-hidden="true">10</span>
               <div class="sb-portrait">
                 <img
                   src="../assets/images/officials/sb-ganotice.svg"
@@ -569,10 +649,42 @@
                   >SK Federation President (Ex-Officio Member)</span
                 >
                 <h4>Hon. Rossa Mirah D. Ganotice</h4>
-                <p class="sb-branch-meta">Sangguniang Kabataan · Ex-Officio</p>
+                <div class="sb-card-foot">
+                  <span class="sb-branch-meta">Sangguniang Kabataan · Ex-Officio</span>
+                  <a href="../legislative/" class="sb-leg-link"
+                    >Legislation <i class="bi bi-arrow-right" aria-hidden="true"></i
+                  ></a>
+                </div>
               </div>
             </article>
           </div>
+          <script>
+            (function () {
+              const grid = document.getElementById('sb-council-grid');
+              const searchInput = document.getElementById('sb-search-input');
+              const filterBtns = document.querySelectorAll('[data-sb-filter]');
+              if (!grid) return;
+              let activeGroup = 'all';
+              function applyFilters() {
+                const q = (searchInput ? searchInput.value : '').trim().toLowerCase();
+                grid.querySelectorAll('.sb-member-card').forEach((card) => {
+                  const matchGroup = activeGroup === 'all' || card.dataset.sbGroup === activeGroup;
+                  const name = (card.querySelector('h4')?.textContent || '').toLowerCase();
+                  const matchSearch = !q || name.includes(q);
+                  card.style.display = matchGroup && matchSearch ? '' : 'none';
+                });
+              }
+              filterBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                  activeGroup = btn.dataset.sbFilter;
+                  filterBtns.forEach((b) => b.classList.remove('is-active'));
+                  btn.classList.add('is-active');
+                  applyFilters();
+                });
+              });
+              if (searchInput) searchInput.addEventListener('input', applyFilters);
+            })();
+          </script>
         </div>
       </section>
 
