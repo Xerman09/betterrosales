@@ -26,6 +26,12 @@ BetterRosales.org is part of the **BetterGov.ph** civic initiative (`https://doc
 3. **Answer Concisely**
    - Keep responses brief, direct, and focused on key outcomes, changed files, and verification results without unnecessary filler.
 
+## UI/UX Craft & Design Standards
+
+Follow the workspace skill `.agents/skills/civic-ui-ux/SKILL.md` on all UI/UX work:
+- **Consistent Alignment & Hierarchy**: Left-align badges, titles, and metadata inside cards; use `1px solid #e2e8f0` hairline borders, `tabular-nums` for numbers, and Bootstrap Icons (`bi-*`) instead of raw emojis.
+- **Functional Split Layouts**: Prefer interactive split panels (controls/list + map/chart) over repetitive static grids, and include graceful fallbacks for images and maps.
+
 ## Branding & Asset Conventions
 
 - **Logo & Emblem**: The BetterRosales.org brand mark (`assets/images/logo/better-rosales-logo.svg` and `-white.svg`, plus legacy `better-solano-logo*.svg` aliases and `react-app/public/assets/images/logo/` copies) must remain an **original civic geometric emblem** and must **never** replicate or closely resemble the official Municipality of Rosales LGU seal.
