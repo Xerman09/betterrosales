@@ -120,8 +120,26 @@ function buildSvg(isWhite) {
 `;
 }
 
+function buildFaviconSvg() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg id="better-rosales-favicon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250">
+  <!-- BetterRosales.org Vector Favicon -->
+  <rect fill="#f1f2f2" x="3.9" y="3.9" width="242.3" height="242.3" rx="72.8" ry="72.8"/>
+  <g transform="translate(125, 125) scale(1.42) translate(-82, -79)">
+    <g fill="#f2c91d">
+      ${sunRays.map(d => `<path d="${d}"/>`).join('\n      ')}
+      <path d="${sunDome}"/>
+    </g>
+    <path fill="#0032a0" d="${upperRibbon}"/>
+    <path fill="#0032a0" fill-opacity="0.88" d="${lowerRibbon}"/>
+  </g>
+</svg>
+`;
+}
+
 const colorSvg = buildSvg(false);
 const whiteSvg = buildSvg(true);
+const faviconSvg = buildFaviconSvg();
 
 const targetFiles = [
   // Primary web assets
@@ -129,17 +147,21 @@ const targetFiles = [
   'assets/images/logo/better-solano-logo-white.svg',
   'assets/images/logo/better-rosales-logo.svg',
   'assets/images/logo/better-rosales-logo-white.svg',
+  'assets/images/logo/favicon.svg',
   // React app assets
   'react-app/public/assets/images/logo/better-solano-logo.svg',
   'react-app/public/assets/images/logo/better-solano-logo-white.svg',
   'react-app/public/assets/images/logo/better-rosales-logo.svg',
-  'react-app/public/assets/images/logo/better-rosales-logo-white.svg'
+  'react-app/public/assets/images/logo/better-rosales-logo-white.svg',
+  'react-app/public/assets/images/logo/favicon.svg'
 ];
 
 targetFiles.forEach(file => {
   const fullPath = path.resolve(__dirname, '..', file);
   if (fs.existsSync(path.dirname(fullPath))) {
-    const content = file.includes('-white') ? whiteSvg : colorSvg;
+    const content = file.endsWith('favicon.svg')
+      ? faviconSvg
+      : (file.includes('-white') ? whiteSvg : colorSvg);
     fs.writeFileSync(fullPath, content, 'utf8');
     console.log('Updated:', file);
   }
