@@ -151,3 +151,4 @@
     document.querySelectorAll('.js-feedback-form').forEach(initFeedbackForm);
   });
 })();
+
