@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Refined **Rosales at a Glance** (`.home-stats-v2` / `.home-stat-card`) layout in `assets/css/ui-enhancements.css` from a cramped horizontal flex row to a balanced vertical column card with `tabular-nums` single-line metrics (`clamp(1.625rem, 2.2vw, 2rem); white-space: nowrap;`) and bottom-anchored `Official Source:` footers (`margin-top: auto`) so `"1st Class"` and `"66.39 km²"` no longer wrap awkwardly and all four cards align evenly.
 - Synced the single-row Rosales `.hotline-bar` carousel (`.hotline-carousel-viewport` / `.hotline-track`) and `ui-enhancements.css` stylesheet link across all 49 remaining HTML pages (`legislative/`, `services/`, `service-details/`, `statistics/`, `budget/`, `contact/`, `faq/`, `news/`, `accessibility/`, `privacy/`, `terms/`, `sitemap/`, and error pages), removing all legacy 3-row Solano/R2TMC hotline bars.
 - Fixed `.hotline-bar` in `government/index.html` (which was wrapping 3 rows of legacy Solano/R2TMC numbers) to use the single-row `.hotline-carousel-viewport` / `.hotline-track` with Rosales emergency hotlines.
 - Fixed `assets/js/weather-map.js` (`ROSALES_CENTER: [15.8942, 120.6334]`, OSM embed fallback, `rosales_weather_cache`, and `Pangasinan 2441` popup) and `index.html` JSON-LD `GeoCoordinates` (`15.8942, 120.6334`) so the Weather & Map section centers on Rosales, Pangasinan instead of Solano, Nueva Vizcaya (bumped `weather-map.js?v=1.6.5`).
