@@ -1078,12 +1078,12 @@
   margin-bottom: 20px;
 }
 
-.td-panel--split-procurement,
-.td-panel--split-infra {
-  grid-template-columns: 1fr;
+.td-panel--split-procurement {
+  grid-template-columns: 1.3fr 1fr;
 }
 
 .td-panel--split-infra {
+  grid-template-columns: 1fr;
   margin-bottom: 0;
 }
 
@@ -1094,8 +1094,11 @@
   gap: 16px;
 }
 
-.td-pane:first-child {
-  border-right: none;
+.td-panel--split-procurement .td-pane:first-child {
+  border-right: 1px solid #e2e8f0;
+}
+
+.td-panel--split-infra .td-pane:first-child {
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -1195,7 +1198,7 @@
   .td-panel--split-infra {
     grid-template-columns: 1fr;
   }
-  .td-pane:first-child {
+  .td-panel--split-procurement .td-pane:first-child {
     border-right: none;
     border-bottom: 1px solid #e2e8f0;
   }
