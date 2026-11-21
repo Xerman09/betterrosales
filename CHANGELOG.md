@@ -21,6 +21,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Updated Section 2 Transparency Dashboard panels (`.td-panel--split-procurement`, `.td-panel--split-infra`) in `assets/css/ui-enhancements.css` to a single-column (`1fr`) full-width layout.
 - Rebuilt Section 2 Transparency Dashboard (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) away from a 2x2 card grid into an interactive asymmetric split workspace: dark-navy KPI summary strip, unified Procurement & Awardees panel with working `Line`/`Bar` toggle and entity filter pills (`All`, `LGU of Rosales`, `CFERMTC`, `NIA-PIMO`), and unified DPWH Infrastructure Map + COA Reports panel with live map category filters (`All`, `Flood Control`, `Buildings`, `Roadways`).
 - Redesigned Section 2 Transparency Dashboard UI (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) with a crisp data-first layout: Y-axis scale + Q1/Q3 legend + interactive hover tooltip on the PhilGEPS chart, ranked `01`–`04` contractor ledger rows, DPWH map status legend + structured category rows, and COA scope badges + 3-column audit coverage summary bar.
 - Removed raw emojis from Section 2 Transparency Dashboard card headings in `index.html`, relying on the Bootstrap Icons in `.transparency-card-icon`.
