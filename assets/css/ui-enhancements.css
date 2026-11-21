@@ -47,6 +47,7 @@
 
 .hotline-inner {
   display: flex !important;
+  flex-wrap: nowrap !important;
   align-items: center !important;
   gap: 16px !important;
   width: 100% !important;
@@ -82,6 +83,7 @@
 .hotline-carousel-viewport,
 .hotline-items {
   flex: 1 1 auto !important;
+  min-width: 0 !important;
   display: flex !important;
   align-items: center !important;
   overflow: hidden !important;
