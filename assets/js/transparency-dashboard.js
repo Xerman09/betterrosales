@@ -1,16 +1,13 @@
 /**
  * Transparency Dashboard Interactive Module
- * Renders the PhilGEPS Monthly Cost Trend SVG chart (with Y-axis scale and
- * interactive hover tooltip) and the DPWH 6th District interactive Leaflet map.
+ * Powers the PhilGEPS Cost Trend chart (Line/Bar toggle + Entity filter)
+ * and the DPWH 6th District interactive Leaflet map (Category filter + live pin details).
  */
 (function () {
   'use strict';
 
-  function initCostTrendChart() {
-    const container = document.getElementById('philgeps-trend-chart');
-    if (!container) return;
-
-    const points = [
+  const TREND_SERIES = {
+    all: [
       { label: '2018 Q1', val: 42, type: 'Q1', note: 'DPWH Infra Allocation' },
       { label: '2018 Q3', val: 38, type: 'Q3', note: 'Medical & DRRM' },
       { label: '2019 Q1', val: 56, type: 'Q1', note: 'DPWH Infra Allocation' },
@@ -27,89 +24,186 @@
       { label: '2024 Q3', val: 78, type: 'Q3', note: 'Medical & DRRM' },
       { label: '2025 Q1', val: 96, type: 'Q1', note: 'DPWH Infra Peak' },
       { label: '2025 Q4', val: 82, type: 'Q3', note: 'Year-End Procurement' }
-    ];
+    ],
+    lgu: [
+      { label: '2018 Q1', val: 28, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2018 Q3', val: 24, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2019 Q1', val: 36, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2019 Q3', val: 30, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2020 Q1', val: 32, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2020 Q3', val: 46, type: 'Q3', note: 'Relief & DRRM Peak' },
+      { label: '2021 Q1', val: 44, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2021 Q3', val: 40, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2022 Q1', val: 52, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2022 Q3', val: 39, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2023 Q1', val: 58, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2023 Q3', val: 47, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2024 Q1', val: 62, type: 'Q1', note: 'LGU Infra & Ops' },
+      { label: '2024 Q3', val: 51, type: 'Q3', note: 'LGU DRRM' },
+      { label: '2025 Q1', val: 66, type: 'Q1', note: 'LGU Infra Peak' },
+      { label: '2025 Q4', val: 54, type: 'Q3', note: 'Year-End Ops' }
+    ],
+    cfermtc: [
+      { label: '2018 Q1', val: 18, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2018 Q3', val: 22, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2019 Q1', val: 24, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2019 Q3', val: 29, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2020 Q1', val: 34, type: 'Q1', note: 'Hospital Expansion' },
+      { label: '2020 Q3', val: 62, type: 'Q3', note: 'Medical Emergency Peak' },
+      { label: '2021 Q1', val: 42, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2021 Q3', val: 54, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2022 Q1', val: 45, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2022 Q3', val: 49, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2023 Q1', val: 48, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2023 Q3', val: 56, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2024 Q1', val: 52, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2024 Q3', val: 61, type: 'Q3', note: 'Lab Supplies Peak' },
+      { label: '2025 Q1', val: 55, type: 'Q1', note: 'Hospital Equipment' },
+      { label: '2025 Q4', val: 64, type: 'Q3', note: 'Medical Procurement' }
+    ],
+    nia: [
+      { label: '2018 Q1', val: 26, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2018 Q3', val: 16, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2019 Q1', val: 34, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2019 Q3', val: 19, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2020 Q1', val: 29, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2020 Q3', val: 21, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2021 Q1', val: 38, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2021 Q3', val: 22, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2022 Q1', val: 44, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2022 Q3', val: 25, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2023 Q1', val: 49, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2023 Q3', val: 27, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2024 Q1', val: 53, type: 'Q1', note: 'Irrigation Canals' },
+      { label: '2024 Q3', val: 30, type: 'Q3', note: 'Fleet Maintenance' },
+      { label: '2025 Q1', val: 57, type: 'Q1', note: 'Irrigation Peak' },
+      { label: '2025 Q4', val: 31, type: 'Q3', note: 'Fleet & Parts' }
+    ]
+  };
 
-    const w = 520;
-    const h = 164;
-    const padL = 38;
-    const padR = 14;
-    const padT = 18;
-    const padB = 26;
-    const plotW = w - padL - padR;
-    const plotH = h - padT - padB;
-    const maxVal = 100;
+  function initCostTrendChart() {
+    const container = document.getElementById('philgeps-trend-chart');
+    if (!container) return;
 
-    const coords = points.map((pt, i) => {
-      const x = padL + (i / (points.length - 1)) * plotW;
-      const y = padT + plotH - (pt.val / maxVal) * plotH;
-      return { ...pt, x, y };
-    });
+    let currentMode = 'line';
+    let currentEntity = 'all';
 
-    const linePath = coords
-      .map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x.toFixed(1)},${c.y.toFixed(1)}`)
-      .join(' ');
-    const areaPath = `${linePath} L${coords[coords.length - 1].x.toFixed(1)},${(padT + plotH).toFixed(1)} L${coords[0].x.toFixed(1)},${(padT + plotH).toFixed(1)} Z`;
+    function render() {
+      const points = TREND_SERIES[currentEntity] || TREND_SERIES.all;
+      const w = 540;
+      const h = 185;
+      const padL = 40;
+      const padR = 14;
+      const padT = 18;
+      const padB = 26;
+      const plotW = w - padL - padR;
+      const plotH = h - padT - padB;
+      const maxVal = 100;
 
-    const gridLines = [25, 50, 75, 100]
-      .map((v) => {
-        const gy = (padT + plotH - (v / maxVal) * plotH).toFixed(1);
-        return `
-          <line x1="${padL}" y1="${gy}" x2="${w - padR}" y2="${gy}" stroke="#e2e8f0" stroke-dasharray="2,3" stroke-width="1"/>
-          <text x="${padL - 6}" y="${(parseFloat(gy) + 3).toFixed(1)}" text-anchor="end" font-size="9.5" fill="#94a3b8" font-family="inherit">₱${v}M</text>
-        `;
-      })
-      .join('');
+      const coords = points.map((pt, i) => {
+        const x = padL + (i / (points.length - 1)) * plotW;
+        const y = padT + plotH - (pt.val / maxVal) * plotH;
+        return { ...pt, x, y };
+      });
 
-    const yearLabels = ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
-      .map((yr, idx) => {
-        const lx = (padL + ((idx * 2) / (points.length - 1)) * plotW).toFixed(1);
-        return `<text x="${lx}" y="${h - 6}" font-size="9.5" fill="#64748b" font-family="inherit">${yr}</text>`;
-      })
-      .join('');
+      const gridLines = [25, 50, 75, 100]
+        .map((v) => {
+          const gy = (padT + plotH - (v / maxVal) * plotH).toFixed(1);
+          return `
+            <line x1="${padL}" y1="${gy}" x2="${w - padR}" y2="${gy}" stroke="#e2e8f0" stroke-dasharray="2,3" stroke-width="1"/>
+            <text x="${padL - 6}" y="${(parseFloat(gy) + 3).toFixed(1)}" text-anchor="end" font-size="9.5" fill="#94a3b8" font-family="inherit">₱${v}M</text>
+          `;
+        })
+        .join('');
 
-    const dots = coords
-      .map((c, idx) => {
-        const dotColor = c.type === 'Q1' ? '#0032a0' : '#0ea5e9';
-        return `<circle class="trend-pt" data-idx="${idx}" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="3.75" fill="${dotColor}" stroke="#fff" stroke-width="1.5" style="cursor:pointer;"/>`;
-      })
-      .join('');
+      const yearLabels = ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
+        .map((yr, idx) => {
+          const lx = (padL + ((idx * 2) / (points.length - 1)) * plotW).toFixed(1);
+          return `<text x="${lx}" y="${h - 6}" font-size="9.5" fill="#64748b" font-family="inherit">${yr}</text>`;
+        })
+        .join('');
 
-    container.innerHTML = `
-      <div class="trend-chart-wrap" style="position:relative;">
-        <svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Monthly Cost Trend Jan 2018 to Dec 2025" style="width:100%;height:auto;display:block;">
-          <defs>
-            <linearGradient id="philgepsAreaGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#0032a0" stop-opacity="0.16"/>
-              <stop offset="100%" stop-color="#0032a0" stop-opacity="0.01"/>
-            </linearGradient>
-          </defs>
-          ${gridLines}
+      let chartGeom = '';
+      if (currentMode === 'bar') {
+        const barW = Math.max(10, (plotW / points.length) * 0.56);
+        chartGeom = coords
+          .map((c, idx) => {
+            const barH = padT + plotH - c.y;
+            const fill = c.type === 'Q1' ? '#0032a0' : '#0ea5e9';
+            return `<rect class="trend-pt" data-idx="${idx}" x="${(c.x - barW / 2).toFixed(1)}" y="${c.y.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" rx="3" fill="${fill}" opacity="0.9" style="cursor:pointer;"/>`;
+          })
+          .join('');
+      } else {
+        const linePath = coords
+          .map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x.toFixed(1)},${c.y.toFixed(1)}`)
+          .join(' ');
+        const areaPath = `${linePath} L${coords[coords.length - 1].x.toFixed(1)},${(padT + plotH).toFixed(1)} L${coords[0].x.toFixed(1)},${(padT + plotH).toFixed(1)} Z`;
+        const dots = coords
+          .map((c, idx) => {
+            const dotColor = c.type === 'Q1' ? '#0032a0' : '#0ea5e9';
+            return `<circle class="trend-pt" data-idx="${idx}" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="3.75" fill="${dotColor}" stroke="#fff" stroke-width="1.5" style="cursor:pointer;"/>`;
+          })
+          .join('');
+        chartGeom = `
           <path d="${areaPath}" fill="url(#philgepsAreaGrad)"/>
           <path d="${linePath}" fill="none" stroke="#0032a0" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
           ${dots}
-          ${yearLabels}
-        </svg>
-        <div class="trend-tooltip" aria-hidden="true"></div>
-      </div>
-    `;
+        `;
+      }
 
-    const tooltip = container.querySelector('.trend-tooltip');
-    const wrap = container.querySelector('.trend-chart-wrap');
-    container.querySelectorAll('.trend-pt').forEach((circle) => {
-      circle.addEventListener('mouseenter', () => {
-        const pt = coords[Number(circle.dataset.idx)];
-        tooltip.textContent = `${pt.label} · ${pt.note}`;
-        tooltip.style.left = `${(pt.x / w) * 100}%`;
-        tooltip.style.top = `${(pt.y / h) * 100}%`;
-        tooltip.classList.add('is-visible');
+      container.innerHTML = `
+        <div class="trend-chart-wrap" style="position:relative;">
+          <svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Monthly Cost Trend Jan 2018 to Dec 2025" style="width:100%;height:auto;display:block;">
+            <defs>
+              <linearGradient id="philgepsAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0032a0" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#0032a0" stop-opacity="0.01"/>
+              </linearGradient>
+            </defs>
+            ${gridLines}
+            ${chartGeom}
+            ${yearLabels}
+          </svg>
+          <div class="trend-tooltip" aria-hidden="true"></div>
+        </div>
+      `;
+
+      const tooltip = container.querySelector('.trend-tooltip');
+      const wrap = container.querySelector('.trend-chart-wrap');
+      container.querySelectorAll('.trend-pt').forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+          const pt = coords[Number(el.dataset.idx)];
+          tooltip.textContent = `${pt.label} · ${pt.note}`;
+          tooltip.style.left = `${(pt.x / w) * 100}%`;
+          tooltip.style.top = `${(pt.y / h) * 100}%`;
+          tooltip.classList.add('is-visible');
+        });
+        el.addEventListener('mouseleave', () => tooltip.classList.remove('is-visible'));
       });
-      circle.addEventListener('mouseleave', () => {
-        tooltip.classList.remove('is-visible');
+      if (wrap) {
+        wrap.addEventListener('mouseleave', () => tooltip.classList.remove('is-visible'));
+      }
+    }
+
+    document.querySelectorAll('[data-chart-mode]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentMode = btn.dataset.chartMode;
+        document.querySelectorAll('[data-chart-mode]').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        render();
       });
     });
-    if (wrap) {
-      wrap.addEventListener('mouseleave', () => tooltip.classList.remove('is-visible'));
-    }
+
+    document.querySelectorAll('[data-entity-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentEntity = btn.dataset.entityFilter;
+        document.querySelectorAll('[data-entity-filter]').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        render();
+      });
+    });
+
+    render();
   }
 
   function initDpwhMap() {
@@ -166,27 +260,48 @@
       Bidding: '#d97706'
     };
 
-    projects.forEach((p) => {
-      const color = statusColors[p.status] || '#0032a0';
-      const marker = L.circleMarker(p.coords, {
-        radius: 8,
-        fillColor: color,
-        color: '#ffffff',
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0.94
-      }).addTo(map);
+    const layerGroup = L.layerGroup().addTo(map);
 
-      marker.bindPopup(
-        `<div style="min-width:195px;font-family:inherit;">
-          <strong style="display:block;margin-bottom:4px;color:#0f172a;">${p.name}</strong>
-          <div style="font-size:12px;color:#475569;margin-bottom:4px;">Category: ${p.category}</div>
-          <div style="font-size:12px;margin-bottom:2px;">
-            <span style="display:inline-block;padding:2px 8px;border-radius:999px;background:${color};color:#fff;font-weight:600;">${p.status}</span>
-          </div>
-          <div style="font-size:12px;color:#0f172a;font-weight:700;margin-top:4px;">DPWH Allocation: ${p.budget}</div>
-        </div>`
-      );
+    function renderMarkers(categoryFilter) {
+      layerGroup.clearLayers();
+      const filtered =
+        categoryFilter === 'all'
+          ? projects
+          : projects.filter((p) => p.category === categoryFilter);
+
+      filtered.forEach((p) => {
+        const color = statusColors[p.status] || '#0032a0';
+        const marker = L.circleMarker(p.coords, {
+          radius: 8,
+          fillColor: color,
+          color: '#ffffff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.94
+        }).addTo(layerGroup);
+
+        marker.bindPopup(
+          `<div style="min-width:195px;font-family:inherit;">
+            <strong style="display:block;margin-bottom:4px;color:#0f172a;">${p.name}</strong>
+            <div style="font-size:12px;color:#475569;margin-bottom:4px;">Category: ${p.category}</div>
+            <div style="font-size:12px;margin-bottom:2px;">
+              <span style="display:inline-block;padding:2px 8px;border-radius:999px;background:${color};color:#fff;font-weight:600;">${p.status}</span>
+            </div>
+            <div style="font-size:12px;color:#0f172a;font-weight:700;margin-top:4px;">DPWH Allocation: ${p.budget}</div>
+          </div>`
+        );
+      });
+    }
+
+    renderMarkers('all');
+
+    document.querySelectorAll('[data-dpwh-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.dpwhFilter;
+        document.querySelectorAll('[data-dpwh-filter]').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        renderMarkers(cat);
+      });
     });
   }
 

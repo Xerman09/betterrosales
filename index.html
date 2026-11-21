@@ -632,60 +632,84 @@
             >
           </div>
 
-          <div class="transparency-grid">
-            <!-- Card 1: Monthly Cost Trend -->
-            <article class="transparency-card">
-              <div class="transparency-card-header">
-                <div class="transparency-card-title-group">
-                  <div class="transparency-card-icon"><i class="bi bi-graph-up"></i></div>
-                  <div>
-                    <h3>Monthly Cost Trend</h3>
-                    <p class="transparency-card-subtitle">
-                      Contract amounts over time • Jan 2018 – Dec 2025
-                    </p>
+          <!-- Top KPI Summary Strip -->
+          <div class="td-kpi-strip" role="region" aria-label="Transparency key metrics">
+            <div class="td-kpi-item">
+              <span class="td-kpi-val">2018 – 2025</span>
+              <span class="td-kpi-lbl">PhilGEPS Award Notices</span>
+            </div>
+            <div class="td-kpi-item">
+              <span class="td-kpi-val">3 Entities</span>
+              <span class="td-kpi-lbl">LGU Rosales • CFERMTC • NIA-PIMO</span>
+            </div>
+            <div class="td-kpi-item">
+              <span class="td-kpi-val">6th District</span>
+              <span class="td-kpi-lbl">DPWH Infrastructure Projects</span>
+            </div>
+            <div class="td-kpi-item">
+              <span class="td-kpi-val">37 Barangays</span>
+              <span class="td-kpi-lbl">Annual COA Audit Coverage</span>
+            </div>
+          </div>
+
+          <!-- Row 1: Procurement & Awardees Unified Split Panel -->
+          <div class="td-panel td-panel--split-procurement">
+            <div class="td-pane td-pane--chart">
+              <div class="td-pane-head">
+                <div>
+                  <h3>Monthly Cost Trend</h3>
+                  <p class="transparency-card-subtitle">
+                    Contract amounts over time • Jan 2018 – Dec 2025
+                  </p>
+                </div>
+                <div class="td-controls">
+                  <div class="td-segmented" role="group" aria-label="Chart display mode">
+                    <button type="button" class="td-seg-btn is-active" data-chart-mode="line">
+                      Line
+                    </button>
+                    <button type="button" class="td-seg-btn" data-chart-mode="bar">Bar</button>
                   </div>
                 </div>
-                <div class="transparency-legend" aria-label="Chart peak indicators">
-                  <span class="legend-item"><i class="legend-dot legend-dot--q1"></i>Q1 Infra</span>
-                  <span class="legend-item"><i class="legend-dot legend-dot--q3"></i>Q3 DRRM</span>
-                </div>
               </div>
+
+              <div class="td-filter-row" role="group" aria-label="Filter by tracked entity">
+                <button type="button" class="td-pill is-active" data-entity-filter="all">
+                  All Entities
+                </button>
+                <button type="button" class="td-pill" data-entity-filter="lgu">
+                  LGU of Rosales
+                </button>
+                <button type="button" class="td-pill" data-entity-filter="cfermtc">
+                  CFERMTC
+                </button>
+                <button type="button" class="td-pill" data-entity-filter="nia">NIA-PIMO</button>
+              </div>
+
               <div id="philgeps-trend-chart" class="transparency-chart-box"></div>
-              <div class="transparency-callout">
-                <strong>Trend Highlights:</strong> Municipal spending typically peaks in
-                <strong>Q1</strong> for DPWH infrastructure allocations and <strong>Q3</strong> for
-                disaster-relief and medical procurements.
-              </div>
-              <div class="transparency-card-footer">
-                <div class="entity-chips">
-                  <span class="entity-chips-label">Tracked Entities:</span>
-                  <span class="entity-chip">LGU of Rosales</span>
-                  <span class="entity-chip" title="Conrado F. Estrella Regional Medical and Trauma Center"
-                    >CFERMTC</span
-                  >
-                  <span class="entity-chip" title="National Irrigation Administration">NIA-PIMO</span>
+
+              <div class="td-trend-footer">
+                <div class="transparency-legend" aria-label="Chart peak indicators">
+                  <span class="legend-item"><i class="legend-dot legend-dot--q1"></i>Q1 DPWH Infra Peak</span>
+                  <span class="legend-item"><i class="legend-dot legend-dot--q3"></i>Q3 Medical &amp; DRRM Peak</span>
                 </div>
                 <div class="source-caption">
                   <i class="bi bi-database-check" aria-hidden="true"></i>
                   Source: PhilGEPS Award Notices for the Municipality of Rosales
                 </div>
               </div>
-            </article>
+            </div>
 
-            <!-- Card 2: Top Awardees & Contractors -->
-            <article class="transparency-card">
-              <div class="transparency-card-header">
-                <div class="transparency-card-title-group">
-                  <div class="transparency-card-icon"><i class="bi bi-trophy-fill"></i></div>
-                  <div>
-                    <h3>Top Awardees &amp; Contractors</h3>
-                    <p class="transparency-card-subtitle">
-                      By total contract value • Publicly disclosed via PhilGEPS
-                    </p>
-                  </div>
+            <div class="td-pane td-pane--awardees">
+              <div class="td-pane-head">
+                <div>
+                  <h3>Top Awardees &amp; Contractors</h3>
+                  <p class="transparency-card-subtitle">
+                    By total contract value • Disclosed via PhilGEPS
+                  </p>
                 </div>
-                <span class="transparency-badge">Top Sectors</span>
+                <span class="transparency-badge">Top 4 Sectors</span>
               </div>
+
               <div class="awardee-ledger">
                 <div class="awardee-row">
                   <div class="awardee-row-head">
@@ -739,19 +763,18 @@
                   </p>
                 </div>
               </div>
-            </article>
+            </div>
+          </div>
 
-            <!-- Card 3: DPWH Infrastructure -->
-            <article class="transparency-card">
-              <div class="transparency-card-header">
-                <div class="transparency-card-title-group">
-                  <div class="transparency-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                  <div>
-                    <h3>DPWH • Infrastructure</h3>
-                    <p class="transparency-card-subtitle">
-                      Public Works and Highway Projects in the 6th District
-                    </p>
-                  </div>
+          <!-- Row 2: DPWH Infrastructure Map + COA Reports Unified Split Panel -->
+          <div class="td-panel td-panel--split-infra">
+            <div class="td-pane td-pane--map">
+              <div class="td-pane-head">
+                <div>
+                  <h3>DPWH • Infrastructure</h3>
+                  <p class="transparency-card-subtitle">
+                    Public Works and Highway Projects in the 6th District
+                  </p>
                 </div>
                 <div class="transparency-legend" aria-label="Project status legend">
                   <span class="legend-item"
@@ -765,12 +788,29 @@
                   >
                 </div>
               </div>
-              <div id="dpwh-project-map" class="dpwh-map-box">
+
+              <div class="td-filter-row" role="group" aria-label="Filter DPWH projects by category">
+                <button type="button" class="td-pill is-active" data-dpwh-filter="all">
+                  All Projects
+                </button>
+                <button type="button" class="td-pill" data-dpwh-filter="Flood Control">
+                  Flood Control
+                </button>
+                <button type="button" class="td-pill" data-dpwh-filter="Buildings">
+                  Buildings
+                </button>
+                <button type="button" class="td-pill" data-dpwh-filter="Roadways">
+                  Roadways
+                </button>
+              </div>
+
+              <div id="dpwh-project-map" class="dpwh-map-box dpwh-map-box--tall">
                 <div class="dpwh-map-placeholder">
                   [ Interactive Project Map Placeholder ] (Enable JavaScript to view the project
                   map).
                 </div>
               </div>
+
               <div class="dpwh-categories">
                 <div class="dpwh-cat-item">
                   <span class="dpwh-cat-label">Flood Control</span>
@@ -791,24 +831,17 @@
                   >
                 </div>
               </div>
-              <div class="source-caption">
-                <i class="bi bi-cursor" aria-hidden="true"></i>
-                Click any map pin to view project status and exact DPWH budget allocation.
-              </div>
-            </article>
+            </div>
 
-            <!-- Card 4: Commission on Audit (COA) Reports -->
-            <article class="transparency-card">
-              <div class="transparency-card-header">
-                <div class="transparency-card-title-group">
-                  <div class="transparency-card-icon"><i class="bi bi-file-earmark-check"></i></div>
-                  <div>
-                    <h3>Commission on Audit (COA) Reports</h3>
-                    <p class="transparency-card-subtitle">Annual Financial Audit Summaries</p>
-                  </div>
+            <div class="td-pane td-pane--coa">
+              <div class="td-pane-head">
+                <div>
+                  <h3>Commission on Audit (COA) Reports</h3>
+                  <p class="transparency-card-subtitle">Annual Financial Audit Summaries</p>
                 </div>
                 <span class="transparency-badge">Public Audit</span>
               </div>
+
               <div class="coa-accordion">
                 <details open>
                   <summary>
@@ -862,6 +895,7 @@
                   </div>
                 </details>
               </div>
+
               <div class="coa-coverage-bar">
                 <div class="coa-cov-item">
                   <strong>3</strong>
@@ -876,7 +910,7 @@
                   <span>COA Financial Filings</span>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
 
           <div class="transparency-footer-note">
