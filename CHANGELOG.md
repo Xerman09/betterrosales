@@ -22,6 +22,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Removed the **Popular Services** (`<!-- Quick Access Services -->`) section from `index.html`.
 
 ### Changed
+- Redesigned **Weather and Map of Rosales** (`index.html`, `assets/js/weather-map.js`, `assets/css/ui-enhancements.css`) as a unified two-pane card: dark-navy live weather panel on the left (with `Live`/`Demo` badge, Humidity/Wind tiles, and 4-column upcoming hours via `forecast_days: 2`) paired with a full-height Leaflet map and Google Maps quick link on the right.
 - Redesigned **DPWH • Infrastructure** (`index.html`, `assets/js/transparency-dashboard.js`, `assets/css/ui-enhancements.css`) into a two-pane interactive explorer: project information, category filters, and clickable project cards on the left synced with a full-height Leaflet map and floating status legend on the right.
 - Restored `.td-panel--split-procurement` (`Monthly Cost Trend` + `Top Awardees & Contractors`) to its `1.3fr / 1fr` 2-column split while keeping `.td-panel--split-infra` (`DPWH • Infrastructure` and `COA Reports`) full-width single-column (`1fr`) in `assets/css/ui-enhancements.css`.
 - Updated Section 2 Transparency Dashboard panels (`.td-panel--split-procurement`, `.td-panel--split-infra`) in `assets/css/ui-enhancements.css` to a single-column (`1fr`) full-width layout.

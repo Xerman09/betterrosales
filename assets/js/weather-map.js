@@ -159,7 +159,7 @@
           current: 'temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m',
           hourly: 'temperature_2m,weather_code',
           timezone: 'Asia/Manila',
-          forecast_days: 1,
+          forecast_days: 2,
         });
 
         const apiUrl = `${this.API_URL}?${params}`;
@@ -249,35 +249,48 @@
           .join('');
 
         const dataSourceBadge = data.isFallback
-          ? '<span style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-left:4px;" title="Using fallback data">(Demo)</span>'
-          : '<span style="font-size:0.65rem;color:#06a77d;margin-left:4px;" title="Live data from Open-Meteo API">●</span>';
+          ? '<span class="wx-status-pill wx-status-pill--demo" title="Using fallback data">Demo</span>'
+          : '<span class="wx-status-pill wx-status-pill--live" title="Live data from Open-Meteo API"><i class="wx-live-dot"></i>Live</span>';
 
         container.innerHTML = `
-                <div class="weather-widget" role="region" aria-label="Current weather in Rosales">
+                <div class="weather-widget weather-widget--premium" role="region" aria-label="Current weather in Rosales">
+                    <div class="wx-top-bar">
+                        <span class="wx-location-pill">
+                            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                            Rosales, Pangasinan
+                        </span>
+                        ${dataSourceBadge}
+                    </div>
                     <div class="weather-current">
                         <div class="weather-current-icon" aria-hidden="true">
                             <i class="bi ${data.icon}"></i>
                         </div>
                         <div class="weather-current-info">
                             <div class="weather-current-temp" aria-label="Temperature ${data.temperature} degrees Celsius">${data.temperature}°C</div>
-                            <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}${dataSourceBadge}</div>
-                            <div class="weather-current-location">
-                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Rosales, Pangasinan
-                            </div>
+                            <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}</div>
                         </div>
                     </div>
                     <div class="weather-stats" role="list" aria-label="Weather details">
                         <div class="weather-stat" role="listitem" aria-label="Humidity ${data.humidity} percent">
-                            <i class="bi bi-droplet" aria-hidden="true"></i>
-                            <span>${data.humidity}%</span>
+                            <i class="bi bi-droplet-fill" aria-hidden="true"></i>
+                            <div>
+                                <span class="wx-stat-lbl">Humidity</span>
+                                <strong>${data.humidity}%</strong>
+                            </div>
                         </div>
                         <div class="weather-stat" role="listitem" aria-label="Wind speed ${data.windSpeed} kilometers per hour">
                             <i class="bi bi-wind" aria-hidden="true"></i>
-                            <span>${data.windSpeed} km/h</span>
+                            <div>
+                                <span class="wx-stat-lbl">Wind</span>
+                                <strong>${data.windSpeed} km/h</strong>
+                            </div>
                         </div>
                     </div>
-                    <div class="weather-hourly" role="list" aria-label="Hourly forecast">
-                        ${forecastHTML}
+                    <div class="wx-hourly-wrap">
+                        <div class="wx-hourly-title">Upcoming Hours</div>
+                        <div class="weather-hourly" role="list" aria-label="Hourly forecast">
+                            ${forecastHTML}
+                        </div>
                     </div>
                 </div>
             `;
