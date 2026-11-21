@@ -2026,9 +2026,9 @@
                 </p>
               </div>
               <div class="brgy-summary-actions">
-                <a href="../contact/" class="brgy-summary-btn">
-                  <i class="bi bi-telephone" aria-hidden="true"></i>
-                  Municipal Contact &amp; Hotlines
+                <a href="#feedback-form" class="brgy-summary-btn">
+                  <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                  Submit Captain / Info Update
                 </a>
                 <a href="../services/certificates" class="brgy-summary-btn brgy-summary-btn--outline">
                   Barangay &amp; Civil Services <i class="bi bi-arrow-right" aria-hidden="true"></i>
@@ -2116,6 +2116,142 @@
               }
             })();
           </script>
+        </div>
+      </section>
+      <!-- Feedback & Data Correction Form -->
+      <section id="feedback-form" class="section fb-section" aria-label="Submit Directory Correction or Additional Information">
+        <div class="container">
+          <div class="fb-wrapper">
+            <div class="fb-info-col">
+              <span class="about-rosales-eyebrow">
+                <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                Directory Updates
+              </span>
+              <h2>Suggest a Correction or Add Official Info</h2>
+              <p>
+                Have the verified list of Barangay Captains, updated Department Heads, or noticed an
+                error in the Rosales Government Directory? Submit it here for verification.
+              </p>
+              <ul class="fb-checklist">
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Submit incumbent Punong Barangay names or hall hotlines</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Update Department Heads, Sangguniang Bayan, or office locations</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Direct delivery to <strong>volunteer@betterrosales.org</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <form class="fb-card js-feedback-form" novalidate>
+              <input type="hidden" name="submission_type" value="Add Missing Information" />
+
+              <div class="fb-field">
+                <label class="fb-label">Submission Type</label>
+                <div class="td-filter-row" role="group" aria-label="Submission type">
+                  <button
+                    type="button"
+                    class="td-pill"
+                    data-fb-type="Incorrect Information"
+                  >
+                    Incorrect Information
+                  </button>
+                  <button
+                    type="button"
+                    class="td-pill is-active"
+                    data-fb-type="Add Missing Information"
+                  >
+                    Add Missing Info
+                  </button>
+                  <button type="button" class="td-pill" data-fb-type="General Feedback">
+                    General Feedback
+                  </button>
+                </div>
+              </div>
+
+              <div class="fb-form-grid">
+                <div class="fb-field">
+                  <label for="fb-section-gov" class="fb-label">Directory Section</label>
+                  <select id="fb-section-gov" name="section" class="fb-input">
+                    <option value="37 Barangays & Barangay Captains" selected>
+                      37 Barangays &amp; Barangay Captains
+                    </option>
+                    <option value="Municipal Offices & Department Heads">
+                      Municipal Offices &amp; Department Heads
+                    </option>
+                    <option value="Government Directory (Officials / SB)">
+                      Executive Branch / Sangguniang Bayan
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="fb-field">
+                  <label for="fb-source-gov" class="fb-label"
+                    >Official Source / Reference <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fb-source-gov"
+                    name="source"
+                    class="fb-input"
+                    placeholder="e.g., DILG Rosales MLGOO, LGU Memo"
+                  />
+                </div>
+              </div>
+
+              <div class="fb-field">
+                <label for="fb-details-gov" class="fb-label"
+                  >Details / Information to Include <span class="fb-req">*</span></label
+                >
+                <textarea
+                  id="fb-details-gov"
+                  name="details"
+                  class="fb-input fb-textarea"
+                  rows="4"
+                  required
+                  placeholder="Example: Barangay Carmen East — Punong Barangay: Hon. ..., Contact: ..."
+                ></textarea>
+              </div>
+
+              <div class="fb-form-grid">
+                <div class="fb-field">
+                  <label for="fb-name-gov" class="fb-label"
+                    >Your Name <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fb-name-gov"
+                    name="name"
+                    class="fb-input"
+                    placeholder="Juan Dela Cruz"
+                  />
+                </div>
+                <div class="fb-field">
+                  <label for="fb-email-gov" class="fb-label"
+                    >Your Email <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="email"
+                    id="fb-email-gov"
+                    name="email"
+                    class="fb-input"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="fb-form-status" role="status" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary fb-submit-btn">
+                <i class="bi bi-send-fill" aria-hidden="true"></i> Submit Report / Information
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

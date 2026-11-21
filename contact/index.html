@@ -487,6 +487,148 @@
           </div>
         </div>
       </section>
+      <!-- Feedback & Data Correction Form -->
+      <section id="feedback-form" class="section fb-section" aria-label="Report Correction or Submit Information">
+        <div class="container">
+          <div class="fb-wrapper">
+            <div class="fb-info-col">
+              <span class="about-rosales-eyebrow">
+                <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                Community Accuracy
+              </span>
+              <h2>Report Incorrect or Missing Information</h2>
+              <p>
+                Notice an outdated phone number, missing Barangay Captain, department head, or
+                additional municipal detail? Send us a correction or update so we can verify and
+                publish it.
+              </p>
+              <ul class="fb-checklist">
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Corrections to official names, titles, or hotlines</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Additional barangay captains, department heads, or office hours</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>Direct delivery to <strong>volunteer@betterrosales.org</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <form class="fb-card js-feedback-form" novalidate>
+              <input type="hidden" name="submission_type" value="Incorrect Information" />
+
+              <div class="fb-field">
+                <label class="fb-label">What would you like to submit?</label>
+                <div class="td-filter-row" role="group" aria-label="Submission type">
+                  <button
+                    type="button"
+                    class="td-pill is-active"
+                    data-fb-type="Incorrect Information"
+                  >
+                    Incorrect Information
+                  </button>
+                  <button
+                    type="button"
+                    class="td-pill"
+                    data-fb-type="Add Missing Information"
+                  >
+                    Add Missing Info
+                  </button>
+                  <button type="button" class="td-pill" data-fb-type="General Feedback">
+                    General Feedback
+                  </button>
+                </div>
+              </div>
+
+              <div class="fb-form-grid">
+                <div class="fb-field">
+                  <label for="fb-section-contact" class="fb-label">Page / Section</label>
+                  <select id="fb-section-contact" name="section" class="fb-input">
+                    <option value="Government Directory (Officials / SB)">
+                      Government Directory (Officials / SB)
+                    </option>
+                    <option value="37 Barangays & Barangay Captains">
+                      37 Barangays &amp; Barangay Captains
+                    </option>
+                    <option value="Municipal Offices & Department Heads">
+                      Municipal Offices &amp; Department Heads
+                    </option>
+                    <option value="Emergency Hotlines">Emergency Hotlines</option>
+                    <option value="Transparency / Budget / DPWH">
+                      Transparency / Budget / DPWH
+                    </option>
+                    <option value="Services & Requirements">Services &amp; Requirements</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="fb-field">
+                  <label for="fb-source-contact" class="fb-label"
+                    >Official Source / Link <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fb-source-contact"
+                    name="source"
+                    class="fb-input"
+                    placeholder="e.g., DILG memo, Rosales.gov.ph"
+                  />
+                </div>
+              </div>
+
+              <div class="fb-field">
+                <label for="fb-details-contact" class="fb-label"
+                  >Details / Correction <span class="fb-req">*</span></label
+                >
+                <textarea
+                  id="fb-details-contact"
+                  name="details"
+                  class="fb-input fb-textarea"
+                  rows="4"
+                  required
+                  placeholder="Describe the incorrect information or share the additional details to include..."
+                ></textarea>
+              </div>
+
+              <div class="fb-form-grid">
+                <div class="fb-field">
+                  <label for="fb-name-contact" class="fb-label"
+                    >Your Name <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fb-name-contact"
+                    name="name"
+                    class="fb-input"
+                    placeholder="Juan Dela Cruz"
+                  />
+                </div>
+                <div class="fb-field">
+                  <label for="fb-email-contact" class="fb-label"
+                    >Your Email <span class="fb-opt">(Optional)</span></label
+                  >
+                  <input
+                    type="email"
+                    id="fb-email-contact"
+                    name="email"
+                    class="fb-input"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="fb-form-status" role="status" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary fb-submit-btn">
+                <i class="bi bi-send-fill" aria-hidden="true"></i> Submit Report / Information
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
