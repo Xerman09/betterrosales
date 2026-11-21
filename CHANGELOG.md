@@ -11,7 +11,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
-- Added Rosales architectural landmark hero backdrop (`assets/images/banners/rosales-hero-landmark.svg`) behind `.home-hero-v2` in `index.html` and `assets/css/ui-enhancements.css` featuring the Rosales Welcome Arch, Presidencia silhouette, and sunburst motif.
+- Added Rosales Presidencia landmark hero backdrop (`assets/images/banners/rosales-presidencia.jpg`) behind `.home-hero-v2` in `index.html` and `assets/css/ui-enhancements.css`, replacing the initial SVG illustration (`rosales-hero-landmark.svg`) with the real photo of The Presidencia, carabao monument, and Bayan ng Rosales lawn emblem blended into the royal-blue hero gradient.
 - Added citizen **Feedback & Data Correction Form** (`#feedback-form`, `assets/js/feedback-form.js`, `assets/css/ui-enhancements.css`) to `contact/index.html` and `government/index.html` allowing users to report incorrect information or submit missing details (e.g., Barangay Captains, Department Heads, hotlines) to `volunteer@betterrosales.org` via FormSubmit AJAX with `mailto:` and copy-to-clipboard fallbacks.
 - Created per-commit municipality replication guide `docs/rollout/MUNICIPALITY_ROLLOUT_LOG.md` covering all commits from `91bd555` through `75ee1c1`, and updated `AGENTS.md` Rule #1 to log every future commit there.
 - Added workspace skill `.agents/skills/civic-ui-ux/SKILL.md` and UI/UX Craft standards in `AGENTS.md`.
