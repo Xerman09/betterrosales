@@ -20,7 +20,7 @@ for (let i = 0; i < word.length; i++) {
   const glyph = font.charToGlyph(ch);
   const p = glyph.getPath(x, baselineY, size);
   rosalesPaths.push(p.toPathData(1));
-  const kerning = (i < word.length - 1) ? font.getKerningValue(glyph, font.charToGlyph(word[i+1])) : 0;
+  const kerning = (i < word.length - 1) ? font.getKerningValue(glyph, font.charToGlyph(word[i + 1])) : 0;
   x += (glyph.advanceWidth + kerning + tracking) * (size / font.unitsPerEm);
 }
 
@@ -41,57 +41,43 @@ const orgPaths = [
   'M409.7,146.2c-1.1,0-2.1-.1-3.1-.4-.9-.3-1.7-.7-2.5-1.2-.7-.5-1.5-1.5-2.3-2.8l3.3-1.7c.6.9,1,1.5,1.4,1.8.4.3.9.6,1.4.7.5.2,1.1.2,1.6.2,1.5,0,2.6-.4,3.4-1.3.8-.8,1.2-2,1.2-3.5v-1.7h0c-.6.8-1.3,1.4-2.2,1.9-.9.4-1.9.7-3,.7-2.2,0-4-.8-5.4-2.3-1.4-1.5-2.1-3.6-2.1-6.2s.7-4.6,2.2-6.2c1.5-1.6,3.3-2.3,5.5-2.3s2.1.2,3,.7c.9.4,1.7,1.1,2.2,1.9h1l-1,1v-3h4v15.4c0,2.7-.8,4.7-2.3,6.1-1.5,1.4-3.6,2.1-6.3,2.1ZM409.8,135.4c1.3,0,2.3-.5,3.2-1.4.8-.9,1.2-2.1,1.2-3.7s-.4-2.7-1.2-3.6c-.8-.9-1.9-1.4-3.2-1.4s-2.3.5-3.2,1.3c-.8.9-1.3,2.1-1.3,3.6s.4,2.8,1.3,3.7c.8.9,1.9,1.3,3.2,1.3Z'
 ];
 
-// Emblem paths
-const sunRay = 'M14.3,29.6l-.4-6.8c0-.9.7-1.7,1.6-1.6l7.6.5c.4,0,.8.2,1.1.6l17.4,21.8c0,0,.2-.1.3-.2,0,0,0,0,.1-.1.2-.1.3-.2.5-.4,0,0,0,0,.1,0,.2-.1.4-.3.6-.4.1-.1.3-.2.4-.3l-13-18.6c-.8-1.1.1-2.6,1.4-2.4l1.9.2c.5,0,.9.3,1.2.8l10.9,18.5c.1,0,.2-.1.4-.2,0,0,0,0,.1,0,.2-.1.4-.2.6-.3.2-.1.4-.2.6-.3t0,0c0,0,.2,0,.2-.1,0,0,0,0,0,0,0,0,.1,0,.2,0,.1,0,.2-.1.3-.2.2,0,.3-.2.5-.2.2,0,.3-.1.5-.2,0,0,0,0,.1,0,.2,0,.4-.1.6-.2,0,0,.1,0,.2,0,.2,0,.4-.2.6-.2.2,0,.4-.2.6-.2,0,0,.1,0,.2,0,.2,0,.3-.1.5-.2,0,0,.1,0,.2,0,0,0,0,0,0,0,0,0,0,0,0,0l-5.2-20.9c-.1-.5,0-1,.3-1.4l1.2-1.5c.8-1,2.5-.6,2.7.7l3.7,22.3h0c.2,0,.5,0,.7-.1,0,0,0,0,0,0,.2,0,.5,0,.7-.1.2,0,.5,0,.7,0,0,0,.2,0,.2,0l-3.1-27.7c0-.4,0-.9.4-1.2l5.1-5.7c.6-.7,1.7-.7,2.3,0l5.1,5.7c.3.3.4.8.4,1.2l-3.1,27.7c.2,0,.3,0,.5,0,.2,0,.5,0,.7,0,.3,0,.5,0,.8.1,0,0,0,0,0,0,.2,0,.3,0,.5,0l3.9-22.3c.2-1.3,1.9-1.7,2.7-.7l1.2,1.5c.3.4.4.9.3,1.4l-5.4,20.8c.2,0,.3,0,.5.1,0,0,0,0,0,0,.2,0,.4.1.6.2,0,0,.1,0,.2,0,.2,0,.4.1.6.2.2,0,.4.2.6.2,0,0,.1,0,.2,0,.2,0,.4.1.5.2,0,0,0,0,.1,0,.2,0,.3.2.5.2.2,0,.3.2.5.2.2,0,.3.2.5.2.1,0,.2.1.4.2.2,0,.4.2.6.3.2.1.4.2.6.3,0,0,.2.1.3.2l11.1-18.4c.3-.4.7-.7,1.2-.8l2-.2c1.3-.1,2.2,1.4,1.4,2.5l-13.2,18.4h0c.2.1.4.3.6.4.2.1.4.3.6.4,0,0,0,0,.1,0,.2.1.3.2.5.4,0,0,0,0,.1.1,0,0,0,0,0,0t0,0l17.4-21.8c.3-.3.7-.6,1.1-.6l7.7-.4c.9,0,1.7.7,1.6,1.6l-.5,7.6c0,.4-.2.8-.6,1.1l-21.8,17.4c0,0,.1.2.2.3,0,0,0,0,.1.1.1.2.3.4.4.6.2.2.3.4.4.6,0,0,0,0,0,0,0,.1.2.3.3.4h0l18.6-13c1.1-.8,2.6.1,2.4,1.4l-.2,1.9c0,.5-.3.9-.8,1.2l-18.5,10.9c0,0,0,.2.1.2,0,0,0,.1.1.2.1.2.2.4.3.6,0,0,0,.2.1.2,0,.2.2.3.2.5,0,0,0,0,0,.1.1.2.2.4.3.6,0,.2.2.4.3.6,0,.1,0,.2.1.3,0,.2.2.4.2.5,0,0,0,0,0,0,0,.2.1.3.2.5,0,.2.1.4.2.6,0,.2.2.5.2.7,0,.2.1.4.2.7,0,0,0,.1,0,.2,0,0,0,.1,0,.2l20.8-5.2c.5-.1,1,0,1.4.3l1.5,1.2c1,.9.6,2.5-.7,2.7l-22.3,3.7h0c0,.3,0,.5.1.8,0,0,0,0,0,0,0,.2,0,.5.1.7,0,.3,0,.5,0,.8,0,0,0,0,0,0l-8.4,1.4c0,0-.2,0-.3,0l-12.7-.2c-.2,0-.3,0-.5,0l-24.8-9c-.2,0-.3-.2-.5-.3L14.3,29.6Z';
-const sunCore = 'M109.9,68.6c-.5-1.2-4.2-1-5.5-.4-.5.2-1.3.6-1.9.9-.9.4-1.9-.2-2.3-1.3l-.5-1.9c-.2-.5-.5-.9-.8-1.1l21.1-2.4c-.5.7-.7,1.5-.6,2.1,0,.8-.3,1.4-.9,1.8-.3.2-.5.4-.6.5-.2.4-1,0-1.3.6-.3.7-1.4,2.9-2.1,2-.7-.9-2.2-1-2.7-.2s-1.3.5-1.9-.7Z';
-const blueShape = 'M180.4,104.2c-1.3,3.6-3.9,10.5-4.8,12.8-1.1,2.8-7.2,10.5-8.5,12.1-.2.2-.3.3-.6.5l-7.8,4c-.1,0-.3.2-.4.3l-3.7,3.4c0,0-.1.1-.2.1-.8.5-5.9,3.9-11.2,5.6-4.8,1.6-12.7,3.8-15,4.5-.5.1-.8.4-1,.8l-.6,1c-.4.8-1.4,1.1-2.2.8l-32.8-14.3c-.6-.3-1-.9-1-1.6v-1.9c0-.7-.5-1.3-1.1-1.6l-15.6-6.9-2.3-1-3.9-1.7-11.1-4.9-3.3-1.4-1.3-.6c-.2,0-.4-.2-.5-.3l-1.7-1.6-1.7-1.7c-.5-.5-.6-1.2-.4-1.8l.3-1c.2-.6,0-1.3-.3-1.7l-4.2-4.6-2.3-2.5-1.9-2-3.3-3.6-1.8-2c0,0-.1-.1-.2-.2-.3-.2-.6-.3-.9-.3l-3-.3-5.7-.5-20.3-2c-.8,0-1.5-.8-1.6-1.6v-.6s-.6-10.3-.6-10.3l-.3-5.4c0-.1,0-.2,0-.3l.8-7.5,2.7-25.7c.1-1.3,1.7-2,2.7-1.2l6.4,4.6,13,9.4,6,4.3,13.9,10.1c.2.1.3.2.5.3l24.4,7.5c.2,0,.3,0,.5,0h12.5c0,.1.2.1.3.1l12.2-1.8c.8-.1,1.6.4,1.9,1.2l.5,1.6c0,0,0,.1,0,.2.4.8,1.3,1.2,2.1.9.4-.2.9-.3,1.3-.5.2,0,.4-.2.6-.2,1.3-.5,4.9-.7,5.4.3.1.3.3.5.5.6.4.3.9.4,1.2.1,0,0,.1-.1.2-.2.5-.6,2-.6,2.7.2.6.8,1.7-1.1,2-1.6.3-.6,1.1-.2,1.3-.6,0-.1.3-.3.6-.5.5-.3.9-.9.9-1.5,0-.6.1-1.3.7-1.9,1.2-1.2,3.2-.8,3.5-1.4.3-.6-.5-2-.5-2.6,0-.3.5-.8.9-1.2.3-.2.5-.4.5-.4l14.4,4.7c.3.1.6.3.9.6l22.9,31.4c.3.5.9.7,1.4.7s.2,0,.3,0c.4,0,.8-.3,1.1-.7.5-.6,1.2-.8,1.9-.6.1,0,.3.1.4.2l3.1,2c.2.2.5.3.9.3h.2s7.5.4,7.5.4c.5,0,.9.2,1.2.5.4.5.6,1.1.4,1.8Z';
+// Original BetterRosales Civic Geometric Mark (centered at cx=82, cy=75.85)
+// Minimalist rising sun + 5 geometric rays over two sweeping valley/river ribbons
+const CX = 82;
+const SUN_CY = 74;
+const SUN_R = 23;
 
-// Function to generate SVG
+function buildSunRays(cx, cy, innerR, outerR) {
+  const angles = [-150, -120, -90, -60, -30];
+  const halfWidthDeg = 6.5;
+  return angles.map(deg => {
+    const a1 = ((deg - halfWidthDeg) * Math.PI) / 180;
+    const a2 = ((deg + halfWidthDeg) * Math.PI) / 180;
+    const aMid = (deg * Math.PI) / 180;
+    const x1 = (cx + innerR * Math.cos(a1)).toFixed(1);
+    const y1 = (cy + innerR * Math.sin(a1)).toFixed(1);
+    const x2 = (cx + outerR * Math.cos(aMid)).toFixed(1);
+    const y2 = (cy + outerR * Math.sin(aMid)).toFixed(1);
+    const x3 = (cx + innerR * Math.cos(a2)).toFixed(1);
+    const y3 = (cy + innerR * Math.sin(a2)).toFixed(1);
+    return `M${x1},${y1} L${x2},${y2} L${x3},${y3} Z`;
+  });
+}
+
+const sunRays = buildSunRays(CX, SUN_CY, 30, 56);
+// Rising sun dome (semi-circle above the upper wave)
+const sunDome = `M${CX - SUN_R},${SUN_CY} A${SUN_R},${SUN_R} 0 0,1 ${CX + SUN_R},${SUN_CY} C${CX + 12},${SUN_CY - 4} ${CX - 12},${SUN_CY - 4} ${CX - SUN_R},${SUN_CY} Z`;
+
+// Sweeping geometric valley / river ribbons (distinct from any municipal seal)
+const upperRibbon = 'M16,89 C36,70 64,70 86,81 C106,91 128,89 148,76 C140,95 118,107 92,102 C68,97 44,86 16,89 Z';
+const lowerRibbon = 'M22,108 C46,96 72,104 94,112 C114,119 132,113 144,100 C134,126 110,140 82,140 C54,140 32,127 22,108 Z';
+
 function buildSvg(isWhite) {
   if (isWhite) {
     return `<?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 421.6 151.7">
   <!-- BetterRosales.org Vector Logo (White Variant) -->
-  <defs>
-    <style>
-      .st0 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <g>
-    <g>
-      ${betterPaths.map(d => `<path class="st0" d="${d}"/>`).join('\n      ')}
-      ${rosalesPaths.map(d => `<path class="st0" d="${d}"/>`).join('\n      ')}
-    </g>
-    <g>
-      ${orgPaths.map(d => `<path class="st0" d="${d}"/>`).join('\n      ')}
-    </g>
-  </g>
-  <g>
-    <path class="st0" d="${sunRay}"/>
-    <path class="st0" d="${sunCore}"/>
-    <path class="st0" d="${blueShape}"/>
-  </g>
-</svg>
-`;
-  }
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 421.6 151.7">
-  <!-- BetterRosales.org Vector Logo (Standard Variant) -->
-  <defs>
-    <style>
-      .st0 {
-        fill: #f2c91d;
-      }
-
-      .st1 {
-        fill: #0032a0;
-      }
-    </style>
-  </defs>
-  <g>
+  <g fill="#fff">
     <g>
       ${betterPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
       ${rosalesPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
@@ -100,10 +86,35 @@ function buildSvg(isWhite) {
       ${orgPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
     </g>
   </g>
-  <g>
-    <path class="st0" d="${sunRay}"/>
-    <path class="st0" d="${sunCore}"/>
-    <path class="st1" d="${blueShape}"/>
+  <g id="better-rosales-emblem-white" fill="#fff">
+    ${sunRays.map(d => `<path fill-opacity="0.9" d="${d}"/>`).join('\n    ')}
+    <path fill-opacity="0.9" d="${sunDome}"/>
+    <path d="${upperRibbon}"/>
+    <path fill-opacity="0.82" d="${lowerRibbon}"/>
+  </g>
+</svg>
+`;
+  }
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 421.6 151.7">
+  <!-- BetterRosales.org Vector Logo (Standard Variant) -->
+  <g fill="#000">
+    <g>
+      ${betterPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
+      ${rosalesPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
+    </g>
+    <g>
+      ${orgPaths.map(d => `<path d="${d}"/>`).join('\n      ')}
+    </g>
+  </g>
+  <g id="better-rosales-emblem">
+    <g fill="#f2c91d">
+      ${sunRays.map(d => `<path d="${d}"/>`).join('\n      ')}
+      <path d="${sunDome}"/>
+    </g>
+    <path fill="#0032a0" d="${upperRibbon}"/>
+    <path fill="#0032a0" fill-opacity="0.88" d="${lowerRibbon}"/>
   </g>
 </svg>
 `;
