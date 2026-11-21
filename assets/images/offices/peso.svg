@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="PESO Emblem">
+  <rect width="120" height="120" rx="22" fill="#eff6ff"/>
+  <circle cx="60" cy="60" r="42" fill="none" stroke="#0032a0" stroke-width="4"/>
+           <circle cx="60" cy="46" r="10" fill="#0032a0"/>
+           <path d="M40,80 C40,66 49,60 60,60 C71,60 80,66 80,80" fill="none" stroke="#0032a0" stroke-width="5" stroke-linecap="round"/>
+           <path d="M28,60 A32,32 0 0,1 92,60" fill="none" stroke="#f2c91d" stroke-width="4" stroke-dasharray="6,5"/>
+</svg>

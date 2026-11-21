@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MSWDO Emblem">
+  <rect width="120" height="120" rx="22" fill="#fdf2f8"/>
+  <circle cx="60" cy="60" r="42" fill="none" stroke="#be185d" stroke-width="4"/>
+           <path d="M60,84 C60,84 34,68 34,50 C34,41 41,35 49,35 C54,35 58,38 60,42 C62,38 66,35 71,35 C79,35 86,41 86,50 C86,68 60,84 60,84 Z" fill="#be185d" fill-opacity="0.85"/>
+</svg>

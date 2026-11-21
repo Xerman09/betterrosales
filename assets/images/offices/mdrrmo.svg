@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MDRRMO Emblem">
+  <rect width="120" height="120" rx="22" fill="#fef2f2"/>
+  <circle cx="60" cy="60" r="42" fill="#1d4ed8"/>
+           <polygon points="60,26 94,84 26,84" fill="#f97316" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+           <rect x="57" y="45" width="6" height="20" rx="3" fill="#ffffff"/>
+           <circle cx="60" cy="73" r="3.5" fill="#ffffff"/>
+</svg>

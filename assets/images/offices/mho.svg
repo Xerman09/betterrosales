@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MHO Emblem">
+  <rect width="120" height="120" rx="22" fill="#f0fdf4"/>
+  <circle cx="60" cy="60" r="42" fill="none" stroke="#15803d" stroke-width="4"/>
+           <rect x="52" y="34" width="16" height="52" rx="4" fill="#15803d"/>
+           <rect x="34" y="52" width="52" height="16" rx="4" fill="#15803d"/>
+           <circle cx="60" cy="60" r="7" fill="#ffffff"/>
+</svg>

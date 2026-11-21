@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="LCRO Emblem">
+  <rect width="120" height="120" rx="22" fill="#f8fafc"/>
+  <path d="M36,24 H70 L86,40 V96 H36 Z" fill="none" stroke="#0032a0" stroke-width="4" stroke-linejoin="round"/>
+           <path d="M70,24 V40 H86" fill="none" stroke="#0032a0" stroke-width="4" stroke-linejoin="round"/>
+           <line x1="46" y1="54" x2="76" y2="54" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+           <line x1="46" y1="68" x2="76" y2="68" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+           <line x1="46" y1="82" x2="64" y2="82" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+</svg>

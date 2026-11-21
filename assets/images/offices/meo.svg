@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="MEO Emblem">
+  <rect width="120" height="120" rx="22" fill="#fffbeb"/>
+  <polygon points="60,18 96,38 96,82 60,102 24,82 24,38" fill="none" stroke="#b45309" stroke-width="4"/>
+           <circle cx="60" cy="60" r="14" fill="none" stroke="#0032a0" stroke-width="5"/>
+           <path d="M60,36 V44 M60,76 V84 M36,60 H44 M76,60 H84 M43,43 L49,49 M71,71 L77,77 M77,43 L71,49 M49,71 L43,77" stroke="#0032a0" stroke-width="4" stroke-linecap="round"/>
+</svg>
