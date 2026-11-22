@@ -19763,6 +19763,16 @@ const TranslationEngine = {
       'Longest-Serving': 'Pinakamatagal na Naglingkod',
       'Prior to 1954': 'Bago ang 1954',
       'Governor & DAR Secretary': 'Gobernador at Kalihim ng DAR',
+      'The incumbent mayor of Rosales. First elected in 2022 and ran unopposed in the 2025 midterm elections, overseeing continuing commercial growth and infrastructure expansion along the TPLEX corridor.':
+        'Ang kasalukuyang alkalde ng Rosales. Unang nahalal noong 2022 at tumakbong walang kalaban sa 2025 midterm elections, pinamumunuan ang patuloy na paglago ng komersyo at imprastraktura sa kahabaan ng TPLEX corridor.',
+      'Served the maximum three consecutive terms, guiding Rosales through rapid modernization, business expansion including SM City Rosales, COVID-19 response, and Typhoon Pepeng flood recovery.':
+        'Naglingkod ng tatlong magkakasunod na termino, ginabayan ang Rosales sa mabilis na modernisasyon, paglawak ng negosyo kabilang ang SM City Rosales, pagtugon sa COVID-19, at pagbangon mula sa Bagyong Pepeng.',
+      'A retired police major whose 2004 victory ended a 37-year political stronghold. Over three terms, he spearheaded the major renovation of the historic 1924 Presidencia and modernized agricultural and local infrastructure.':
+        'Isang retiradong police major na nagwakas sa 37-taong pamumuno noong 2004. Sa loob ng tatlong termino, pinangunahan niya ang malawakang pagkukumpuni ng makasaysayang 1924 Presidencia at modernisasyon ng agrikultura at imprastraktura.',
+      'Elected at the turn of the millennium as the first female mayor of Rosales, succeeding long-time local chief executive Remigio Yu.':
+        'Nahalal sa pagpasok ng bagong milenyo bilang kauna-unahang babaeng alkalde ng Rosales, na humalili sa matagal nang alkalde na si Remigio Yu.',
+      'Began his public service as Mayor of Rosales, helping restore St. Anthony of Padua Parish after the 1946 tornado before serving as Pangasinan Governor (1954–1963) and Agrarian Reform Secretary/Minister (1971–1986).':
+        'Nagsimula ang kanyang paglilingkod publiko bilang Alkalde ng Rosales, tumulong sa pagpapanumbalik ng Parokya ng San Antonio ng Padua matapos ang buhawi noong 1946 bago nagsilbi bilang Gobernador ng Pangasinan (1954–1963) at Kalihim/Ministro ng Repormang Agraryo (1971–1986).',
       'Tourism & Heritage': 'Turismo at Pamana',
       'Landmarks & Points of Interest in Rosales': 'Mga Palatandaan at Pasyalan sa Rosales',
       'Explore historical landmarks, photo markers, tranquil nature spots in Acop, and local waypoints strictly within the Municipality of Rosales.':
@@ -20091,6 +20101,16 @@ const TranslationEngine = {
       'Longest-Serving': 'Kapautan a Nagserbi',
       'Prior to 1954': 'Sakbay ti 1954',
       'Governor & DAR Secretary': 'Gobernador ken Sekretario ti DAR',
+      'The incumbent mayor of Rosales. First elected in 2022 and ran unopposed in the 2025 midterm elections, overseeing continuing commercial growth and infrastructure expansion along the TPLEX corridor.':
+        'Ti agdama a mayor ti Rosales. Umuna a nabutosan idi 2022 ken nagtaray nga awan kalabanna iti 2025 midterm elections, a mangimaton iti agtultuloy a panagrang-ay ti komersio ken imprastraktura iti igid ti TPLEX corridor.',
+      'Served the maximum three consecutive terms, guiding Rosales through rapid modernization, business expansion including SM City Rosales, COVID-19 response, and Typhoon Pepeng flood recovery.':
+        'Nagserbi iti tallo a nagsasaruno a termino, a nangidalan iti Rosales iti napardas a modernisasion, panagdur-as ti negosio agraman ti SM City Rosales, panagtignay iti COVID-19, ken panagbangon manipud Bagio Pepeng.',
+      'A retired police major whose 2004 victory ended a 37-year political stronghold. Over three terms, he spearheaded the major renovation of the historic 1924 Presidencia and modernized agricultural and local infrastructure.':
+        'Retirado a police major a nangipatingga iti 37-tawen a panangituray idi 2004. Iti uneg ti tallo a termino, indauluanna ti panagtarimaan ti historikal a 1924 Presidencia ken modernisasion ti agrikultura ken imprastraktura.',
+      'Elected at the turn of the millennium as the first female mayor of Rosales, succeeding long-time local chief executive Remigio Yu.':
+        'Nabutosan iti rugi ti baro a milenio kas kaunaan a babai a mayor ti Rosales, a simmukat iti nabayag a mayor a ni Remigio Yu.',
+      'Began his public service as Mayor of Rosales, helping restore St. Anthony of Padua Parish after the 1946 tornado before serving as Pangasinan Governor (1954–1963) and Agrarian Reform Secretary/Minister (1971–1986).':
+        'Nangrugi ti publiko a panagserbina kas Mayor ti Rosales, a timmulong iti pannakaisubli ti Parokia ni San Antonio ti Padua kalpasan ti alipugpog idi 1946 sakbay a nagserbi kas Gobernador ti Pangasinan (1954–1963) ken Sekretario/Ministro ti Agrarian Reform (1971–1986).',
       'Tourism & Heritage': 'Turismo ken Tawid',
       'Landmarks & Points of Interest in Rosales': 'Dagiti Pagilasinan ken Pasiaran iti Rosales',
       'Explore historical landmarks, photo markers, tranquil nature spots in Acop, and local waypoints strictly within the Municipality of Rosales.':

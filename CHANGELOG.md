@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Moved the chronological **Mayors of Rosales, Pangasinan** historical timeline (`#mayors-timeline`) into the `#about-rosales` section in `index.html` and added Filipino (`fil`) and Ilocano (`ilo`) translations for all mayor descriptions in `assets/js/translations.js`.
 - Added Filipino (`fil`) and Ilocano (`ilo`) translations for the 4 DPWH Infrastructure project titles (`Agno River & Lagasit River Drainage Systems and Dikes`, `Brgy. Tumana West Multi-Purpose Building`, `Poblacion Multi-Purpose Building`, `MacArthur Highway Widening & Farm-to-Market Roads`) and `6th District · DPWH` badge in `assets/js/translations.js`.
 - Fixed multi-line HTML whitespace mismatch in `TranslationEngine.applyPhraseTranslations` (`assets/js/translations.js`) by normalizing internal whitespace (`origRaw.replace(/\s+/g, ' ').trim()`), and added Filipino (`fil`) and Ilocano (`ilo`) translations for `.dpwh-cat-footnotes` so DPWH Infrastructure subtitles, footnotes, and COA Reports descriptions/links translate completely.
 - Styled `#mayors-timeline` in `assets/css/ui-enhancements.css` as a vertical chronological timeline with a continuous spine rail, circular node markers, and term-year pills matching the Brief History timeline layout.
