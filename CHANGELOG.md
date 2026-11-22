@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed extensionless `service-details/*.html` and navbar links in `services/agriculture.html` for Rosales Municipal Agriculture Office.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/tax-payments.html` for Rosales Treasurer & Assessor.
 - Replaced leftover Solano Barangay Health Stations in `services/health.html` with Rosales's 33 barangay/Poblacion RHU stations serving all 37 barangays and fixed `.html` links.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/social-services.html` for Rosales MSWDO.
