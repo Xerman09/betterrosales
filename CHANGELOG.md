@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Replaced leftover Solano, Nueva Vizcaya resolutions (`data/resolutions.json` containing `FNVTTC`, `Barangay Wacal/Lactawan/Osmeña`, `NVPAA`, `Atty. Philip A. Dacayo`) with verified **Rosales, Pangasinan** Sangguniang Bayan ordinances (`05-2026`, `10-2025`, `08-2025`, `06-2025`, `05-2025`, `03-2025`, `01-2025`, `12-2024`, `08-2024`, `5-2024`, `10-2023`, `06-2023`) in `data/ordinances.json` and Pangasinan Sangguniang Panlalawigan review resolutions (`SP-379-2026`, `SP-687-2025`, `SP-261-2020`, etc.) in `data/resolutions.json`; also fixed `.html` links in `legislative/index.html`, `ordinance-framework.html`, and `resolution-framework.html`.
 - Fixed extensionless service dropdown links in `services/environment.html` to `.html`.
 - Replaced leftover R2TMC / Nueva Vizcaya hospital hotlines in `services/public-safety.html` with verified Rosales medical hotlines (CFERMTC, Rosales RHU, Rosales Infirmary, Chan Memorial, Del Carmen Medical) and fixed `.html` links.
 - Replaced leftover Solano schools in `services/education.html` with verified DepEd Pangasinan II schools in Rosales (RNHS, Robert B. Estrella MNHS, Guiling-Coliling NHS, San Luis NHS, Rosales North/South Central, and barangay elementary schools).

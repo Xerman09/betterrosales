@@ -1,39 +1,64 @@
 {
   "ordinances": [
     {
-      "ordinanceNo": "2026-09",
-      "title": "An Ordinance Granting Cash Incentives to Examinees Who Excelled in Either the Bar or Board Examinations and Were Declared Topnotchers by the Supreme Court of the Philippines or the Professional Regulation Commission (PRC), Respectively, Providing Funds Therefor and for Other Purposes",
-      "sessionDate": "2026-03-02"
+      "ordinanceNo": "05-2026",
+      "title": "An Ordinance Establishing the 'Rosales Bahay Kalinga for Children' in the Municipality of Rosales, Pangasinan, Appropriating Funds Therefor, and for Other Purposes",
+      "sessionDate": "2026-02-01"
     },
     {
-      "ordinanceNo": "2026-12",
-      "title": "An Ordinance Reclassifying a Parcel of Land Located at Barangay Zone I, Rosales, Pangasinan from Agricultural to Industrial Use",
-      "sessionDate": "2026-03-16"
-    },
-    {
-      "ordinanceNo": "2025-10",
-      "title": "An Ordinance Creating Various Positions in the Municipality of Rosales, Pangasinan, Necessary for the Effective Delivery of Public Services, and Appropriating the Corresponding Salaries Under the Position Classification Pay Plan",
+      "ordinanceNo": "10-2025",
+      "title": "An Ordinance Creating Various Positions in the Municipality of Rosales, Pangasinan, Necessary for Effective Service Delivery, and Appropriating Corresponding Salaries Under the Position Classification Pay Plan",
       "sessionDate": "2025-10-13"
     },
     {
-      "ordinanceNo": "2025-06",
+      "ordinanceNo": "08-2025",
+      "title": "An Ordinance Reclassifying a Parcel of Land (1,000 sq. m. out of TCT No. 028-2021000102) Located at Barangay Cabalaoangan Sur, Rosales, Pangasinan, from Agricultural to Commercial Lot",
+      "sessionDate": "2025-08-11"
+    },
+    {
+      "ordinanceNo": "06-2025",
       "title": "An Ordinance Supplementing Sections of Ordinance No. 08 (Series of 2016), Otherwise Known as the Comprehensive Traffic Ordinance of 2016 of the Municipality of Rosales, Pangasinan, by Inserting Provisions for Additional Rules, Guidelines, and Penalties",
       "sessionDate": "2025-06-23"
     },
     {
-      "ordinanceNo": "2025-03",
-      "title": "An Ordinance Reclassifying a Parcel of Land Located at Barangay Rizal, Rosales, Pangasinan, from Agricultural to Commercial Use",
+      "ordinanceNo": "05-2025",
+      "title": "An Ordinance Amending Article 17, Sections 29(D), 30(A), and 31 of the Municipal Traffic Code of Rosales, Providing for a Truck Ban, Exemptions, Implementation Hours, and Coverage Areas",
+      "sessionDate": "2025-05-19"
+    },
+    {
+      "ordinanceNo": "03-2025",
+      "title": "An Ordinance Reclassifying a 4,970-Square-Meter Parcel of Land (TCT No. T-62580) Located at Barangay Rizal, Rosales, Pangasinan, from Agricultural to Commercial Use",
       "sessionDate": "2025-03-17"
     },
     {
-      "ordinanceNo": "2025-01",
+      "ordinanceNo": "01-2025",
       "title": "An Ordinance Establishing Rules and Regulations Governing the Administration of the Rosales Trading Post (RTP) in Tomana West, Rosales, Pangasinan",
       "sessionDate": "2025-01-20"
     },
     {
-      "ordinanceNo": "2024-05",
-      "title": "An Ordinance Enacting the Updated Municipal Revenue Code of Rosales",
+      "ordinanceNo": "12-2024",
+      "title": "An Ordinance Reclassifying a Parcel of Land Located in Barangay Acop, Rosales, Pangasinan, from Agricultural to Other Uses",
+      "sessionDate": "2024-11-11"
+    },
+    {
+      "ordinanceNo": "08-2024",
+      "title": "An Ordinance Declaring the 'Rosales Hymn' as the Official Municipal Hymn of Rosales, Pangasinan",
+      "sessionDate": "2024-09-16"
+    },
+    {
+      "ordinanceNo": "5-2024",
+      "title": "An Ordinance Enacting the Updated Municipal Revenue Code of Rosales, Province of Pangasinan",
       "sessionDate": "2024-08-12"
+    },
+    {
+      "ordinanceNo": "10-2023",
+      "title": "An Ordinance Creating Various Positions in the Local Government of Rosales, Pangasinan to Effect Efficient Service Delivery and Appropriating Corresponding Salaries",
+      "sessionDate": "2023-10-16"
+    },
+    {
+      "ordinanceNo": "06-2023",
+      "title": "An Ordinance Defining Gender-Based Sexual Harassment in Streets and Public Spaces in the Municipality of Rosales, Pangasinan, Providing Implementation Guidelines, and Prescribing Penalties",
+      "sessionDate": "2023-07-10"
     }
   ]
 }
