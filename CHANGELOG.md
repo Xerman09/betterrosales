@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Replaced leftover Solano, Nueva Vizcaya figures and 22-barangay charts in `statistics/index.html` and `assets/js/statistics-new.js` with verified Rosales, Pangasinan baseline data (`66,711` residents per PSA Census 2020, `37` barangays per DILG/COMELEC, `66.39 km²` per MPDC, `1st Class` per DOF, `1,004.8/km²` computed density) and direct links to PSA PSGC (`0105532000`), BLGF, and DTI CMCI portals.
 - Moved the chronological **Mayors of Rosales, Pangasinan** historical timeline (`#mayors-timeline`) into the `#about-rosales` section in `index.html` and added Filipino (`fil`) and Ilocano (`ilo`) translations for all mayor descriptions in `assets/js/translations.js`.
 - Added Filipino (`fil`) and Ilocano (`ilo`) translations for the 4 DPWH Infrastructure project titles (`Agno River & Lagasit River Drainage Systems and Dikes`, `Brgy. Tumana West Multi-Purpose Building`, `Poblacion Multi-Purpose Building`, `MacArthur Highway Widening & Farm-to-Market Roads`) and `6th District · DPWH` badge in `assets/js/translations.js`.
 - Fixed multi-line HTML whitespace mismatch in `TranslationEngine.applyPhraseTranslations` (`assets/js/translations.js`) by normalizing internal whitespace (`origRaw.replace(/\s+/g, ' ').trim()`), and added Filipino (`fil`) and Ilocano (`ilo`) translations for `.dpwh-cat-footnotes` so DPWH Infrastructure subtitles, footnotes, and COA Reports descriptions/links translate completely.
