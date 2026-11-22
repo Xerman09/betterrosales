@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Eastern Pangasinan Scenic Highway and Local Waypoint">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="55%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="hw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky3)"/>
+  <ellipse cx="610" cy="95" rx="75" ry="22" fill="#ffffff" opacity="0.75"/>
+  <ellipse cx="220" cy="115" rx="60" ry="18" fill="#ffffff" opacity="0.65"/>
+  <path d="M0 260 Q220 205 420 245 T800 225 L800 450 L0 450 Z" fill="#1e40af" opacity="0.3"/>
+  <path d="M0 290 Q240 265 460 295 T800 280 L800 450 L0 450 Z" fill="#16a34a"/>
+  <polygon points="340,288 460,288 700,450 100,450" fill="url(#hw)"/>
+  <line x1="400" y1="295" x2="400" y2="445" stroke="#fde047" stroke-width="5" stroke-dasharray="16 12"/>
+  <circle cx="135" cy="255" r="44" fill="#15803d"/>
+  <circle cx="670" cy="250" r="48" fill="#15803d"/>
+  <rect x="575" y="295" width="76" height="42" rx="6" fill="#0032a0" stroke="#ffffff" stroke-width="3"/>
+  <rect x="609" y="337" width="8" height="48" fill="#cbd5e1"/>
+</svg>

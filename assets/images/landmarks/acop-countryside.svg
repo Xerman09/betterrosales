@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Acop Rural Countryside and Rice Fields in Rosales">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#fef9c3"/>
+    </linearGradient>
+    <linearGradient id="field1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky2)"/>
+  <circle cx="160" cy="95" r="44" fill="#fde047"/>
+  <circle cx="160" cy="95" r="68" fill="#fef08a" opacity="0.35"/>
+  <path d="M0 245 Q180 185 380 225 T800 205 L800 450 L0 450 Z" fill="#0f766e" opacity="0.55"/>
+  <path d="M0 270 Q240 220 480 260 T800 245 L800 450 L0 450 Z" fill="#166534"/>
+  <path d="M0 305 Q200 280 420 315 T800 295 L800 450 L0 450 Z" fill="url(#field1)"/>
+  <path d="M0 365 Q300 345 550 375 T800 360 L800 450 L0 450 Z" fill="#22c55e" opacity="0.7"/>
+  <!-- Nipa / Barangay Roof Silhouette -->
+  <polygon points="540,265 620,218 700,265" fill="#92400e"/>
+  <rect x="558" y="265" width="124" height="58" fill="#fef3c7"/>
+  <rect x="604" y="282" width="32" height="41" fill="#78350f"/>
+  <!-- Palm Trees -->
+  <path d="M110 315 Q120 250 132 205" stroke="#78350f" stroke-width="8" fill="none"/>
+  <path d="M132 205 Q100 188 76 208 M132 205 Q115 172 138 165 M132 205 Q162 182 182 205 M132 205 Q155 215 166 238" stroke="#15803d" stroke-width="6" stroke-linecap="round" fill="none"/>
+</svg>
