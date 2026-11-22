@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Replaced leftover R2TMC / Nueva Vizcaya hospital hotlines in `services/public-safety.html` with verified Rosales medical hotlines (CFERMTC, Rosales RHU, Rosales Infirmary, Chan Memorial, Del Carmen Medical) and fixed `.html` links.
 - Replaced leftover Solano schools in `services/education.html` with verified DepEd Pangasinan II schools in Rosales (RNHS, Robert B. Estrella MNHS, Guiling-Coliling NHS, San Luis NHS, Rosales North/South Central, and barangay elementary schools).
 - Fixed extensionless `service-details/*.html` and navbar links in `services/infrastructure.html` for Rosales Engineering & Planning.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/agriculture.html` for Rosales Municipal Agriculture Office.
