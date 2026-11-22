@@ -222,6 +222,7 @@
 }
 
 .main-nav .dropdown-menu {
+  display: none !important;
   background: #ffffff !important;
   border: 1px solid #e2e8f0;
   box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12) !important;
@@ -229,11 +230,13 @@
 }
 
 .main-nav .has-dropdown.dropdown-open .dropdown-menu {
+  display: flex !important;
   pointer-events: auto;
 }
 
 @media (hover: hover) and (min-width: 1025px) {
   .main-nav .has-dropdown:hover .dropdown-menu {
+    display: flex !important;
     pointer-events: auto;
   }
 }
