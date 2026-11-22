@@ -19513,6 +19513,13 @@ const TranslationEngine = {
       'Contractors providing seeds, fertilizers, and equipment for the Rosales agricultural sector.':
         'Mga kontratistang nagbibigay ng binhi, pataba, at kagamitan para sa sektor ng agrikultura ng Rosales.',
       'DPWH • Infrastructure': 'DPWH • Imprastraktura',
+      '6th District · DPWH': 'Ika-6 na Distrito · DPWH',
+      'Agno River & Lagasit River Drainage Systems and Dikes':
+        'Mga Sistema ng Paagusan at Dike ng Ilog Agno at Lagasit',
+      'Brgy. Tumana West Multi-Purpose Building': 'Multi-Purpose Building ng Brgy. Tumana West',
+      'Poblacion Multi-Purpose Building': 'Multi-Purpose Building ng Poblacion',
+      'MacArthur Highway Widening & Farm-to-Market Roads':
+        'Pagpapalawak ng MacArthur Highway at mga Kalsadang Farm-to-Market',
       'Public Works and Highway Projects in the 6th District — select a project area to locate it on the map.':
         'Mga Proyektong Pang-imprastraktura sa Ika-6 na Distrito — pumili ng proyekto upang makita sa mapa.',
       'All Categories': 'Lahat ng Kategorya',
@@ -19834,6 +19841,13 @@ const TranslationEngine = {
       'Contractors providing seeds, fertilizers, and equipment for the Rosales agricultural sector.':
         'Dagiti kontratista a mangipapaay ti bin-i, abono, ken ramit para iti sektor ti agrikultura ti Rosales.',
       'DPWH • Infrastructure': 'DPWH • Imprastraktura',
+      '6th District · DPWH': 'Maika-6 a Distrito · DPWH',
+      'Agno River & Lagasit River Drainage Systems and Dikes':
+        'Dagiti Sistema ti Pagayusan ken Dike ti Karayan Agno ken Lagasit',
+      'Brgy. Tumana West Multi-Purpose Building': 'Multi-Purpose Building ti Brgy. Tumana West',
+      'Poblacion Multi-Purpose Building': 'Multi-Purpose Building ti Poblacion',
+      'MacArthur Highway Widening & Farm-to-Market Roads':
+        'Panagpalawa ti MacArthur Highway ken Kalsada a Farm-to-Market',
       'Public Works and Highway Projects in the 6th District — select a project area to locate it on the map.':
         'Dagiti Proyekto ti Kalsada ken Pasdek iti Maika-6 a Distrito — pumili ti proyekto tapno makita iti mapa.',
       'All Categories': 'Amin a Kategoria',
