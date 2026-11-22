@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Replaced leftover Solano schools in `services/education.html` with verified DepEd Pangasinan II schools in Rosales (RNHS, Robert B. Estrella MNHS, Guiling-Coliling NHS, San Luis NHS, Rosales North/South Central, and barangay elementary schools).
 - Fixed extensionless `service-details/*.html` and navbar links in `services/infrastructure.html` for Rosales Engineering & Planning.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/agriculture.html` for Rosales Municipal Agriculture Office.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/tax-payments.html` for Rosales Treasurer & Assessor.
