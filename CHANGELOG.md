@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Final repository-wide Rosales verification cleanup: updated JSON-LD `"telephone"` in `index.html` to `(075) 582-4920`, `offline.html` hospital hotline from `R2TMC`/`(078) 805-3581` to `CFERMTC`/`(075) 529-6863`, `sitemap/index.html` Filipizen Solano links to `https://rosales.gov.ph/user/auth/login.php`, `services/education.html` remaining `Uddiawan National High School` reference, and cleared legacy Solano data from `assets/js/statistics.js`.
 - Redesigned `budget/index.html` and `assets/css/ui-enhancements.css` with a featured FY 2026 KPI card (`₱394,277,410.97`), verified FY 2020→FY 2026 appropriation growth comparison bar (`+57.9%`), aligned horizontal key-value tables, 6 official transparency portal cards (COA, BLGF, PhilGEPS, DBM, Pangasinan.gov.ph, Rosales.gov.ph), and Filipino/Ilocano translations in `assets/js/translations.js`.
 - Fixed empty resolution tables on `legislative/resolution-framework.html` by updating `getResolutionYear`, `sortResolutionsByNumber`, and `initResolutionTable` in `assets/js/resolutions.js` to extract years from `sessionDate` / 4-digit regex (`SP-379-2026`, `SP-Review-05-2026`, etc.) instead of `resolutionNo.split('-')[1]`.
 - Updated hardcoded `2025 Ordinances` / `Mga Ordinansa ng 2025` / `Dagiti Ordinansa ti 2025` headings in `legislative/ordinance-framework.html` and `assets/js/translations.js` (`ord-2025-title`, `ord-2025-subtitle`) to `2023 – 2026`.
