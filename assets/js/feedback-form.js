@@ -104,8 +104,15 @@
             <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
             Thank you! Your submission has been sent.
           </div>
-          <p>Our team will review your ${data.type.toLowerCase()} for <strong>${data.section}</strong> and update the portal once verified.</p>
+          <p></p>
         `;
+        const msgP = statusEl.querySelector('p');
+        if (msgP) {
+          msgP.append('Our team will review your ' + data.type.toLowerCase() + ' for ');
+          const strong = document.createElement('strong');
+          strong.textContent = data.section;
+          msgP.append(strong, ' and update the portal once verified.');
+        }
         form.reset();
       } catch (err) {
         statusEl.className = 'fb-form-status is-fallback';

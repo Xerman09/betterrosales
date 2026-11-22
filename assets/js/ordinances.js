@@ -100,11 +100,16 @@ function renderOrdinanceTable(ordinances) {
     }
 
     const row = document.createElement('tr');
-    row.innerHTML = `
-            <td data-label="Ordinance No.">${formatOrdinanceNo(ordinance.ordinanceNo)}</td>
-            <td data-label="Title">${ordinance.title}</td>
-            <td data-label="Session Date">${formatSessionDate(ordinance.sessionDate)}</td>
-        `;
+    const tdNo = document.createElement('td');
+    tdNo.setAttribute('data-label', 'Ordinance No.');
+    tdNo.textContent = formatOrdinanceNo(ordinance.ordinanceNo);
+    const tdTitle = document.createElement('td');
+    tdTitle.setAttribute('data-label', 'Title');
+    tdTitle.textContent = ordinance.title;
+    const tdDate = document.createElement('td');
+    tdDate.setAttribute('data-label', 'Session Date');
+    tdDate.textContent = formatSessionDate(ordinance.sessionDate);
+    row.append(tdNo, tdTitle, tdDate);
     tableBody.appendChild(row);
   });
 }

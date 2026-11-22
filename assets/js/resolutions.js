@@ -116,11 +116,16 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
     }
 
     const row = document.createElement('tr');
-    row.innerHTML = `
-            <td data-label="Resolution">${formatResolutionNo(resolution.resolutionNo)}</td>
-            <td data-label="Title">${resolution.title}</td>
-            <td data-label="Session Date">${formatSessionDate(resolution.sessionDate)}</td>
-        `;
+    const tdNo = document.createElement('td');
+    tdNo.setAttribute('data-label', 'Resolution');
+    tdNo.textContent = formatResolutionNo(resolution.resolutionNo);
+    const tdTitle = document.createElement('td');
+    tdTitle.setAttribute('data-label', 'Title');
+    tdTitle.textContent = resolution.title;
+    const tdDate = document.createElement('td');
+    tdDate.setAttribute('data-label', 'Session Date');
+    tdDate.textContent = formatSessionDate(resolution.sessionDate);
+    row.append(tdNo, tdTitle, tdDate);
     tableBody.appendChild(row);
   });
 }
