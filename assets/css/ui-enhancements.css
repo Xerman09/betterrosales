@@ -3424,8 +3424,8 @@
    Mayors Historical Timeline (Brief History of Rosales)
    -------------------------------------------------------------------------- */
 .mayors-timeline-block {
-  margin-top: 40px;
-  padding-top: 32px;
+  margin-top: 44px;
+  padding-top: 36px;
   border-top: 1px solid #e2e8f0;
 }
 
@@ -3439,12 +3439,12 @@
 .mayors-timeline-head p {
   font-size: 0.9375rem;
   color: #475569;
-  margin: 0 0 24px;
-  max-width: 700px;
+  margin: 0 0 28px;
+  max-width: 720px;
 }
 
 .mayors-era-group {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .mayors-era-group:last-child {
@@ -3455,34 +3455,70 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--color-primary);
-  margin-bottom: 14px;
+  background: rgba(0, 50, 160, 0.06);
+  border: 1px solid rgba(0, 50, 160, 0.14);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
 }
 
 .mayors-timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 34px;
+}
+
+.mayors-timeline-grid::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, rgba(0, 50, 160, 0.2) 100%);
 }
 
 .mayor-tl-card {
+  position: relative;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 20px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   transition: var(--transition-smooth);
 }
 
+.mayor-tl-card::before {
+  content: '';
+  position: absolute;
+  left: -31px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 0 0 4px #f8fafc;
+}
+
+.mayor-tl-card--current::before {
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(0, 50, 160, 0.14);
+}
+
 .mayor-tl-card:hover {
-  border-color: rgba(0, 50, 160, 0.25);
+  border-color: rgba(0, 50, 160, 0.28);
   box-shadow: var(--shadow-subtle);
+  transform: translateX(3px);
 }
 
 .mayor-tl-card--current {
@@ -3492,13 +3528,17 @@
 .mayor-tl-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .mayor-tl-term {
-  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(0, 50, 160, 0.08);
+  font-size: 0.75rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--color-primary);
@@ -3516,26 +3556,34 @@
 }
 
 .mayor-tl-badge--current {
-  background: rgba(0, 50, 160, 0.1);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
 }
 
 .mayor-tl-card h4 {
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: #0f172a;
-  margin: 2px 0 0;
+  margin: 4px 0 0;
 }
 
 .mayor-tl-card p {
   font-size: 0.875rem;
-  line-height: 1.55;
+  line-height: 1.6;
   color: #475569;
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .mayors-timeline-grid {
-    grid-template-columns: 1fr;
+    padding-left: 26px;
+  }
+
+  .mayors-timeline-grid::before {
+    left: 6px;
+  }
+
+  .mayor-tl-card::before {
+    left: -25px;
   }
 }
