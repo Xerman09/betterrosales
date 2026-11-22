@@ -447,7 +447,7 @@
     },
     {
       "id": "seedo-slaughterhouse",
-      "title": "SEEDO Slaughterhouse",
+      "title": "Rosales Slaughterhouse",
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Hog, cattle, goat, and carabao slaughter with meat inspection services",
@@ -461,11 +461,11 @@
         "meat",
         "inspection",
         "butcher",
-        "SEEDO"
+        "Public Market & Economic Enterprise"
       ],
       "fee": "₱40-350",
       "processingTime": "37 min - 1.5 hrs",
-      "office": "SEEDO Slaughterhouse",
+      "office": "Rosales Slaughterhouse",
       "url": "../service-details/seedo-slaughterhouse.html"
     },
     {
@@ -505,7 +505,7 @@
     },
     {
       "id": "seedo-public-market",
-      "title": "SEEDO Public Market",
+      "title": "Rosales Public Market",
       "category": "Business, Trade & Investment",
       "categoryId": "business",
       "description": "Market clearance, entrance fees, vendor services, and CTC issuance",
@@ -516,12 +516,12 @@
         "stall",
         "clearance",
         "entrance",
-        "SEEDO",
+        "Public Market & Economic Enterprise",
         "palengke"
       ],
       "fee": "₱5-50",
       "processingTime": "Same day",
-      "office": "SEEDO Public Market",
+      "office": "Rosales Public Market",
       "url": "../service-details/seedo-public-market.html"
     },
     {
@@ -733,7 +733,7 @@
       "title": "Business Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "View and pay your business tax bills online via Filipizen",
+      "description": "View and pay your business tax bills via LGU Rosales Portal (rosales.gov.ph)",
       "keywords": [
         "online",
         "billing",
@@ -746,55 +746,55 @@
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/billing"
+      "url": "https://rosales.gov.ph/user/auth/login.php"
     },
     {
       "id": "online-new-business",
       "title": "New Business Application Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Apply for a new business permit online via Filipizen",
+      "description": "Apply for a new business permit via LGU Rosales Portal (rosales.gov.ph)",
       "keywords": ["online", "new business", "application", "permit", "filipizen", "e-services"],
       "fee": "Varies",
       "processingTime": "3-5 days",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/newbusiness"
+      "url": "https://rosales.gov.ph/user/auth/login.php"
     },
     {
       "id": "online-business-renewal",
       "title": "Business Permit Renewal Online",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Renew your existing business permit online via Filipizen",
+      "description": "Renew your existing business permit via LGU Rosales Portal (rosales.gov.ph)",
       "keywords": ["online", "renewal", "business permit", "filipizen", "e-services", "renew"],
       "fee": "Varies",
       "processingTime": "Same day",
       "office": "BPLS Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/bpls/renewbusiness"
+      "url": "https://rosales.gov.ph/user/auth/login.php"
     },
     {
       "id": "online-rpt-billing",
       "title": "Real Property Tax Online Billing & Payment",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "View and pay your real property tax (amilyar) online via Filipizen",
+      "description": "View and pay your real property tax (amilyar) via LGU Rosales Portal (rosales.gov.ph)",
       "keywords": ["online", "property tax", "amilyar", "billing", "payment", "filipizen", "RPT"],
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/rptis/billing"
+      "url": "https://rosales.gov.ph/user/auth/login.php"
     },
     {
       "id": "online-payment-order",
       "title": "Online Payment Order",
       "category": "Online Services",
       "categoryId": "online",
-      "description": "Process payment orders for various municipal fees online via Filipizen",
+      "description": "Process payment orders for various municipal fees via LGU Rosales Portal (rosales.gov.ph)",
       "keywords": ["online", "payment order", "fees", "filipizen", "e-payment", "municipal fees"],
       "fee": "Varies",
       "processingTime": "Instant",
       "office": "Municipal Treasurer's Office",
-      "url": "https://www.filipizen.com/partners/nuevavizcaya_solano/po/billing"
+      "url": "https://rosales.gov.ph/user/auth/login.php"
     }
   ]
 }

@@ -19626,6 +19626,9 @@ const TranslationEngine = {
       'Contribute code with us': 'Mag-ambag ng code sa amin',
       'All public information sourced from official government portals.': 'Lahat ng pampublikong impormasyon ay mula sa mga opisyal na portal ng pamahalaan.',
       'View Services': 'Tingnan ang mga Serbisyo',
+      'Online Services via LGU Rosales Portal': 'Mga Online na Serbisyo sa LGU Rosales Portal',
+      'Rosales Public Market': 'Pamilihang Bayan ng Rosales',
+      'Rosales Slaughterhouse': 'Katayan ng Bayan ng Rosales',
       'The Executive Branch': 'Ang Sangay Tagapagpaganap',
       'The central administration and executive offices of the municipality.':
         'Ang sentral na administrasyon at mga tanggapang tagapagpaganap ng munisipalidad.',
@@ -19964,6 +19967,9 @@ const TranslationEngine = {
       'Contribute code with us': 'Agidonar ti code kadakami',
       'All public information sourced from official government portals.': 'Amin a publiko nga impormasion ket nagtaud kadagiti opisial a portal ti gobierno.',
       'View Services': 'Kitaen dagiti Serbisio',
+      'Online Services via LGU Rosales Portal': 'Dagiti Online a Serbisio iti LGU Rosales Portal',
+      'Rosales Public Market': 'Publiko a Tiendaan ti Rosales',
+      'Rosales Slaughterhouse': 'Pagpartian ti Rosales',
       'The Executive Branch': 'Ti Sanga ti Ehekutibo',
       'The central administration and executive offices of the municipality.':
         'Ti sentral nga administrasion ken dagiti opisina nga ehekutibo ti munisipalidad.',
