@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed extensionless `service-details/*.html` and navbar links in `services/social-services.html` for Rosales MSWDO.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/business.html` for Rosales BPLO and Public Market.
 - Fixed extensionless `service-details/*.html` and navbar links in `services/certificates.html` for Rosales Local Civil Registry Office.
 - Fixed extensionless service category and life-event links in `services/index.html` (`certificates.html`, `business.html`, `social-services.html`, `health.html`, `tax-payments.html`, `agriculture.html`, `infrastructure.html`, `education.html`, `public-safety.html`, `environment.html`) so every service card opens its dedicated page reliably.
