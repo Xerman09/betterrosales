@@ -19517,8 +19517,14 @@ const TranslationEngine = {
         'Mga Proyektong Pang-imprastraktura sa Ika-6 na Distrito — pumili ng proyekto upang makita sa mapa.',
       'All Categories': 'Lahat ng Kategorya',
       'Flood Control': 'Pagkontrol sa Baha',
+      'Flood Control:': 'Pagkontrol sa Baha:',
+      'Agno & Lagasit River dikes': 'Mga dike ng Ilog Agno at Lagasit',
       'Buildings': 'Mga Gusali',
+      'Buildings:': 'Mga Gusali:',
+      'Brgy. Tumana West & Poblacion': 'Brgy. Tumana West at Poblacion',
       'Roadways': 'Mga Kalsada',
+      'Roadways:': 'Mga Kalsada:',
+      'FMR & MacArthur Hwy widening': 'Pagpapalawak ng FMR at MacArthur Hwy',
       'Commission on Audit (COA) Reports': 'Mga Ulat ng Commission on Audit (COA)',
       'Annual Financial Audit Summaries': 'Buod ng Taunang Pagsusuri sa Pananalapi',
       'Public Audit': 'Pampublikong Audit',
@@ -19832,8 +19838,14 @@ const TranslationEngine = {
         'Dagiti Proyekto ti Kalsada ken Pasdek iti Maika-6 a Distrito — pumili ti proyekto tapno makita iti mapa.',
       'All Categories': 'Amin a Kategoria',
       'Flood Control': 'Panagkontrol ti Layus',
+      'Flood Control:': 'Panagkontrol ti Layus:',
+      'Agno & Lagasit River dikes': 'Dagiti dike ti Karayan Agno ken Lagasit',
       'Buildings': 'Dagiti Pasdek',
+      'Buildings:': 'Dagiti Pasdek:',
+      'Brgy. Tumana West & Poblacion': 'Brgy. Tumana West ken Poblacion',
       'Roadways': 'Dagiti Kalsada',
+      'Roadways:': 'Dagiti Kalsada:',
+      'FMR & MacArthur Hwy widening': 'Panagpalawa ti FMR ken MacArthur Hwy',
       'Commission on Audit (COA) Reports': 'Dagiti Report ti Commission on Audit (COA)',
       'Annual Financial Audit Summaries': 'Tinawen a Pakabuklan ti Audit ti Pinansia',
       'Public Audit': 'Publiko nga Audit',
@@ -20140,8 +20152,8 @@ const TranslationEngine = {
         continue;
       }
 
-      const trimmed = origRaw.trim();
-      const translated = self.translatePhrase(trimmed, lang);
+      const normalized = origRaw.replace(/\s+/g, ' ').trim();
+      const translated = self.translatePhrase(normalized, lang);
       if (translated) {
         const leading = origRaw.match(/^\s*/)[0];
         const trailing = origRaw.match(/\s*$/)[0];

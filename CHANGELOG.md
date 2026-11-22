@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed multi-line HTML whitespace mismatch in `TranslationEngine.applyPhraseTranslations` (`assets/js/translations.js`) by normalizing internal whitespace (`origRaw.replace(/\s+/g, ' ').trim()`), and added Filipino (`fil`) and Ilocano (`ilo`) translations for `.dpwh-cat-footnotes` so DPWH Infrastructure subtitles, footnotes, and COA Reports descriptions/links translate completely.
 - Styled `#mayors-timeline` in `assets/css/ui-enhancements.css` as a vertical chronological timeline with a continuous spine rail, circular node markers, and term-year pills matching the Brief History timeline layout.
 - Fixed `.main-nav a` wrapping onto two lines (including dropdown carets and `"Makipag-ugnayan"`) when switching to Filipino or Ilocano by adding `display: inline-flex; align-items: center; white-space: nowrap;` and tightening nav link spacing in `assets/css/ui-enhancements.css`, and added solid white background and `pointer-events` gating to `.main-nav .dropdown-menu`.
 - Expanded `phraseTranslations` (`fil` and `ilo`) in `assets/js/translations.js` to cover all card titles, role badges, office descriptions, filter tabs, and metadata across `government/index.html` (Executive Branch, Sangguniang Bayan, Municipal Offices, 37 Barangays), `statistics/index.html`, `budget/index.html`, `legislative/index.html`, `news/index.html`, and `contact/index.html`, plus hotline bar prefixes (`Police:`, `BFP Fire:`, `Hall:`, `Hospital:`, `Emergency:`).
