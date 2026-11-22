@@ -3419,3 +3419,123 @@
   position: relative;
   z-index: 1;
 }
+
+/* --------------------------------------------------------------------------
+   Mayors Historical Timeline (Brief History of Rosales)
+   -------------------------------------------------------------------------- */
+.mayors-timeline-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mayors-timeline-head h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 8px 0 6px;
+}
+
+.mayors-timeline-head p {
+  font-size: 0.9375rem;
+  color: #475569;
+  margin: 0 0 24px;
+  max-width: 700px;
+}
+
+.mayors-era-group {
+  margin-bottom: 24px;
+}
+
+.mayors-era-group:last-child {
+  margin-bottom: 0;
+}
+
+.mayors-era-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.mayors-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mayor-tl-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.mayor-tl-card:hover {
+  border-color: rgba(0, 50, 160, 0.25);
+  box-shadow: var(--shadow-subtle);
+}
+
+.mayor-tl-card--current {
+  border-left: 4px solid var(--color-primary);
+}
+
+.mayor-tl-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mayor-tl-term {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+}
+
+.mayor-tl-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.mayor-tl-badge--current {
+  background: rgba(0, 50, 160, 0.1);
+  color: var(--color-primary);
+}
+
+.mayor-tl-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 0;
+}
+
+.mayor-tl-card p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mayors-timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
