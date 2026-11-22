@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed empty resolution tables on `legislative/resolution-framework.html` by updating `getResolutionYear`, `sortResolutionsByNumber`, and `initResolutionTable` in `assets/js/resolutions.js` to extract years from `sessionDate` / 4-digit regex (`SP-379-2026`, `SP-Review-05-2026`, etc.) instead of `resolutionNo.split('-')[1]`.
 - Updated hardcoded `2025 Ordinances` / `Mga Ordinansa ng 2025` / `Dagiti Ordinansa ti 2025` headings in `legislative/ordinance-framework.html` and `assets/js/translations.js` (`ord-2025-title`, `ord-2025-subtitle`) to `2023 – 2026`.
 - Replaced leftover Solano, Nueva Vizcaya resolutions (`data/resolutions.json` containing `FNVTTC`, `Barangay Wacal/Lactawan/Osmeña`, `NVPAA`, `Atty. Philip A. Dacayo`) with verified **Rosales, Pangasinan** Sangguniang Bayan ordinances (`05-2026`, `10-2025`, `08-2025`, `06-2025`, `05-2025`, `03-2025`, `01-2025`, `12-2024`, `08-2024`, `5-2024`, `10-2023`, `06-2023`) in `data/ordinances.json` and Pangasinan Sangguniang Panlalawigan review resolutions (`SP-379-2026`, `SP-687-2025`, `SP-261-2020`, etc.) in `data/resolutions.json`; also fixed `.html` links in `legislative/index.html`, `ordinance-framework.html`, and `resolution-framework.html`.
 - Fixed extensionless service dropdown links in `services/environment.html` to `.html`.

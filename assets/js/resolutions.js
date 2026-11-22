@@ -24,24 +24,26 @@ async function fetchResolutions() {
  * @param {string} resolutionNo - Resolution number (e.g., "246-2025-11")
  * @returns {number} The year (e.g., 2025)
  */
-function getResolutionYear(resolutionNo) {
-  return parseInt(resolutionNo.split('-')[1], 10);
+function getResolutionYear(resolutionNo, sessionDate) {
+  if (sessionDate) {
+    const y = parseInt(String(sessionDate).slice(0, 4), 10);
+    if (!isNaN(y)) return y;
+  }
+  const match = String(resolutionNo || '').match(/\b(20\d{2})\b/);
+  return match ? parseInt(match[1], 10) : NaN;
 }
 
 /**
- * Sorts resolutions by year, then sequence number, in descending order (newest first)
- * Resolution format: "XXX-YYYY-SS" (sequence-year-session)
+ * Sorts resolutions by sessionDate descending (newest first)
  * @param {Array} resolutions - Array of resolution objects
  * @returns {Array} Sorted array of resolutions
  */
 function sortResolutionsByNumber(resolutions) {
   return [...resolutions].sort((a, b) => {
-    const [numA, yearA] = a.resolutionNo.split('-');
-    const [numB, yearB] = b.resolutionNo.split('-');
-    if (yearA !== yearB) {
-      return parseInt(yearB, 10) - parseInt(yearA, 10);
-    }
-    return parseInt(numB, 10) - parseInt(numA, 10);
+    const dateA = a.sessionDate || '';
+    const dateB = b.sessionDate || '';
+    if (dateA !== dateB) return dateB.localeCompare(dateA);
+    return String(b.resolutionNo || '').localeCompare(String(a.resolutionNo || ''));
   });
 }
 
@@ -132,10 +134,10 @@ async function initResolutionTable() {
     const sortedResolutions = sortResolutionsByNumber(resolutions);
 
     const resolutions2026 = sortedResolutions.filter(
-      (resolution) => getResolutionYear(resolution.resolutionNo) === 2026
+      (resolution) => getResolutionYear(resolution.resolutionNo, resolution.sessionDate) >= 2026
     );
     const resolutions2025 = sortedResolutions.filter(
-      (resolution) => getResolutionYear(resolution.resolutionNo) === 2025
+      (resolution) => getResolutionYear(resolution.resolutionNo, resolution.sessionDate) < 2026
     );
 
     renderResolutionTable(resolutions2026, 'resolution-table-body-2026', 2026);
