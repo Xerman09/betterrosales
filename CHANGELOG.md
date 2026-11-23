@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Configured `vercel.json` with `"framework": null`, `"buildCommand": ""`, `"outputDirectory": "."`, and `"cleanUrls": true` so Vercel deploys the static portal directly without failing on `bash build.sh` (`npm run build`).
 - Security hardening: replaced `innerHTML` data interpolation with `textContent` DOM nodes in `assets/js/ordinances.js`, `assets/js/resolutions.js`, and `assets/js/feedback-form.js`, and verified all `target="_blank"` anchors carry `rel="noopener noreferrer"`.
 - Pre-rollout link & asset integrity fix: corrected `../` root paths in `403.html`, `404.html`, and `500.html` (`18` broken asset/footer links) and added `.html` extensions to all `546` extensionless internal links across `48` HTML pages (`brokenAssets=0`, `extensionlessHtmlLinks=0`).
 - Final repository-wide Rosales verification cleanup: updated JSON-LD `"telephone"` in `index.html` to `(075) 582-4920`, `offline.html` hospital hotline from `R2TMC`/`(078) 805-3581` to `CFERMTC`/`(075) 529-6863`, `sitemap/index.html` Filipizen Solano links to `https://rosales.gov.ph/user/auth/login.php`, `services/education.html` remaining `Uddiawan National High School` reference, and cleared legacy Solano data from `assets/js/statistics.js`.
