@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed Vercel `404 NOT_FOUND` by adding `scripts/vercel-build.js` (pure Node.js static build into `dist/`) and updating `vercel.json` to `"buildCommand": "node scripts/vercel-build.js"` and `"outputDirectory": "dist"`.
 - Configured `vercel.json` with `"framework": null`, `"buildCommand": ""`, `"outputDirectory": "."`, and `"cleanUrls": true` so Vercel deploys the static portal directly without failing on `bash build.sh` (`npm run build`).
 - Security hardening: replaced `innerHTML` data interpolation with `textContent` DOM nodes in `assets/js/ordinances.js`, `assets/js/resolutions.js`, and `assets/js/feedback-form.js`, and verified all `target="_blank"` anchors carry `rel="noopener noreferrer"`.
 - Pre-rollout link & asset integrity fix: corrected `../` root paths in `403.html`, `404.html`, and `500.html` (`18` broken asset/footer links) and added `.html` extensions to all `546` extensionless internal links across `48` HTML pages (`brokenAssets=0`, `extensionlessHtmlLinks=0`).
