@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "echo skip",
-  "buildCommand": "node scripts/vercel-build.js",
+  "buildCommand": "node -e \"const fs=require('fs'),p=require('path');require(p.resolve(fs.existsSync('scripts/vercel-build.js')?'scripts/vercel-build.js':'../scripts/vercel-build.js'))\"",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "headers": [

@@ -5,6 +5,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 ## [Unreleased]
 
 ### Fixed
+- Fixed Vercel `MODULE_NOT_FOUND` (`/vercel/path0/react-app/scripts/vercel-build.js`) when Vercel's Root Directory is set to `react-app`: updated `scripts/vercel-build.js` to resolve `repoRoot` via `__dirname` and write to `process.cwd()/dist`, and updated `vercel.json` `buildCommand` to work from either `.` or `react-app`.
 - Added `"installCommand": "echo skip"` to `vercel.json` so Vercel skips installing heavy devDependencies (`playwright`, `@lhci/cli`) before running `node scripts/vercel-build.js`.
 - Fixed Vercel `404 NOT_FOUND` by adding `scripts/vercel-build.js` (pure Node.js static build into `dist/`) and updating `vercel.json` to `"buildCommand": "node scripts/vercel-build.js"` and `"outputDirectory": "dist"`.
 - Configured `vercel.json` with `"framework": null`, `"buildCommand": ""`, `"outputDirectory": "."`, and `"cleanUrls": true` so Vercel deploys the static portal directly without failing on `bash build.sh` (`npm run build`).

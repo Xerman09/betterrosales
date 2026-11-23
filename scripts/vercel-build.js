@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const root = process.cwd();
-const outDir = path.join(root, 'dist');
+const repoRoot = path.resolve(__dirname, '..');
+const outDir = path.join(process.cwd(), 'dist');
 
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
@@ -39,18 +39,17 @@ const dirs = [
 ];
 
 for (const f of files) {
-  const src = path.join(root, f);
+  const src = path.join(repoRoot, f);
   if (fs.existsSync(src)) {
     fs.copyFileSync(src, path.join(outDir, f));
   }
 }
 
 for (const d of dirs) {
-  const src = path.join(root, d);
+  const src = path.join(repoRoot, d);
   if (fs.existsSync(src)) {
     fs.cpSync(src, path.join(outDir, d), { recursive: true });
   }
 }
 
-console.log('Vercel static build copied to dist/ successfully.');
-
+console.log('Vercel static build copied from', repoRoot, 'to', outDir);
