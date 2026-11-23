@@ -53,3 +53,4 @@ for (const d of dirs) {
 }
 
 console.log('Vercel static build copied to dist/ successfully.');
+
