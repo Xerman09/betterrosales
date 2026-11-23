@@ -5,6 +5,10 @@
   "buildCommand": "node -e \"const fs=require('fs'),p=require('path');require(p.resolve(fs.existsSync('scripts/vercel-build.js')?'scripts/vercel-build.js':'../scripts/vercel-build.js'))\"",
   "outputDirectory": "dist",
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/index.html", "destination": "/" },
+    { "source": "/(.*)/index.html", "destination": "/$1/" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
