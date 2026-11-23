@@ -628,3 +628,208 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initHotlineCarousel();
 });
+
+
+// ============================================================================
+// Highlight-to-Report Floating Action Popover
+// Allows citizens to highlight any text on the portal and send a prefilled
+// correction or addition directly to #feedback-form.
+// ============================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const STORAGE_KEY = 'betterrosales_pending_report';
+    const MIN_LENGTH = 3;
+    const MAX_QUOTE_LENGTH = 500;
+
+    let popover = null;
+    let activePayload = null;
+
+    function getRootPrefix() {
+        const scriptEl = document.querySelector('script[src*="assets/js/main.js"]');
+        const src = scriptEl ? scriptEl.getAttribute('src') : '';
+        const match = src ? src.match(/^((?:\.\.\/)+)/) : null;
+        return match ? match[1] : '';
+    }
+
+    function inferSection(node) {
+        const el = node && node.nodeType === Node.TEXT_NODE ? node.parentElement : node;
+        const container = el && el.closest
+            ? el.closest('section, article, main, [id]')
+            : null;
+        const contextText = [
+            window.location.pathname,
+            container ? container.id : '',
+            container ? container.className : '',
+            container && container.querySelector('h1, h2, h3')
+                ? container.querySelector('h1, h2, h3').textContent
+                : ''
+        ].join(' ').toLowerCase();
+
+        if (/barangay|captain|punong/.test(contextText)) {
+            return '37 Barangays & Barangay Captains';
+        }
+        if (/hotline|emergency|mdrrmo|bfp|pnp|rhu|panelco|water/.test(contextText)) {
+            return 'Emergency Hotlines';
+        }
+        if (/official|mayor|vice|sanggunian|council|government|leadership|directory/.test(contextText)) {
+            return 'Government Directory (Officials / SB)';
+        }
+        if (/department|office|treasurer|assessor|engineering|planning|mpdc/.test(contextText)) {
+            return 'Municipal Offices & Department Heads';
+        }
+        if (/budget|transparency|dpwh|philgeps|coa|ordinance|legislative|stat/.test(contextText)) {
+            return 'Transparency / Budget / DPWH';
+        }
+        if (/service|permit|clearance|certificate|business|requirement/.test(contextText)) {
+            return 'Services & Requirements';
+        }
+        return 'Other';
+    }
+
+    function ensurePopover() {
+        if (popover) return popover;
+        popover = document.createElement('div');
+        popover.className = 'selection-report-popover';
+        popover.setAttribute('role', 'dialog');
+        popover.setAttribute('aria-label', 'Report highlighted content');
+        popover.hidden = true;
+        popover.innerHTML = [
+            '<button type="button" class="srp-btn srp-btn--report" data-srp-action="report">',
+            '  <i class="bi bi-flag-fill" aria-hidden="true"></i>',
+            '  <span>Report Incorrect Info</span>',
+            '</button>',
+            '<button type="button" class="srp-btn srp-btn--add" data-srp-action="add">',
+            '  <i class="bi bi-plus-circle-fill" aria-hidden="true"></i>',
+            '  <span>Add Info</span>',
+            '</button>'
+        ].join('');
+
+        popover.addEventListener('mousedown', (e) => {
+            // Preserve current text selection when clicking popover buttons
+            e.preventDefault();
+        });
+
+        popover.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-srp-action]');
+            if (!btn || !activePayload) return;
+
+            const action = btn.getAttribute('data-srp-action');
+            const payload = {
+                type: action === 'add' ? 'Add Missing Information' : 'Incorrect Information',
+                section: activePayload.section,
+                quote: activePayload.quote,
+                url: activePayload.url
+            };
+
+            hidePopover();
+            const sel = window.getSelection();
+            if (sel) sel.removeAllRanges();
+
+            const feedbackForm = document.getElementById('feedback-form');
+            if (feedbackForm && typeof window.prefillFeedbackForm === 'function') {
+                window.prefillFeedbackForm(payload);
+                return;
+            }
+
+            try {
+                sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+            } catch (_) {
+                // Ignore storage quota / private mode errors; query params below act as fallback
+            }
+
+            const params = new URLSearchParams({
+                reportType: payload.type,
+                reportSection: payload.section,
+                reportText: payload.quote
+            });
+            window.location.href = `${getRootPrefix()}contact/index.html?${params.toString()}#feedback-form`;
+        });
+
+        document.body.appendChild(popover);
+        return popover;
+    }
+
+    function hidePopover() {
+        if (popover) popover.hidden = true;
+        activePayload = null;
+    }
+
+    function isIgnoredTarget(node) {
+        const el = node && node.nodeType === Node.TEXT_NODE ? node.parentElement : node;
+        if (!el || !el.closest) return true;
+        return Boolean(
+            el.closest('input, textarea, select, [contenteditable="true"], #feedback-form, .selection-report-popover')
+        );
+    }
+
+    function updatePopoverFromSelection() {
+        const sel = window.getSelection();
+        if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
+            hidePopover();
+            return;
+        }
+
+        const rawText = sel.toString().replace(/\s+/g, ' ').trim();
+        if (rawText.length < MIN_LENGTH) {
+            hidePopover();
+            return;
+        }
+
+        const range = sel.getRangeAt(0);
+        if (isIgnoredTarget(range.commonAncestorContainer)) {
+            hidePopover();
+            return;
+        }
+
+        const rect = range.getBoundingClientRect();
+        if (!rect || (rect.width === 0 && rect.height === 0)) {
+            hidePopover();
+            return;
+        }
+
+        const pop = ensurePopover();
+        const quote = rawText.length > MAX_QUOTE_LENGTH
+            ? `${rawText.slice(0, MAX_QUOTE_LENGTH - 3)}...`
+            : rawText;
+
+        activePayload = {
+            section: inferSection(range.commonAncestorContainer),
+            quote,
+            url: window.location.href
+        };
+
+        pop.hidden = false;
+        const popRect = pop.getBoundingClientRect();
+        const centerX = rect.left + (rect.width / 2) + window.scrollX;
+        const minLeft = window.scrollX + 8;
+        const maxLeft = window.scrollX + window.innerWidth - popRect.width - 8;
+        const left = Math.max(minLeft, Math.min(maxLeft, centerX - (popRect.width / 2)));
+
+        const preferAboveTop = rect.top + window.scrollY - popRect.height - 10;
+        const top = rect.top > popRect.height + 16
+            ? preferAboveTop
+            : rect.bottom + window.scrollY + 10;
+
+        pop.style.left = `${Math.round(left)}px`;
+        pop.style.top = `${Math.round(top)}px`;
+    }
+
+    document.addEventListener('mouseup', () => {
+        setTimeout(updatePopoverFromSelection, 10);
+    });
+
+    document.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape') {
+            hidePopover();
+            return;
+        }
+        if (e.shiftKey || e.key.startsWith('Arrow')) {
+            setTimeout(updatePopoverFromSelection, 10);
+        }
+    });
+
+    document.addEventListener('mousedown', (e) => {
+        if (popover && !popover.hidden && !e.target.closest('.selection-report-popover')) {
+            hidePopover();
+        }
+    });
+});

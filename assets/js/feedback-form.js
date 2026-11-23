@@ -154,8 +154,75 @@
     });
   }
 
+  function prefillFeedbackForm(payload) {
+    const form = document.querySelector('.js-feedback-form');
+    if (!form || !payload) return;
+
+    const typeButtons = form.querySelectorAll('[data-fb-type]');
+    const typeInput = form.querySelector('input[name="submission_type"]');
+    const sectionEl = form.querySelector('[name="section"]');
+    const detailsEl = form.querySelector('[name="details"]');
+
+    if (payload.type) {
+      typeButtons.forEach((btn) => {
+        const match = btn.dataset.fbType === payload.type;
+        btn.classList.toggle('is-active', match);
+        if (match && typeInput) typeInput.value = payload.type;
+      });
+    }
+
+    if (sectionEl && payload.section) {
+      const opt = Array.from(sectionEl.options).find((o) => o.value === payload.section);
+      if (opt) sectionEl.value = opt.value;
+    }
+
+    if (detailsEl && payload.quote) {
+      const sourceLine = payload.url ? `Source page: ${payload.url}\n\n` : '';
+      detailsEl.value = `Highlighted text:\n"${payload.quote}"\n\n${sourceLine}Suggested correction / additional details:\n`;
+    }
+
+    const container = form.closest('#feedback-form') || form;
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => {
+      if (detailsEl) {
+        detailsEl.focus();
+        detailsEl.setSelectionRange(detailsEl.value.length, detailsEl.value.length);
+      }
+    }, 350);
+  }
+
+  window.prefillFeedbackForm = prefillFeedbackForm;
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-feedback-form').forEach(initFeedbackForm);
+
+    let pending = null;
+    try {
+      const raw = sessionStorage.getItem('betterrosales_pending_report');
+      if (raw) {
+        pending = JSON.parse(raw);
+        sessionStorage.removeItem('betterrosales_pending_report');
+      }
+    } catch (_) {
+      /* ignore storage errors */
+    }
+
+    if (!pending && window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      const quote = params.get('reportText');
+      if (quote) {
+        pending = {
+          type: params.get('reportType') || 'Incorrect Information',
+          section: params.get('reportSection') || 'Other',
+          quote,
+          url: document.referrer || '',
+        };
+      }
+    }
+
+    if (pending) {
+      prefillFeedbackForm(pending);
+    }
   });
 })();
 

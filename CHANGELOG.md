@@ -46,6 +46,7 @@ All notable changes to the BetterRosales.org portal are documented in this file.
 - Fixed `.hotline-inner` wrapping `.hotline-carousel-viewport` onto a second row by adding `flex-wrap: nowrap !important` to `.hotline-inner` and `min-width: 0 !important` to `.hotline-carousel-viewport, .hotline-items` in `assets/css/ui-enhancements.css`.
 
 ### Added
+- Added site-wide **Highlight-to-Report** selection popover (`.selection-report-popover` in `assets/js/main.js`, `assets/js/feedback-form.js`, `assets/css/ui-enhancements.css`) that lets citizens highlight any text on the portal to report incorrect info or add missing details, automatically scrolling to `#feedback-form` (or navigating to `contact/index.html#feedback-form` with `sessionStorage` + query fallback) and autofilling the report type, section, quote, and page URL.
 - Added `vercel.json` security headers configuration matching `_headers` (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `Content-Security-Policy`) for Vercel deployments.
 - Added `_headers` security header policy for static hosting (`X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy`, and `Content-Security-Policy`).
 - Added all verified **2026 Rosales Municipal Ordinances** (`01-2026`, `02-2026`, `05-2026`, `06-2026`, `09-2026`, `10-2026`, `11-2026`) from `pangasinan.gov.ph` Sangguniang Panlalawigan review records into `data/ordinances.json` (`18` total verified Rosales ordinances, 2023–2026).

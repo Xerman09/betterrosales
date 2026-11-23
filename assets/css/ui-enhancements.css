@@ -4307,3 +4307,56 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Highlight-to-Report Floating Action Popover
+   -------------------------------------------------------------------------- */
+.selection-report-popover {
+  position: absolute;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
+  animation: fadeInUp 0.14s ease-out;
+}
+
+.selection-report-popover[hidden] {
+  display: none !important;
+}
+
+.srp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, transform 0.15s ease;
+}
+
+.srp-btn--report {
+  background: #0032a0;
+  color: #ffffff;
+}
+
+.srp-btn--report:hover {
+  background: #1d4ed8;
+}
+
+.srp-btn--add {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.srp-btn--add:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
