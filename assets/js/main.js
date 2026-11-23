@@ -741,7 +741,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 reportSection: payload.section,
                 reportText: payload.quote
             });
-            window.location.href = `${getRootPrefix()}contact/index.html?${params.toString()}#feedback-form`;
+            const contactPath = window.location.protocol === 'file:' ? 'contact/index.html' : 'contact/';
+            window.location.href = `${getRootPrefix()}${contactPath}?${params.toString()}#feedback-form`;
         });
 
         document.body.appendChild(popover);
